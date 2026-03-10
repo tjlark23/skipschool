@@ -40,5 +40,22 @@
 - [x] Expanded all 25 tool reviews from ~170-519 to 843-1344 words each
 - [x] Expanded 50-ai-prompts-homeschool from 9 prompts to all 50 (2278 words)
 
+## Completed This Session (Curriculum System)
+- [x] Built curriculum packet generation system (v4 design)
+- [x] Created SKILL.md with TEKS alignment, tier structure, v4 design rules
+- [x] Created K-5 scope and sequence (36 weeks per grade, Math + ELA)
+- [x] Created page templates reference (every worksheet page type)
+- [x] Created focus area banks for Tier 2 supplements
+- [x] Created v4 HTML/CSS template (two-bar header, 5-color system, Try This boxes, Extension Page)
+- [x] Created generate_packet.py (JSON content to styled HTML renderer)
+- [x] Generated sample Grade 3 Week 1 packet as proof of pipeline
+- [x] All files committed to Git
+
 ## Next Steps
+- [ ] Ashley reviews Grade 3 Week 1 sample against her originals
+- [ ] Generate Grade 1 Week 1 sample for Charlie
+- [ ] Build intake form (Typeform)
+- [ ] Wire up payment (Stripe/Gumroad)
+- [ ] Wire up delivery (Beehiiv or email)
+- [ ] Beta launch with founding member pricing
 - [ ] Add real testimonials when available
