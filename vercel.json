@@ -1,0 +1,42 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/tools",
+      "destination": "/tools-index"
+    },
+    {
+      "source": "/articles",
+      "destination": "/articles-index"
+    },
+    {
+      "source": "/guides",
+      "destination": "/guides-index"
+    },
+    {
+      "source": "/directory",
+      "destination": "/directory-index"
+    }
+  ],
+  "redirects": [],
+  "headers": [
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400"
+        }
+      ]
+    }
+  ]
+}

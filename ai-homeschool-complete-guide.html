@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d203b">
+    <title>How to Use AI to Homeschool Your Kids: The Complete Guide | Skip School</title>
+    <meta name="description" content="The complete, practical guide to using AI for homeschooling. Specific tools, exact prompts, daily routines, subject-by-subject strategies, costs, and common mistakes to avoid.">
+    <meta property="og:title" content="How to Use AI to Homeschool Your Kids: The Complete Guide | Skip School">
+    <meta property="og:description" content="The complete, practical guide to using AI for homeschooling. Specific tools, exact prompts, daily routines, subject-by-subject strategies, costs, and common mistakes to avoid.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://skipschool.ai">
+    <meta name="twitter:card" content="summary">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet"></noscript>
+    <style>
+        :root {
+            --navy: #0d203b; --yellow: #fbc926; --cream: #fdf8ef; --warm-white: #faf9f7;
+            --sand: #f0ebe3; --text: #1a1a1a; --text-mid: #3a3a3a; --text-light: #595959;
+            --border: #d8d3cb; --border-light: #e8e4de; --max: 1280px;
+            --green: #1a6b4a; --coral: #c75234; --blue: #2563eb; --purple: #7c3aed; --teal: #0d9488;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'DM Sans', -apple-system, sans-serif; background: var(--warm-white); color: var(--text); -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+        /* SPONSOR BAR */
+        .sponsor-bar { background: var(--yellow); color: var(--navy); padding: 9px 20px; font-size: 13px; text-align: center; }
+        .sponsor-tag { background: var(--navy); color: var(--yellow); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 2px 7px; border-radius: 2px; margin-right: 6px; }
+        .sponsor-bar strong { color: var(--navy); }
+        .sponsor-bar a { color: var(--navy); font-weight: 700; margin-left: 4px; text-decoration: underline; }
+
+        
+        /* SEARCH */
+        .nav-search-btn { background: none; border: none; color: var(--text-mid); cursor: pointer; padding: 4px; display: flex; align-items: center; }
+        .nav-search-btn:hover { color: var(--navy); }
+        .search-overlay { display: none; background: #fff; border-bottom: 2px solid var(--border); padding: 12px 0; }
+        .search-overlay.active { display: block; }
+        .search-bar { display: flex; align-items: center; gap: 10px; }
+        .search-input { flex: 1; border: none; outline: none; font-size: 16px; font-family: inherit; color: var(--text); background: transparent; }
+        .search-input::placeholder { color: var(--text-light); }
+        .search-close { background: none; border: none; font-size: 22px; color: var(--text-light); cursor: pointer; padding: 0 4px; line-height: 1; }
+
+        /* NAV */
+        .nav { background: #fff; border-bottom: 3px solid var(--navy); position: sticky; top: 0; z-index: 100; }
+        .nav .wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 8px; padding-bottom: 8px; }
+        .nav-left { display: flex; align-items: center; gap: 14px; }
+        .nav-logo img { height: 28px; }
+        .nav-tagline { font-size: 12px; color: var(--text-light); padding-left: 14px; border-left: 1.5px solid var(--border); }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .nav-right a { min-height:44px; display:inline-flex; align-items:center; font-size: 13px; font-weight: 600; color: var(--text-mid); }
+        .nav-sub { background: var(--navy) !important; color: #fff !important; padding: 7px 16px; border-radius: 5px; }
+
+        /* HERO (kept from v5/v6) */
+        .hero { padding: 22px 0 0; border-bottom: 2px solid var(--navy); background: var(--warm-white); }
+        .hero-layout { display: grid; grid-template-columns: 1fr 290px; gap: 22px; }
+        .hero-stories { border-right: 1px solid var(--border); padding-right: 22px; padding-bottom: 20px; }
+        .story { display: grid; grid-template-columns: 200px 1fr; gap: 16px; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border-light); align-items: start; }
+        .story:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .story-img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; display: block; }
+        .story-label { display: inline-block; background: var(--navy); color: var(--yellow); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; padding: 2px 7px; border-radius: 2px; margin-bottom: 6px; }
+        .story-label-urgent { background: #c0392b; color: #fff; }
+        .story h2 { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 800; line-height: 1.2; color: var(--navy); margin-bottom: 6px; }
+        
+        .story h2:hover { color: #1a3a5c; }
+        .story p { font-size: 13.5px; color: var(--text-mid); line-height: 1.5; }
+        .read-more { font-size: 12px; font-weight: 700; color: var(--navy); border-bottom: 2px solid var(--yellow); padding-bottom: 1px; margin-top: 6px; display: inline-block; }
+        .hero-sidebar { padding-bottom: 20px; display: flex; flex-direction: column; }
+        .subscribe-box { background: var(--navy); border-radius: 8px; padding: 22px 18px; color: #fff; }
+        .subscribe-box h2 { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 800; line-height: 1.25; margin-bottom: 8px; }
+        .subscribe-box h2 span { color: var(--yellow); }
+        .subscribe-box p { font-size: 13px; opacity: 0.75; line-height: 1.5; margin-bottom: 14px; }
+        .subscribe-box input { width: 100%; padding: 9px 12px; border: 1.5px solid rgba(255,255,255,0.25); border-radius: 5px; background: rgba(255,255,255,0.08); color: #fff; font-size: 13px; font-family: inherit; margin-bottom: 7px; }
+        .subscribe-box input::placeholder { color: rgba(255,255,255,0.65); }
+        .subscribe-box button { width: 100%; padding: 10px; background: var(--yellow); color: var(--navy); border: none; border-radius: 5px; font-weight: 700; font-size: 14px; cursor: pointer; font-family: inherit; }
+        .subscribe-box .proof { text-align: center; font-size: 11px; opacity: 0.45; margin-top: 8px; }
+        
+        .prompt-teaser-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--navy); margin-bottom: 6px; display: flex; align-items: center; gap: 5px; }
+        .prompt-teaser-label::before { content: ''; display: inline-block; width: 7px; height: 7px; background: var(--yellow); border-radius: 2px; }
+        .prompt-teaser pre { font-family: 'SF Mono', Consolas, monospace; font-size: 11px; color: var(--text-mid); line-height: 1.5; white-space: pre-wrap; word-wrap: break-word; flex: 1; }
+        .prompt-teaser-footer { margin-top: 8px; display: flex; justify-content: space-between; align-items: center; }
+        .prompt-teaser-footer a { font-size: 11px; font-weight: 600; color: var(--navy); }
+        .copy-sm { background: var(--navy); color: var(--yellow); border: none; padding: 3px 9px; border-radius: 3px; font-size: 10px; font-weight: 700; cursor: pointer; font-family: inherit; }
+
+        /* ===== SECTION SYSTEM ===== */
+        .section { padding: 36px 0; }
+        .section-alt { background: #fff; }
+        .section-cream { background: var(--cream); }
+        .section-navy { background: var(--navy); color: #fff; }
+        .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+        .section-title { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 800; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
+        .section-navy .section-title { color: var(--yellow); }
+        .section-line { flex: 1; height: 2px; background: var(--navy); opacity: 0.15; }
+        .section-navy .section-line { background: #fff; opacity: 0.2; }
+        .section-link { font-size: 12px; font-weight: 600; color: var(--text-light); white-space: nowrap; }
+        .section-navy .section-link { color: rgba(255,255,255,0.6); }
+
+        /* ===== LATEST ARTICLES ===== */
+        .articles-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .article-card { background: #fff; border-radius: 8px; overflow: hidden; border: 1.5px solid var(--border-light); transition: border-color 0.2s, transform 0.15s; }
+        .article-card:hover { border-color: var(--navy); transform: translateY(-2px); }
+        .article-card-img { height: 120px; display: flex; align-items: flex-end; padding: 10px 12px; position: relative; }
+        .article-card-img .article-cat { position: relative; z-index: 2; }
+        .ac-blue { background: linear-gradient(135deg, #1a3a5c, #0d203b); }
+        .ac-green { background: linear-gradient(135deg, #1a5a3a, #0d3b20); }
+        .ac-warm { background: linear-gradient(135deg, #5a3a1a, #3b200d); }
+        .article-cat { display: inline-block; font-size: 10px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.07em; padding: 3px 8px; border-radius: 3px; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); }
+        .article-cat-sponsor { background: rgba(255,255,255,0.2); }
+        .article-card-body { padding: 14px 16px 16px; }
+        .article-card-body h3 { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 700; line-height: 1.25; color: var(--navy); margin-bottom: 5px; }
+        .article-card-body p { font-size: 13px; color: var(--text-light); line-height: 1.45; }
+
+        /* ===== DIRECTORY ===== */
+        .dir-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+        .dir-card { background: #fff; border-radius: 8px; padding: 18px; border: 1.5px solid var(--border-light); transition: border-color 0.2s, transform 0.15s; display: flex; gap: 14px; align-items: flex-start; }
+        .dir-card:hover { border-color: var(--navy); transform: translateY(-2px); }
+        .dir-logo { width: 52px; height: 52px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 800; color: #fff; flex-shrink: 0; letter-spacing: -0.5px; }
+        .dir-logo-green { background: linear-gradient(135deg, #1a6b4a, #2d8f65); }
+        .dir-logo-blue { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+        .dir-logo-purple { background: linear-gradient(135deg, #7c3aed, #9b5de5); }
+        .dir-logo-coral { background: linear-gradient(135deg, #c75234, #e07356); }
+        .dir-logo-teal { background: linear-gradient(135deg, #0d9488, #14b8a6); }
+        .dir-logo-navy { background: linear-gradient(135deg, #0d203b, #1e3a5f); }
+        .dir-card-info { flex: 1; min-width: 0; }
+        .dir-card-info h3 { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+        .dir-card-type { font-size: 10px; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-bottom: 4px; }
+        .dir-featured-tag { background: var(--yellow); color: var(--navy); font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 2px; margin-right: 4px; }
+        .dir-card-info p { font-size: 12.5px; color: var(--text-mid); line-height: 1.4; }
+
+        /* ===== WHAT YOU GET ===== */
+        .wyg-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .wyg-card { text-align: center; padding: 28px 20px; }
+        .wyg-icon-wrap { width: 56px; height: 56px; border-radius: 14px; margin: 0 auto 14px; display: flex; align-items: center; justify-content: center; font-size: 26px; }
+        .wyg-icon-yellow { background: var(--yellow); }
+        .wyg-icon-navy { background: var(--navy); color: var(--yellow); }
+        .wyg-icon-cream { background: var(--sand); }
+        .wyg-card h3 { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+        .wyg-card p { font-size: 14px; color: var(--text-mid); line-height: 1.55; }
+
+        /* ===== TESTIMONIALS ===== */
+        .test-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .test-card { background: var(--warm-white); border-radius: 8px; padding: 22px; border: 1.5px solid var(--border-light); }
+        .test-text { font-size: 14px; color: var(--text); line-height: 1.6; font-style: italic; margin-bottom: 16px; }
+        .test-author { display: flex; align-items: center; gap: 10px; }
+        .test-avatar { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; color: #fff; flex-shrink: 0; }
+        .av-1 { background: linear-gradient(135deg, #7c3aed, #9b5de5); }
+        .av-2 { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+        .av-3 { background: linear-gradient(135deg, #c75234, #e07356); }
+        .test-name { font-size: 13px; font-weight: 600; color: var(--navy); }
+        .test-detail { font-size: 11px; color: var(--text-light); }
+
+        /* ===== TOOLS ===== */
+        .tools-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+        .tool-card { background: #fff; border: 1.5px solid var(--border-light); border-radius: 8px; padding: 18px; text-align: center; transition: border-color 0.2s, transform 0.15s; }
+        .tool-card:hover { border-color: var(--navy); transform: translateY(-2px); }
+        .tool-icon { width: 44px; height: 44px; border-radius: 10px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #fff; }
+        .ti-purple { background: linear-gradient(135deg, #7c3aed, #9b5de5); }
+        .ti-green { background: linear-gradient(135deg, #1a6b4a, #2d8f65); }
+        .ti-blue { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+        .ti-teal { background: linear-gradient(135deg, #0d9488, #14b8a6); }
+        .tool-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+        .tool-card .tp { font-size: 12px; color: var(--text-light); margin-bottom: 5px; }
+        .tool-card p { font-size: 12.5px; color: var(--text-mid); line-height: 1.4; }
+
+        /* ===== NEWSLETTER PREVIEW ===== */
+        .nl-preview { background: #fff; border: 2px solid var(--border); border-radius: 10px; overflow: hidden; max-width: 700px; margin: 0 auto; }
+        .nl-head { background: var(--navy); padding: 16px 22px; display: flex; justify-content: space-between; align-items: center; }
+        .nl-head-left .nl-issue { font-size: 11px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.06em; }
+        .nl-head-left .nl-subj { font-family: 'Fraunces', serif; font-size: 17px; font-weight: 700; color: #fff; margin-top: 3px; }
+        .nl-head-right { color: var(--yellow); font-size: 12px; font-weight: 600; white-space: nowrap; }
+        .nl-body { padding: 22px; }
+        .nl-body p { font-size: 14.5px; line-height: 1.65; color: var(--text-mid); margin-bottom: 14px; }
+        .nl-body p:last-child { margin-bottom: 0; }
+        .nl-foot { padding: 14px 22px; background: var(--cream); border-top: 1px solid var(--border-light); text-align: center; }
+        .nl-foot a { font-size: 14px; font-weight: 700; color: var(--navy); }
+
+        /* ===== TOPICS ===== */
+        .topic-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+        .topic-tile { border-radius: 8px; padding: 20px 12px; text-align: center; transition: transform 0.15s; }
+        .topic-tile:hover { transform: translateY(-3px); }
+        .tt-1 { background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(37,99,235,0.05)); border: 1.5px solid rgba(37,99,235,0.2); }
+        .tt-2 { background: linear-gradient(135deg, rgba(26,107,74,0.1), rgba(26,107,74,0.05)); border: 1.5px solid rgba(26,107,74,0.2); }
+        .tt-3 { background: linear-gradient(135deg, rgba(199,82,52,0.1), rgba(199,82,52,0.05)); border: 1.5px solid rgba(199,82,52,0.2); }
+        .tt-4 { background: linear-gradient(135deg, rgba(251,201,38,0.15), rgba(251,201,38,0.05)); border: 1.5px solid rgba(251,201,38,0.3); }
+        .tt-5 { background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(124,58,237,0.05)); border: 1.5px solid rgba(124,58,237,0.2); }
+        .tt-6 { background: linear-gradient(135deg, rgba(13,148,136,0.1), rgba(13,148,136,0.05)); border: 1.5px solid rgba(13,148,136,0.2); }
+        .topic-tile .tt-emoji { font-size: 28px; display: block; margin-bottom: 8px; }
+        .topic-tile .tt-name { font-size: 13px; font-weight: 700; color: var(--navy); display: block; margin-bottom: 2px; }
+        .topic-tile .tt-count { font-size: 11px; color: var(--text-light); }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta { background: var(--navy); padding: 52px 0; }
+        .final-cta-inner { max-width: 540px; margin: 0 auto; text-align: center; }
+        .final-cta h2 { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 800; color: #fff; line-height: 1.3; margin-bottom: 12px; }
+        .final-cta h2 span { color: var(--yellow); }
+        .final-cta p { font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.55; margin-bottom: 22px; }
+        .final-form { display: flex; gap: 8px; max-width: 400px; margin: 0 auto; }
+        .final-form input { flex: 1; padding: 11px 14px; border: 2px solid rgba(255,255,255,0.3); border-radius: 6px; background: rgba(255,255,255,0.08); color: #fff; font-size: 14px; font-family: inherit; }
+        .final-form input::placeholder { color: rgba(255,255,255,0.65); }
+        .final-form button { padding: 11px 22px; background: var(--yellow); color: var(--navy); border: none; border-radius: 6px; font-weight: 700; font-size: 14px; cursor: pointer; font-family: inherit; }
+        .final-proof { margin-top: 12px; font-size: 12px; color: rgba(255,255,255,0.65); }
+
+        /* FOOTER */
+        .footer { background: #0a1828; color: rgba(255,255,255,0.7); padding: 32px 0; }
+        .footer .wrap { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; }
+        .footer-brand img { height: 26px; margin-bottom: 8px; }
+        .footer-brand p { font-size: 12.5px; max-width: 260px; line-height: 1.5; }
+        .footer-col h4 { color: var(--yellow); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; font-weight: 700; }
+        .footer-col a { display: block; font-size: 12.5px; margin-bottom: 5px; opacity: 0.6; }
+        .footer-col a:hover { opacity: 1; color: #fff; }
+        .footer-bottom { margin-top: 20px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; font-size: 11px; opacity: 0.35; }
+
+        
+        /* PROMPT OF THE WEEK (outside card) */
+        .prompt-section { margin-top: 14px; flex: 1; display: flex; flex-direction: column; }
+        .prompt-heading { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+        .prompt-card-outer {
+            background: var(--cream);
+            border: 1.5px solid var(--border);
+            border-radius: 7px;
+            padding: 14px 14px 10px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .prompt-card-outer pre {
+            font-family: 'SF Mono', Consolas, monospace;
+            font-size: 11.5px; color: var(--text-mid); line-height: 1.55;
+            white-space: pre-wrap; word-wrap: break-word;
+            flex: 1;
+        }
+        .prompt-card-footer { margin-top: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .prompt-card-footer a { font-size: 11px; font-weight: 600; color: var(--navy); }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero-layout { grid-template-columns: 1fr; }
+            .hero-stories { border-right: none; padding-right: 0; }
+            .story { grid-template-columns: 140px 1fr; } .story-img { height: 110px; }
+            .articles-grid, .test-grid, .wyg-grid { grid-template-columns: 1fr; }
+            .dir-grid { grid-template-columns: 1fr; }
+            .tools-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .topic-grid { grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+            .nl-head { flex-direction: column; gap: 8px; }
+            .footer .wrap { flex-direction: column; }
+            .nav-right a:not(.nav-sub) { display: none; }
+            .nav-tagline { display: none; }
+            .final-form { flex-direction: column; }
+        }
+        @media (max-width: 600px) {
+            .story { grid-template-columns: 1fr; } .story-img { height: 160px; }
+            .tools-grid { grid-template-columns: 1fr; }
+            .topic-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+        .hero-stories { animation: fadeIn 0.35s ease both; }
+        .hero-sidebar { animation: fadeIn 0.35s 0.08s ease both; }
+    
+        /* Touch target minimum sizes */
+        a, button { min-height: 44px; }
+        .nav-right a { padding: 12px 14px; display: inline-flex; align-items: center; }
+
+    
+        /* Prevent layout shift with aspect ratios */
+        .story-img { aspect-ratio: 3/2; }
+        .testimonial img { aspect-ratio: 1/1; }
+    
+        .page-content { max-width: 780px; margin: 0 auto; padding: 48px 24px; }
+        .page-content h1 { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 800; color: var(--navy); margin-bottom: 16px; line-height: 1.2; }
+        .page-content h2 { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
+        .page-content h3 { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin: 24px 0 8px; }
+        .page-content p { font-size: 16px; line-height: 1.7; color: var(--text); margin-bottom: 16px; }
+        .page-content ul { margin: 0 0 16px 24px; }
+        .page-content li { font-size: 16px; line-height: 1.7; color: var(--text); margin-bottom: 8px; }
+        .page-content a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--yellow); text-underline-offset: 3px; }
+        .page-breadcrumb { font-size: 13px; color: var(--text-light); margin-bottom: 20px; }
+        .page-breadcrumb a { color: var(--text-light); text-decoration: none; }
+        .page-breadcrumb a:hover { color: var(--navy); }
+        .cta-banner { background: var(--navy); border-radius: 10px; padding: 32px; text-align: center; margin: 40px 0; }
+        .cta-banner h3 { color: #fff; font-family: 'Fraunces', serif; font-size: 22px; margin-bottom: 8px; }
+        .cta-banner p { color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+        .cta-banner a { display: inline-block; background: var(--yellow); color: var(--navy); font-weight: 700; padding: 12px 28px; border-radius: 6px; text-decoration: none; }
+        .prompt-box { background: #1e1e2e; border-radius: 8px; padding: 20px; margin: 16px 0; }
+        .prompt-box pre { font-family: monospace; font-size: 13px; color: #e0e0e0; line-height: 1.6; white-space: pre-wrap; }
+        .prompt-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--yellow); margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="wrap">
+            <div class="nav-left">
+                <a href="/" class="nav-logo"><picture><source srcset="/images/img-01-c418d1be.webp" type="image/webp"><img src="/images/img-01-c418d1be.png" alt="Skip School"></picture></a>
+                <span class="nav-tagline">The AI Playbook for Homeschool Parents</span>
+            </div>
+            <div class="nav-right">
+                <a href="guides-index">Guides</a>
+                <a href="articles-index">Articles</a>
+                <a href="tools-index">Tools</a>
+                <a href="directory-index">Directory</a>
+                <button class="nav-search-btn" onclick="document.querySelector('.search-overlay').classList.toggle('active')" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <a href="/subscribe" class="nav-sub">Subscribe</a>
+            </div>
+        </div>
+    </nav>
+    <main role="main">
+    <div class="page-content">
+        <div class="page-breadcrumb"><a href="/">Home</a> &rsaquo; How to Use AI to Homeschool Your Kids: The Complete Guide</div>
+        <h1>How to Use AI to Homeschool Your Kids: The Complete Guide</h1>
+
+        <p>This is the guide I wish existed when we started using AI for homeschooling. Not a pitch for some tool. Not a vague article about "the future of education." Just a practical walkthrough of what works, what doesn't, and how to set everything up this week.</p>
+
+        <p>I've been homeschooling two kids (ages 7 and 10) with AI tools for over a year. Before AI, I spent 3-4 hours a day on lesson planning, worksheet hunting, and curriculum research. Now I spend about 30 minutes. The rest of my time goes to actually teaching, which is the part that matters.</p>
+
+        <p>Here's everything I've learned.</p>
+
+        <h2>The Three Tools You Actually Need</h2>
+
+        <p>You don't need ten AI subscriptions. You need three tools, used well. Start with these and add others only when you hit a specific need they don't cover.</p>
+
+        <h3>1. Claude (Free at claude.ai)</h3>
+
+        <p><a href="/review-claude-ai">Claude</a> is what I use for lesson planning, custom worksheet creation, curriculum design, and assessment generation. It follows complex instructions better than any other AI I've tested, and it's the best at writing in a specific style when you give it clear direction.</p>
+
+        <p>What makes Claude different for homeschooling: you can give it a long, detailed prompt with your child's age, grade level, interests, strengths, weaknesses, and curriculum preferences, and it holds all of that context throughout the conversation. Other AIs lose the thread. Claude keeps it.</p>
+
+        <p>The free tier gives you enough daily messages for real educational use. The paid tier ($20/month) gives you more messages and access to the most capable model. I use the paid tier because I rely on it daily, but the free tier is genuinely enough to get started.</p>
+
+        <h3>2. Khan Academy + Khanmigo ($44/year)</h3>
+
+        <p><a href="/review-khan-academy">Khan Academy</a> provides structured, self-paced instruction in math, science, computing, economics, and more. It's completely free. The videos are clear, the practice exercises adapt to your child's level, and the mastery system ensures they don't move on until they've actually learned the material.</p>
+
+        <p>Khanmigo ($44/year for families, covers up to 10 children) adds an AI tutor layer. Instead of just telling your child the answer when they're stuck, Khanmigo asks guiding questions that lead them to the answer themselves. It also provides a parent dashboard that shows exactly where your child is struggling and progressing.</p>
+
+        <p>We use Khan Academy for math daily. My 10-year-old works through it independently for 30 minutes each morning. I check the dashboard once a week to make sure she's not stuck anywhere. This single tool removed math instruction from my daily workload entirely.</p>
+
+        <h3>3. ChatGPT Voice Mode (Free)</h3>
+
+        <p><a href="/review-chatgpt">ChatGPT's voice mode</a> turns any car ride, walk, or chore time into learning time. Connect it to a Bluetooth speaker and your kids can have verbal conversations about any subject. It's natural and engaging in a way that typing isn't, especially for younger children who can't type fluently yet.</p>
+
+        <p>We use it for: car ride quizzes ("Quiz me on multiplication facts"), verbal narration practice ("I'm going to tell you what I learned about the water cycle, and you ask me follow-up questions"), and the "explain it back to me" technique where my kids teach a concept to the AI to prove they understand it.</p>
+
+        <h2>How to Set Up Your AI Homeschool This Week</h2>
+
+        <h3>Day 1: Create Your Master Prompt</h3>
+
+        <p>Open Claude and paste this prompt. Fill in the brackets with your actual information. Save it somewhere you can copy-paste it at the start of every new conversation.</p>
+
+        <div class="prompt-box"><div class="prompt-label">Master Prompt (Save This)</div><pre>I'm a homeschool parent. Here's my setup:
+
+Child: [Name], age [X], grade [X]
+Subjects we cover: [list them]
+Curriculum we use: [list any, or "none yet"]
+Schedule: [how many hours per day, which days]
+Strengths: [what they're good at]
+Struggles: [what's hard for them]
+Interests: [what they love outside of school]
+State: [your state, for standards alignment]
+
+When I ask you for lesson plans, worksheets, or activities, use this context. Write in a warm, practical tone. Be specific: include real page numbers, real tool names, and real time estimates. If I ask for a weekly plan, format it day-by-day with clear instructions I can follow.</pre></div>
+
+        <p>This master prompt is the foundation of everything. Every time you start a new conversation with Claude, paste it first. Now the AI knows your child and can generate personalized content instantly.</p>
+
+        <h3>Day 2: Generate Your First Week's Plan</h3>
+
+        <div class="prompt-box"><div class="prompt-label">Weekly Planner</div><pre>Create a detailed plan for this week. For each day, give me:
+- Subject and specific topic
+- Activity or lesson (with exact instructions)
+- Materials needed
+- Time estimate
+- One thing to watch for (common mistakes or signs they're struggling)
+
+Keep total daily instruction time under [X] hours. Include at least 2 hands-on activities this week. Theme the week around [topic/interest] wherever it naturally fits.</pre></div>
+
+        <p>You'll get a complete week of lesson plans in about 60 seconds. Read through it, adjust anything that doesn't fit your family, and you're set.</p>
+
+        <h3>Day 3: Set Up Khan Academy</h3>
+
+        <p>Create a parent account at khanacademy.org. Add your child as a student. Have them take the diagnostic assessment for their grade level in math. This takes about 20 minutes and places them at the right starting point. From tomorrow on, they'll do 15-30 minutes of Khan Academy math independently each morning.</p>
+
+        <h3>Day 4: Test Voice Mode</h3>
+
+        <p>Download ChatGPT on your phone. Try voice mode during a car ride or while making dinner. Start simple: "Quiz my kids on [topic they studied this week]." See how they respond. Most kids take to it naturally because it feels like a conversation, not a lesson.</p>
+
+        <h3>Day 5: Evaluate and Adjust</h3>
+
+        <p>After one week, you'll know what's working. The AI-generated plan was too ambitious? Scale it down. Khan Academy is too easy? Adjust the grade level. Voice mode was a hit? Use it more. This is the beauty of homeschooling: you can adjust instantly based on what you observe.</p>
+
+        <h2>Subject-by-Subject Breakdown</h2>
+
+        <h3>Math</h3>
+
+        <p><a href="/review-khan-academy">Khan Academy</a> handles daily math practice and instruction. For supplementary practice, I use Claude to generate custom word problems themed around my kids' interests (Minecraft math problems, dinosaur measurement activities). <a href="/review-prodigy-math">Prodigy Math</a> (free) gamifies practice for younger kids who need extra motivation. <a href="/21-ai-math-help">Full math guide here.</a></p>
+
+        <h3>Reading and Language Arts</h3>
+
+        <p>Daily reading is non-negotiable: 30 minutes minimum. Use the <a href="/review-libby-app">Libby app</a> (free with a library card) for unlimited ebooks and audiobooks. Claude generates <a href="/62-ai-reading-comprehension">reading comprehension questions</a>, <a href="/47-ai-vocabulary-builder">vocabulary exercises</a>, writing prompts, and <a href="/66-ai-grammar-painless">grammar practice</a> tailored to whatever your child is reading. <a href="/52-reading-aloud-with-ai">Read aloud daily</a>, even to older kids.</p>
+
+        <h3>Science</h3>
+
+        <p>Claude generates <a href="/18-ai-science-experiments">hands-on science experiments</a> using household materials. PhET Interactive Simulations (free, from University of Colorado) lets kids experiment with physics, chemistry, and biology concepts virtually. For structured science curriculum, <a href="/review-curiosity-stream">Curiosity Stream</a> ($2.99/month) has thousands of science documentaries at every level.</p>
+
+        <h3>History and Social Studies</h3>
+
+        <p>AI turns history from a boring textbook subject into <a href="/27-ai-history-alive">vivid storytelling and interactive role-play</a>. Have Claude tell historical events as campfire stories. Let your kids <a href="/27-ai-history-alive">interview historical figures</a> through AI conversations. Use <a href="/41-ai-geography-lessons">AI for geography lessons</a> that connect past events to present-day locations.</p>
+
+        <h3>Foreign Language</h3>
+
+        <p><a href="/review-duolingo">Duolingo</a> (free) handles vocabulary and grammar drills. Claude provides <a href="/32-ai-foreign-language">conversation practice</a> in any language. The combination of structured drilling plus real conversation practice is more effective than either alone.</p>
+
+        <h3>Coding and Technology</h3>
+
+        <p>Scratch (free, ages 5-12) for visual programming. Code.org (free) for structured courses. Claude as a <a href="/35-ai-coding-kids">patient coding tutor</a> that explains errors and guides problem-solving without giving away answers.</p>
+
+        <h2>What AI Cannot Do</h2>
+
+        <p>I need to be direct about this because the hype around AI in education is intense, and some of it is misleading.</p>
+
+        <p>AI cannot replace your judgment about what your child needs. It doesn't know that your daughter had a rough morning and needs an easier lesson today. It doesn't notice when your son's eyes light up during a science experiment, signaling a deep interest worth pursuing. It can't hug a frustrated kid or celebrate a breakthrough with genuine pride.</p>
+
+        <p>AI cannot replace hands-on experiences. Reading about volcanoes on a screen is not the same as building a baking soda volcano in the backyard. AI plans the experiment; your child does the experiment. The doing is where learning happens.</p>
+
+        <p>AI can make mistakes. It's highly accurate for educational content, but not perfect. It occasionally generates incorrect math solutions, outdated information, or oversimplified explanations. Teach your child to verify important facts. Use <a href="/review-perplexity-ai">Perplexity AI</a> for research that cites sources.</p>
+
+        <p>AI doesn't teach values, character, or resilience. Those come from you, from community, from struggle, and from love. AI handles the logistics of education so you have more energy for the parts that actually require a human being.</p>
+
+        <h2>Common Mistakes to Avoid</h2>
+
+        <p><strong>Mistake 1: Using AI for everything.</strong> If every lesson comes from AI, your homeschool becomes sterile. AI generates the plan; you add the field trips, the real books, the hands-on projects, and the spontaneous detours that make homeschooling rich.</p>
+
+        <p><strong>Mistake 2: Letting your child use AI as a crutch.</strong> "Explain this concept to me" builds learning. "Write my essay for me" builds dependency. Set clear expectations about AI use from day one. <a href="/13-teach-kids-use-ai">Our guide to teaching kids responsible AI use</a> covers this in detail.</p>
+
+        <p><strong>Mistake 3: Buying paid tools before trying free ones.</strong> The free tiers of Claude, Khan Academy, and ChatGPT provide more than enough for a solid homeschool program. Don't spend money until you've identified a specific gap that free tools can't fill.</p>
+
+        <p><strong>Mistake 4: Over-scheduling.</strong> AI makes it easy to generate mountains of content. Resist the urge to fill every hour. Elementary kids need 2-3 hours of focused academics. Middle schoolers need 3-4. The rest should be play, projects, and exploration.</p>
+
+        <p><strong>Mistake 5: Skipping the human edit.</strong> Every AI-generated lesson plan, worksheet, or assessment should get a quick review from you before your child sees it. This takes 2-3 minutes and catches the occasional error or inappropriate difficulty level.</p>
+
+        <h2>The Daily Routine That Works for Us</h2>
+
+        <p>8:30 AM: Math (Khan Academy, independent, 30 minutes)</p>
+
+        <p>9:00 AM: Language arts (reading + one writing or grammar activity, 40 minutes)</p>
+
+        <p>9:40 AM: Break (15 minutes outside)</p>
+
+        <p>10:00 AM: One rotating subject from AI-generated plan (science, history, geography, art, 30 minutes)</p>
+
+        <p>10:30 AM: Done with structured academics.</p>
+
+        <p>Afternoon: Projects, co-op, enrichment activities, sports, free play, or following whatever rabbit hole my kids fell down that morning.</p>
+
+        <p>Total structured instruction: about 2 hours. Total time I spend on AI-assisted planning: about 15 minutes per day (less on days when I generated the whole week's plan on Sunday). Compare that to the 3-4 hours of planning I used to do before AI.</p>
+
+        <h2>Cost Breakdown</h2>
+
+        <p>Our monthly AI homeschool costs:</p>
+
+        <p>Claude Pro: $20/month (optional; free tier works fine to start)</p>
+        <p>Khan Academy: $0 (Khanmigo is $44/year if you want the AI tutor)</p>
+        <p>ChatGPT: $0 (free tier, including voice mode)</p>
+        <p>Libby app: $0 (free with library card)</p>
+        <p>Duolingo: $0 (free tier)</p>
+
+        <p>Total: $0-$24/month for AI tools. Add whatever you spend on physical books, art supplies, science kits, and field trips. Our total annual homeschool budget is under $1,000, and that includes everything.</p>
+
+        <p>If your state has an <a href="/texas-esa-guide">Education Savings Account program</a>, ESA funds can cover these costs and much more.</p>
+
+        <h2>Getting Started Today</h2>
+
+        <p>You don't need to read every guide on this site before you start. You need three things: a Claude account (free), a Khan Academy account (free), and 30 minutes to generate your first week's lesson plan.</p>
+
+        <p>Start small. Try it for one week. Adjust based on what works. Add tools and complexity gradually as you get comfortable. The families who succeed with AI homeschooling are the ones who start imperfectly and improve over time, not the ones who wait until everything is perfect.</p>
+
+        <p><a href="/09-first-week-ai-homeschool">Our first-week walkthrough</a> gives you the exact day-by-day setup. <a href="/50-ai-prompts-homeschool">50 copy-paste prompts</a> cover every subject and situation you'll encounter. And the <a href="/subscribe">weekly newsletter</a> delivers one new tip every Wednesday so you keep improving.</p>
+
+        <p>You already made the hardest decision: choosing to homeschool. AI just makes everything after that decision easier.</p>
+
+        <div style="margin-top:32px;padding:20px;background:#fafaf7;border-radius:8px;border:1.5px solid #eae7e2;"><h3 style="font-family:Fraunces,serif;font-size:17px;color:#0d203b;margin:0 0 12px 0;">Related Tool Reviews</h3><p style="margin:0 0 6px 0;font-size:15px;"><a href="/review-claude-ai" style="color:#0d203b;text-decoration:underline;text-decoration-color:#fbc926;">Claude AI Review for Homeschool Parents</a></p><p style="margin:0 0 6px 0;font-size:15px;"><a href="/review-khan-academy" style="color:#0d203b;text-decoration:underline;text-decoration-color:#fbc926;">Khan Academy Review for Homeschool Families</a></p><p style="margin:0 0 6px 0;font-size:15px;"><a href="/review-math-academy" style="color:#0d203b;text-decoration:underline;text-decoration-color:#fbc926;">Math Academy Review for Homeschool Families</a></p></div>
+<div class="cta-banner">
+            <h3>Get the AI Playbook Every Wednesday</h3>
+            <p>One email a week. Real tools, tested prompts, and honest advice for homeschool parents.</p>
+            <a href="/subscribe">Subscribe Free</a>
+        </div>
+    </div>
+    </main>
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer-brand">
+                <picture><source srcset="/images/img-18-861ffcfb.webp" type="image/webp"><img loading="lazy" src="/images/img-18-861ffcfb.png" alt="Skip School" style="height:28px;width:auto;"></picture>
+                <p>Skip the classroom. Use AI to personalize how your kids learn. Give them a five-year head start.</p>
+            </div>
+            <div class="footer-col"><div style="font-weight:700;font-size:13px;"><strong>Content</strong></div><a href="guides-index">Guides</a><a href="articles-index">Articles</a><a href="50-ai-prompts-homeschool">50 AI Prompts</a><a href="texas-esa-guide">Texas ESA Guide</a></div>
+            <div class="footer-col"><div style="font-weight:700;font-size:13px;"><strong>Resources</strong></div><a href="tools-index">AI Tools</a><a href="directory-index">Directory</a><a href="/subscribe">Subscribe</a></div>
+            <div class="footer-col"><div style="font-weight:700;font-size:13px;"><strong>About</strong></div><a href="/about">Our Story</a><a href="/contact">Contact</a></div>
+        </div>
+        <div class="wrap"><div class="footer-bottom">&copy; 2026 Skip School. All rights reserved. SkipSchool.ai</div></div>
+    </footer>
+</body>
+</html>

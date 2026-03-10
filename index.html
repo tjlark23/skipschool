@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#0d203b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skip School | The AI Playbook for Homeschool Parents</title>
+    <meta name="description" content="Skip the classroom. Use AI to personalize how your kids learn. Give them a five-year head start.">
+    <meta property="og:title" content="Skip School | The AI Playbook for Homeschool Parents">
+    <meta property="og:description" content="Skip the classroom. Use AI to personalize how your kids learn. Give them a five-year head start.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skipschool.ai">
+    <meta property="og:image" content="https://skipschool.ai/images/img-01-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Skip School | The AI Playbook for Homeschool Parents">
+    <meta name="twitter:description" content="Skip the classroom. Use AI to personalize how your kids learn. Give them a five-year head start.">
+    <meta name="twitter:image" content="https://skipschool.ai/images/img-01-logo.png">
+        <link rel="preload" as="image" type="image/webp" href="/images/img-02-2ecb5e02.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet"></noscript>
+    <style>
+        :root {
+            --navy: #0d203b; --yellow: #fbc926; --cream: #fdf8ef; --warm-white: #faf9f7;
+            --sand: #f0ebe3; --text: #1a1a1a; --text-mid: #3a3a3a; --text-light: #595959;
+            --border: #d8d3cb; --border-light: #e8e4de; --max: 1280px;
+            --green: #1a6b4a; --coral: #c75234; --blue: #2563eb; --purple: #7c3aed; --teal: #0d9488;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'DM Sans', -apple-system, sans-serif; background: var(--warm-white); color: var(--text); -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+        /* SPONSOR BAR */
+        .sponsor-bar { background: var(--yellow); color: var(--navy); padding: 9px 20px; font-size: 13px; text-align: center; }
+        .sponsor-tag { background: var(--navy); color: var(--yellow); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 2px 7px; border-radius: 2px; margin-right: 6px; }
+        .sponsor-bar strong { color: var(--navy); }
+        .sponsor-bar a { color: var(--navy); font-weight: 700; margin-left: 4px; text-decoration: underline; }
+
+        
+        /* SEARCH */
+        .nav-search-btn { background: none; border: none; color: var(--text-mid); cursor: pointer; padding: 4px; display: flex; align-items: center; }
+        .nav-search-btn:hover { color: var(--navy); }
+        .search-overlay { display: none; background: #fff; border-bottom: 2px solid var(--border); padding: 12px 0; }
+        .search-overlay.active { display: block; }
+        .search-bar { display: flex; align-items: center; gap: 10px; }
+        .search-input { flex: 1; border: none; outline: none; font-size: 16px; font-family: inherit; color: var(--text); background: transparent; }
+        .search-input::placeholder { color: var(--text-light); }
+        .search-close { background: none; border: none; font-size: 22px; color: var(--text-light); cursor: pointer; padding: 0 4px; line-height: 1; }
+
+        /* NAV */
+        .nav { background: #fff; border-bottom: 3px solid var(--navy); position: sticky; top: 0; z-index: 100; }
+        .nav .wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 8px; padding-bottom: 8px; }
+        .nav-left { display: flex; align-items: center; gap: 14px; }
+        .nav-logo img { height: 28px; }
+        .nav-tagline { font-size: 12px; color: var(--text-light); padding-left: 14px; border-left: 1.5px solid var(--border); }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .nav-right a { min-height:44px; display:inline-flex; align-items:center; font-size: 13px; font-weight: 600; color: var(--text-mid); }
+        .nav-sub { background: var(--navy) !important; color: #fff !important; padding: 7px 16px; border-radius: 5px; }
+
+        /* HERO (kept from v5/v6) */
+        .hero { padding: 22px 0 0; border-bottom: 2px solid var(--navy); background: var(--warm-white); }
+        .hero-layout { display: grid; grid-template-columns: 1fr 290px; gap: 22px; }
+        .hero-stories { border-right: 1px solid var(--border); padding-right: 22px; padding-bottom: 20px; }
+        .story { display: grid; grid-template-columns: 200px 1fr; gap: 16px; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border-light); align-items: start; }
+        .story:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .story-img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; display: block; }
+        .story-label { display: inline-block; background: var(--navy); color: var(--yellow); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; padding: 2px 7px; border-radius: 2px; margin-bottom: 6px; }
+        .story-label-urgent { background: #c0392b; color: #fff; }
+        .story h2 { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 800; line-height: 1.2; color: var(--navy); margin-bottom: 6px; }
+        
+        .story h2:hover { color: #1a3a5c; }
+        .story p { font-size: 13.5px; color: var(--text-mid); line-height: 1.5; }
+        .read-more { font-size: 12px; font-weight: 700; color: var(--navy); border-bottom: 2px solid var(--yellow); padding-bottom: 1px; margin-top: 6px; display: inline-block; }
+        .hero-sidebar { padding-bottom: 20px; display: flex; flex-direction: column; }
+        .subscribe-box { background: var(--navy); border-radius: 8px; padding: 22px 18px; color: #fff; }
+        .subscribe-box h2 { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 800; line-height: 1.25; margin-bottom: 8px; }
+        .subscribe-box h2 span { color: var(--yellow); }
+        .subscribe-box p { font-size: 13px; opacity: 0.75; line-height: 1.5; margin-bottom: 14px; }
+        .subscribe-box input { width: 100%; padding: 9px 12px; border: 1.5px solid rgba(255,255,255,0.25); border-radius: 5px; background: rgba(255,255,255,0.08); color: #fff; font-size: 13px; font-family: inherit; margin-bottom: 7px; }
+        .subscribe-box input::placeholder { color: rgba(255,255,255,0.65); }
+        .subscribe-box button { width: 100%; padding: 10px; background: var(--yellow); color: var(--navy); border: none; border-radius: 5px; font-weight: 700; font-size: 14px; cursor: pointer; font-family: inherit; }
+        .subscribe-box .proof { text-align: center; font-size: 11px; opacity: 0.45; margin-top: 8px; }
+        
+        .prompt-teaser-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--navy); margin-bottom: 6px; display: flex; align-items: center; gap: 5px; }
+        .prompt-teaser-label::before { content: ''; display: inline-block; width: 7px; height: 7px; background: var(--yellow); border-radius: 2px; }
+        .prompt-teaser pre { font-family: 'SF Mono', Consolas, monospace; font-size: 11px; color: var(--text-mid); line-height: 1.5; white-space: pre-wrap; word-wrap: break-word; flex: 1; }
+        .prompt-teaser-footer { margin-top: 8px; display: flex; justify-content: space-between; align-items: center; }
+        .prompt-teaser-footer a { font-size: 11px; font-weight: 600; color: var(--navy); }
+        .copy-sm { background: var(--navy); color: var(--yellow); border: none; padding: 3px 9px; border-radius: 3px; font-size: 10px; font-weight: 700; cursor: pointer; font-family: inherit; }
+
+        /* ===== SECTION SYSTEM ===== */
+        .section { padding: 36px 0; }
+        .section-alt { background: #fff; }
+        .section-cream { background: var(--cream); }
+        .section-navy { background: var(--navy); color: #fff; }
+        .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+        .section-title { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 800; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
+        .section-navy .section-title { color: var(--yellow); }
+        .section-line { flex: 1; height: 2px; background: var(--navy); opacity: 0.15; }
+        .section-navy .section-line { background: #fff; opacity: 0.2; }
+        .section-link { font-size: 12px; font-weight: 600; color: var(--text-light); white-space: nowrap; }
+        .section-navy .section-link { color: rgba(255,255,255,0.6); }
+
+        /* ===== LATEST ARTICLES ===== */
+        .articles-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .article-card { background: #fff; border-radius: 8px; overflow: hidden; border: 1.5px solid var(--border-light); transition: border-color 0.2s, transform 0.15s; }
+        .article-card:hover { border-color: var(--navy); transform: translateY(-2px); }
+        .article-card-img { height: 120px; display: flex; align-items: flex-end; padding: 10px 12px; position: relative; }
+        .article-card-img .article-cat { position: relative; z-index: 2; }
+        .ac-blue { background: linear-gradient(135deg, #1a3a5c, #0d203b); }
+        .ac-green { background: linear-gradient(135deg, #1a5a3a, #0d3b20); }
+        .ac-warm { background: linear-gradient(135deg, #5a3a1a, #3b200d); }
+        .article-cat { display: inline-block; font-size: 10px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.07em; padding: 3px 8px; border-radius: 3px; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); }
+        .article-cat-sponsor { background: rgba(255,255,255,0.2); }
+        .article-card-body { padding: 14px 16px 16px; }
+        .article-card-body h3 { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 700; line-height: 1.25; color: var(--navy); margin-bottom: 5px; }
+        .article-card-body p { font-size: 13px; color: var(--text-light); line-height: 1.45; }
+
+        /* ===== DIRECTORY ===== */
+        .dir-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+        .dir-card { background: #fff; border-radius: 8px; padding: 18px; border: 1.5px solid var(--border-light); transition: border-color 0.2s, transform 0.15s; display: flex; gap: 14px; align-items: flex-start; }
+        .dir-card:hover { border-color: var(--navy); transform: translateY(-2px); }
+        .dir-logo { width: 52px; height: 52px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 800; color: #fff; flex-shrink: 0; letter-spacing: -0.5px; }
+        .dir-logo-green { background: linear-gradient(135deg, #1a6b4a, #2d8f65); }
+        .dir-logo-blue { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+        .dir-logo-purple { background: linear-gradient(135deg, #7c3aed, #9b5de5); }
+        .dir-logo-coral { background: linear-gradient(135deg, #c75234, #e07356); }
+        .dir-logo-teal { background: linear-gradient(135deg, #0d9488, #14b8a6); }
+        .dir-logo-navy { background: linear-gradient(135deg, #0d203b, #1e3a5f); }
+        .dir-card-info { flex: 1; min-width: 0; }
+        .dir-card-info h3 { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+        .dir-card-type { font-size: 10px; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-bottom: 4px; }
+        .dir-featured-tag { background: var(--yellow); color: var(--navy); font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 2px; margin-right: 4px; }
+        .dir-card-info p { font-size: 12.5px; color: var(--text-mid); line-height: 1.4; }
+
+        /* ===== WHAT YOU GET ===== */
+        .wyg-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .wyg-card { text-align: center; padding: 28px 20px; }
+        .wyg-icon-wrap { width: 56px; height: 56px; border-radius: 14px; margin: 0 auto 14px; display: flex; align-items: center; justify-content: center; font-size: 26px; }
+        .wyg-icon-yellow { background: var(--yellow); }
+        .wyg-icon-navy { background: var(--navy); color: var(--yellow); }
+        .wyg-icon-cream { background: var(--sand); }
+        .wyg-card h3 { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+        .wyg-card p { font-size: 14px; color: var(--text-mid); line-height: 1.55; }
+
+        /* ===== TESTIMONIALS ===== */
+        .test-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .test-card { background: var(--warm-white); border-radius: 8px; padding: 22px; border: 1.5px solid var(--border-light); }
+        .test-avatar { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; color: #fff; flex-shrink: 0; }
+        .av-1 { background: linear-gradient(135deg, #7c3aed, #9b5de5); }
+        .av-2 { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+        .av-3 { background: linear-gradient(135deg, #c75234, #e07356); }
+
+        /* ===== TOOLS ===== */
+        .tools-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+        .tool-card { background: #fff; border: 1.5px solid var(--border-light); border-radius: 8px; padding: 18px; text-align: center; transition: border-color 0.2s, transform 0.15s; }
+        .tool-card:hover { border-color: var(--navy); transform: translateY(-2px); }
+        .tool-icon { width: 44px; height: 44px; border-radius: 10px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #fff; }
+        .ti-purple { background: linear-gradient(135deg, #7c3aed, #9b5de5); }
+        .ti-green { background: linear-gradient(135deg, #1a6b4a, #2d8f65); }
+        .ti-blue { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+        .ti-teal { background: linear-gradient(135deg, #0d9488, #14b8a6); }
+        .tool-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+        .tool-card .tp { font-size: 12px; color: var(--text-light); margin-bottom: 5px; }
+        .tool-card p { font-size: 12.5px; color: var(--text-mid); line-height: 1.4; }
+
+        /* ===== NEWSLETTER PREVIEW ===== */
+        .nl-preview { background: #fff; border: 2px solid var(--border); border-radius: 10px; overflow: hidden; max-width: 700px; margin: 0 auto; }
+        .nl-head { background: var(--navy); padding: 16px 22px; display: flex; justify-content: space-between; align-items: center; }
+        .nl-head-left .nl-issue { font-size: 11px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.06em; }
+        .nl-head-left .nl-subj { font-family: 'Fraunces', serif; font-size: 17px; font-weight: 700; color: #fff; margin-top: 3px; }
+        .nl-head-right { color: var(--yellow); font-size: 12px; font-weight: 600; white-space: nowrap; }
+        .nl-body { padding: 22px; }
+        .nl-body p { font-size: 14.5px; line-height: 1.65; color: var(--text-mid); margin-bottom: 14px; }
+        .nl-body p:last-child { margin-bottom: 0; }
+        .nl-foot { padding: 14px 22px; background: var(--cream); border-top: 1px solid var(--border-light); text-align: center; }
+        .nl-foot a { font-size: 14px; font-weight: 700; color: var(--navy); }
+
+        /* ===== TOPICS ===== */
+        .topic-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+        .topic-tile { border-radius: 8px; padding: 20px 12px; text-align: center; transition: transform 0.15s; }
+        .topic-tile:hover { transform: translateY(-3px); }
+        .tt-1 { background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(37,99,235,0.05)); border: 1.5px solid rgba(37,99,235,0.2); }
+        .tt-2 { background: linear-gradient(135deg, rgba(26,107,74,0.1), rgba(26,107,74,0.05)); border: 1.5px solid rgba(26,107,74,0.2); }
+        .tt-3 { background: linear-gradient(135deg, rgba(199,82,52,0.1), rgba(199,82,52,0.05)); border: 1.5px solid rgba(199,82,52,0.2); }
+        .tt-4 { background: linear-gradient(135deg, rgba(251,201,38,0.15), rgba(251,201,38,0.05)); border: 1.5px solid rgba(251,201,38,0.3); }
+        .tt-5 { background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(124,58,237,0.05)); border: 1.5px solid rgba(124,58,237,0.2); }
+        .tt-6 { background: linear-gradient(135deg, rgba(13,148,136,0.1), rgba(13,148,136,0.05)); border: 1.5px solid rgba(13,148,136,0.2); }
+        .topic-tile .tt-emoji { font-size: 28px; display: block; margin-bottom: 8px; }
+        .topic-tile .tt-name { font-size: 13px; font-weight: 700; color: var(--navy); display: block; margin-bottom: 2px; }
+        .topic-tile .tt-count { font-size: 11px; color: var(--text-light); }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta { background: var(--navy); padding: 52px 0; }
+        .final-cta-inner { max-width: 540px; margin: 0 auto; text-align: center; }
+        .final-cta h2 { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 800; color: #fff; line-height: 1.3; margin-bottom: 12px; }
+        .final-cta h2 span { color: var(--yellow); }
+        .final-cta p { font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.55; margin-bottom: 22px; }
+        .final-form { display: flex; gap: 8px; max-width: 400px; margin: 0 auto; }
+        .final-form input { flex: 1; padding: 11px 14px; border: 2px solid rgba(255,255,255,0.3); border-radius: 6px; background: rgba(255,255,255,0.08); color: #fff; font-size: 14px; font-family: inherit; }
+        .final-form input::placeholder { color: rgba(255,255,255,0.65); }
+        .final-form button { padding: 11px 22px; background: var(--yellow); color: var(--navy); border: none; border-radius: 6px; font-weight: 700; font-size: 14px; cursor: pointer; font-family: inherit; }
+        .final-proof { margin-top: 12px; font-size: 12px; color: rgba(255,255,255,0.65); }
+
+        /* FOOTER */
+        .footer { background: #0a1828; color: rgba(255,255,255,0.7); padding: 32px 0; }
+        .footer .wrap { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; }
+        .footer-brand img { height: 26px; margin-bottom: 8px; }
+        .footer-brand p { font-size: 12.5px; max-width: 260px; line-height: 1.5; }
+        .footer-col h4 { color: var(--yellow); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; font-weight: 700; }
+        .footer-col a { display: block; font-size: 12.5px; margin-bottom: 5px; opacity: 0.6; }
+        .footer-col a:hover { opacity: 1; color: #fff; }
+        .footer-bottom { margin-top: 20px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; font-size: 11px; opacity: 0.35; }
+
+        
+        /* PROMPT OF THE WEEK (outside card) */
+        .prompt-section { margin-top: 14px; flex: 1; display: flex; flex-direction: column; }
+        .prompt-heading { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+        .prompt-card-outer {
+            background: var(--cream);
+            border: 1.5px solid var(--border);
+            border-radius: 7px;
+            padding: 14px 14px 10px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .prompt-card-outer pre {
+            font-family: 'SF Mono', Consolas, monospace;
+            font-size: 11.5px; color: var(--text-mid); line-height: 1.55;
+            white-space: pre-wrap; word-wrap: break-word;
+            flex: 1;
+        }
+        .prompt-card-footer { margin-top: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .prompt-card-footer a { font-size: 11px; font-weight: 600; color: var(--navy); }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero-layout { grid-template-columns: 1fr; }
+            .hero-stories { border-right: none; padding-right: 0; }
+            .story { grid-template-columns: 140px 1fr; } .story-img { height: 110px; }
+            .articles-grid, .test-grid, .wyg-grid { grid-template-columns: 1fr; }
+            .dir-grid { grid-template-columns: 1fr; }
+            .tools-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .topic-grid { grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+            .nl-head { flex-direction: column; gap: 8px; }
+            .footer .wrap { flex-direction: column; }
+            .nav-right a:not(.nav-sub) { display: none; }
+            .nav-tagline { display: none; }
+            .final-form { flex-direction: column; }
+        }
+        @media (max-width: 600px) {
+            .story { grid-template-columns: 1fr; } .story-img { height: 160px; }
+            .tools-grid { grid-template-columns: 1fr; }
+            .topic-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+        .hero-stories { animation: fadeIn 0.35s ease both; }
+        .hero-sidebar { animation: fadeIn 0.35s 0.08s ease both; }
+    
+        /* Touch target minimum sizes */
+        a, button { min-height: 44px; }
+        .nav-right a { padding: 12px 14px; display: inline-flex; align-items: center; }
+
+    
+        /* Prevent layout shift with aspect ratios */
+        .story-img { aspect-ratio: 3/2; }
+        .testimonial img { aspect-ratio: 1/1; }
+    </style>
+</head>
+<body>
+    <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Skip School: The AI Playbook for Homeschool Parents</h1>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="wrap">
+            <div class="nav-left">
+                <a href="/" class="nav-logo"><picture><source srcset="/images/img-01-c418d1be.webp" type="image/webp"><img src="/images/img-01-c418d1be.png" alt="Skip School"></picture></a>
+                <span class="nav-tagline">The AI Playbook for Homeschool Parents</span>
+            </div>
+            <div class="nav-right">
+                <a href="/guides">Guides</a>
+                <a href="/articles">Articles</a>
+                <a href="/tools">Tools</a>
+                <a href="/directory">Directory</a>
+                <button class="nav-search-btn" onclick="document.querySelector('.search-overlay').classList.toggle('active')" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <a href="/subscribe" class="nav-sub">Subscribe</a>
+            </div>
+        </div>
+    </nav>
+    <main role="main">
+
+    
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay">
+        <div class="wrap">
+            <div class="search-bar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--text-light)" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" placeholder="Search guides, articles, tools..." class="search-input" autofocus>
+                <button class="search-close" onclick="this.closest('.search-overlay').classList.remove('active')">&times;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SPONSOR BAR -->
+    <div class="sponsor-bar">
+        <span class="sponsor-tag">Free</span>
+        <strong>One email a week that actually helps.</strong> &nbsp;&middot;&nbsp; AI tools, tested prompts, and honest reviews for homeschool parents.
+        <a href="/subscribe">Subscribe free &rarr;</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="wrap">
+            <div class="hero-layout">
+                <div class="hero-stories">
+                    <a href="ai-homeschool-complete-guide" class="story">
+                        <picture><source srcset="/images/img-02-2ecb5e02.webp" type="image/webp"><img fetchpriority="high" src="/images/img-02-2ecb5e02.jpg" alt="Parent and child learning" class="story-img"></picture>
+                        <div class="story-text">
+                            <span class="story-label">Complete Guide</span>
+                            <h2>How to Use AI to Homeschool Your Kids (The No-Hype Version)</h2>
+                            <p>Real tools, tested prompts, and an honest breakdown of what works. Claude, ChatGPT, Khan Academy, and more.</p>
+                            <span class="read-more">Read the guide &rarr;</span>
+                        </div>
+                    </a>
+                    <a href="texas-esa-guide" class="story">
+                        <picture><source srcset="/images/img-03-da18f4b5.webp" type="image/webp"><img src="/images/img-03-da18f4b5.jpg" alt="Children studying" class="story-img"></picture>
+                        <div class="story-text">
+                            <span class="story-label story-label-urgent">Deadline: March 17</span>
+                            <h2>Texas Is Giving Homeschool Families $2,000 Per Child</h2>
+                            <p>The TEFA application closes in 10 days. Here's what you get, who qualifies, and how to apply.</p>
+                            <span class="read-more">Read the ESA guide &rarr;</span>
+                        </div>
+                    </a>
+                    <a href="homeschool-kids-ai-five-years-ahead" class="story">
+                        <picture><source srcset="/images/img-04-44a156d1.webp" type="image/webp"><img loading="lazy" src="/images/img-04-44a156d1.jpg" alt="Child with technology" class="story-img"></picture>
+                        <div class="story-text">
+                            <span class="story-label">Featured</span>
+                            <h2>Why Homeschool Kids Using AI Will Be 5 Years Ahead</h2>
+                            <p>The math on personalized learning, time compression, and the digital literacy advantage.</p>
+                            <span class="read-more">Read the article &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="hero-sidebar">
+                    <div class="subscribe-box">
+                        <h2>One email a week.<br><span>Actually useful.</span></h2>
+                        <p>AI tools, tested prompts, and honest reviews for homeschool parents. Join homeschool families across the country.</p>
+                        <input type="email" placeholder="Your email address">
+                        <button type="button">Subscribe Free</button>
+                        <div class="proof">Free forever. No spam. Unsubscribe anytime.</div>
+                    </div>
+                    <div class="prompt-section">
+                        <h3 class="prompt-heading">Prompt of the Week</h3>
+                        <div class="prompt-card-outer">
+                            <pre>Create a spelling list of 15 words for a [age]-year-old at a [grade] level. Words should relate to our current topic: [topic].
+
+Include each word, a simple definition, and use it in a sentence.
+
+Mix difficulty: 5 easy, 7 medium, 3 challenging.</pre>
+                            <div class="prompt-card-footer">
+                                <a href="50-ai-prompts-homeschool">49 more prompts &rarr;</a>
+                                <button class="copy-sm" onclick="navigator.clipboard.writeText(this.closest('.prompt-card-outer').querySelector('pre').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)})">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LATEST ARTICLES (white bg) -->
+    <section class="section section-alt">
+        <div class="wrap">
+            <div class="section-header">
+                <span class="section-title">Latest</span><span class="section-line"></span>
+                <a href="/articles" class="section-link">All articles &rarr;</a>
+            </div>
+            <div class="articles-grid">
+                <a href="06-chatgpt-vs-claude-homeschool" class="article-card">
+                    <div class="article-card-img" style="background:url(/images/img-05-133c7d4e.jpg) center/cover;"><span class="article-cat">Tool Review</span></div>
+                    <div class="article-card-body"><h3>ChatGPT vs Claude for Homeschooling</h3><p>An honest comparison after using both for a year. Which one should you pick?</p></div>
+                </a>
+                <a href="09-first-week-ai-homeschool" class="article-card">
+                    <div class="article-card-img" style="background:url(/images/img-06-c371cbad.jpg) center/cover;"><span class="article-cat">Getting Started</span></div>
+                    <div class="article-card-body"><h3>Your First Week Using AI for Homeschool</h3><p>A 5-day starter plan. One small step each day. Start this Monday.</p></div>
+                </a>
+                <a href="#" class="article-card">
+                    <div class="article-card-img" style="background:url(/images/img-07-763f7dc3.jpg) center/cover;"><span class="article-cat article-cat-sponsor">Sponsor</span></div>
+                    <div class="article-card-body"><h3>IXL: Personalized Practice That Adapts</h3><p>Adaptive questions, real-time diagnostics, and progress tracking. Try it free for 30 days.</p></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT YOU GET (cream bg) -->
+    <section class="section section-cream">
+        <div class="wrap">
+            <div class="section-header">
+                <span class="section-title">What You Get</span><span class="section-line"></span>
+            </div>
+            <div class="wyg-grid">
+                <div class="wyg-card">
+                    <div class="wyg-icon-wrap wyg-icon-yellow">&#128231;</div>
+                    <h3>Weekly Newsletter</h3>
+                    <p>Every Wednesday: one tested AI tool, one copy-paste prompt, and one honest review. Five-minute read. Zero fluff.</p>
+                </div>
+                <div class="wyg-card">
+                    <div class="wyg-icon-wrap wyg-icon-navy">&#128214;</div>
+                    <h3>Guides &amp; Resources</h3>
+                    <p>Deep guides on AI tools, curriculum methods, state funding, and college prep. Practical, specific, and always free.</p>
+                </div>
+                <div class="wyg-card">
+                    <div class="wyg-icon-wrap wyg-icon-cream">&#128269;</div>
+                    <h3>Trusted Directory</h3>
+                    <p>Vetted curriculum providers, enrichment programs, co-ops, and AI tools. The businesses homeschool families actually use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUIDES -->
+    <section class="section section-alt">
+        <div class="wrap">
+            <div class="section-header">
+                <span class="section-title">Guides</span><span class="section-line"></span>
+                <a href="/guides" class="section-link">All guides &rarr;</a>
+            </div>
+            <div class="articles-grid">
+                <a href="ai-homeschool-complete-guide" class="article-card">
+                    <div class="article-card-img" style="background:url(/images/img-05-133c7d4e.jpg) center/cover;"><span class="article-cat">Complete Guide</span></div>
+                    <div class="article-card-body"><h3>How to Use AI to Homeschool Your Kids</h3><p>The practical, no-hype guide. Real tools, tested prompts, real results. 18 min read.</p></div>
+                </a>
+                <a href="05-ai-curriculum-builder" class="article-card">
+                    <div class="article-card-img" style="background:url(/images/img-06-c371cbad.jpg) center/cover;"><span class="article-cat">How-To</span></div>
+                    <div class="article-card-body"><h3>Build a Custom Curriculum Using AI</h3><p>From blank page to full year plan in 45 minutes. Step by step.</p></div>
+                </a>
+                <a href="09-first-week-ai-homeschool" class="article-card">
+                    <div class="article-card-img" style="background:url(/images/img-07-763f7dc3.jpg) center/cover;"><span class="article-cat">Getting Started</span></div>
+                    <div class="article-card-body"><h3>Your First Week Using AI for Homeschool</h3><p>A 5-day starter plan. One small step each day. Start this Monday.</p></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIRECTORY (white bg) -->
+    <section class="section section-alt">
+        <div class="wrap">
+            <div class="section-header">
+                <span class="section-title">Directory</span><span class="section-line"></span>
+                <a href="/directory" class="section-link">Browse all &rarr;</a>
+            </div>
+            <div class="dir-grid">
+                <div class="dir-card">
+                    <div class="dir-logo dir-logo-green">M</div>
+                    <div class="dir-card-info">
+                        <div class="dir-card-type"><span class="dir-featured-tag">Featured</span> Curriculum</div>
+                        <h3>Math-U-See</h3><p>Multi-sensory math with manipulative blocks. K through Calculus.</p>
+                    </div>
+                </div>
+                <div class="dir-card">
+                    <picture><source srcset="/images/img-11-40a58bf2.webp" type="image/webp"><img loading="lazy" src="/images/img-11-40a58bf2.png" alt="IXL Learning app icon" style="width:52px;height:52px;border-radius:10px;object-fit:cover;flex-shrink:0;"></picture>
+                    <div class="dir-card-info">
+                        <div class="dir-card-type"><span class="dir-featured-tag">Featured</span> AI Platform</div>
+                        <h3>Khan Academy</h3><p>Free K-12 with Khanmigo AI tutor. Best free math resource.</p>
+                    </div>
+                </div>
+                <div class="dir-card">
+                    <div class="dir-logo dir-logo-purple">EP</div>
+                    <div class="dir-card-info">
+                        <div class="dir-card-type">Online Curriculum</div>
+                        <h3>Easy Peasy All-in-One</h3><p>Free online homeschool curriculum. All grades, all subjects.</p>
+                    </div>
+                </div>
+                <div class="dir-card">
+                    <div class="dir-logo dir-logo-coral">O</div>
+                    <div class="dir-card-info">
+                        <div class="dir-card-type">Enrichment</div>
+                        <h3>Outschool</h3><p>Live online classes for ages 3-18. Art, coding, science, and more.</p>
+                    </div>
+                </div>
+                <div class="dir-card">
+                    <div class="dir-logo dir-logo-teal">HS</div>
+                    <div class="dir-card-info">
+                        <div class="dir-card-type">Science</div>
+                        <h3>Home Science Tools</h3><p>Science kits and lab supplies designed for homeschool families.</p>
+                    </div>
+                </div>
+                <div class="dir-card">
+                    <div class="dir-logo dir-logo-navy">D</div>
+                    <div class="dir-card-info">
+                        <div class="dir-card-type">Languages</div>
+                        <h3>Duolingo</h3><p>Gamified language learning. 30+ languages. Free tier works great.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS (cream bg) -->
+    
+
+    <!-- AI TOOLS & RESOURCES -->
+    <section class="section section-alt">
+        <div class="wrap">
+            <div class="section-header">
+                <span class="section-title">AI Tools &amp; Resources</span><span class="section-line"></span>
+                <a href="/articles" class="section-link">All articles &rarr;</a>
+            </div>
+            <div class="articles-grid">
+                <a href="06-chatgpt-vs-claude-homeschool" class="article-card">
+                    <div class="article-card-img" style="background:url(/images/img-06-c371cbad.jpg) center/cover;"><span class="article-cat">Comparison</span></div>
+                    <div class="article-card-body"><h3>ChatGPT vs Claude: Which Should You Use?</h3><p>After a year using both, here's the honest breakdown for homeschool parents.</p></div>
+                </a>
+                <a href="10-khan-academy-guide" class="article-card">
+                    <div class="article-card-img" style="background:url(/images/img-05-133c7d4e.jpg) center/cover;"><span class="article-cat">Setup Guide</span></div>
+                    <div class="article-card-body"><h3>Khan Academy: The Complete Setup Guide</h3><p>How to set up Khan Academy properly for homeschooling. Free content, Khanmigo, tracking.</p></div>
+                </a>
+                <a href="50-ai-prompts-homeschool" class="article-card">
+                    <div class="article-card-img" style="background:url(/images/img-07-763f7dc3.jpg) center/cover;"><span class="article-cat">Resource</span></div>
+                    <div class="article-card-body"><h3>50 AI Prompts for Homeschool Parents</h3><p>Copy, paste, fill in the blanks. Organized by subject. Tested with real kids.</p></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS (white bg) -->
+    <section class="section section-alt">
+        <div class="wrap">
+            <div class="section-header">
+                <span class="section-title">Tools We Use</span><span class="section-line"></span>
+                <a href="/tools" class="section-link">All tools &rarr;</a>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card"><div class="tool-icon ti-purple">C</div><h3>Claude</h3><div class="tp">Free / $20 mo</div><p>Lesson planning and custom materials</p></div>
+                <div class="tool-card"><div class="tool-icon ti-green">G</div><h3>ChatGPT</h3><div class="tp">Free / $20 mo</div><p>Quick questions and voice tutoring</p></div>
+                <div class="tool-card"><div class="tool-icon ti-blue">K</div><h3>Khan Academy</h3><div class="tp">Free / $44 yr</div><p>Adaptive math and SAT prep</p></div>
+                <div class="tool-card"><div class="tool-icon ti-teal">D</div><h3>Duolingo</h3><div class="tp">Free / $8 mo</div><p>Language learning with gamification</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPLORE BY TOPIC (white bg) -->
+    <section class="section section-alt">
+        <div class="wrap">
+            <div class="section-header">
+                <span class="section-title">Explore by Topic</span><span class="section-line"></span>
+            </div>
+            <div class="topic-grid">
+                <a href="/topics/ai-tools" class="topic-tile tt-1"><span class="tt-emoji">&#129302;</span><span class="tt-name">AI Tools</span><span class="tt-count">12 guides</span></a>
+                <a href="/topics/curriculum" class="topic-tile tt-2"><span class="tt-emoji">&#128218;</span><span class="tt-name">Curriculum</span><span class="tt-count">8 articles</span></a>
+                <a href="/topics/esa-funding" class="topic-tile tt-3"><span class="tt-emoji">&#128176;</span><span class="tt-name">ESA &amp; Funding</span><span class="tt-count">5 guides</span></a>
+                <a href="/topics/getting-started" class="topic-tile tt-4"><span class="tt-emoji">&#127793;</span><span class="tt-name">Getting Started</span><span class="tt-count">6 articles</span></a>
+                <a href="/topics/high-school" class="topic-tile tt-5"><span class="tt-emoji">&#127891;</span><span class="tt-name">High School</span><span class="tt-count">4 guides</span></a>
+                <a href="/topics/special-needs" class="topic-tile tt-6"><span class="tt-emoji">&#128156;</span><span class="tt-name">Special Needs</span><span class="tt-count">3 articles</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <div class="wrap">
+            <div class="final-cta-inner">
+                <h2>Skip the classroom. Use AI to personalize how your kids learn. <span>Give them a five-year head start.</span></h2>
+                <p>Join 3,000+ homeschool parents who get practical AI tools, tested prompts, and honest reviews every Wednesday.</p>
+                <div class="final-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="button">Subscribe Free</button>
+                </div>
+                <div class="final-proof">Free forever &middot; No spam &middot; Unsubscribe anytime</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    </main>
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer-brand">
+                <picture><source srcset="/images/img-18-861ffcfb.webp" type="image/webp"><img loading="lazy" src="/images/img-18-861ffcfb.png" alt="Skip School" style="height:28px;width:auto;"></picture>
+                <p>Skip the classroom. Use AI to personalize how your kids learn. Give them a five-year head start.</p>
+            </div>
+            <div class="footer-col"><div style="font-weight:700;font-size:13px;"><strong>Content</strong></div><a href="/guides">Guides</a><a href="/articles">Articles</a><a href="50-ai-prompts-homeschool">50 AI Prompts</a><a href="texas-esa-guide">Texas ESA Guide</a></div>
+            <div class="footer-col"><div style="font-weight:700;font-size:13px;"><strong>Resources</strong></div><a href="/tools">AI Tools</a><a href="/directory">Directory</a><a href="/subscribe">Subscribe</a></div>
+            <div class="footer-col"><div style="font-weight:700;font-size:13px;"><strong>About</strong></div><a href="/about">Our Story</a><a href="/contact">Contact</a></div>
+        </div>
+        <div class="wrap"><div class="footer-bottom">&copy; 2026 Skip School. All rights reserved. SkipSchool.ai</div></div>
+    </footer>
+
+
+<script>
+document.querySelectorAll('button').forEach(function(btn) {
+    if (btn.textContent.trim() === 'Subscribe Free' || btn.textContent.trim() === 'Subscribe') {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            var input = this.parentElement.querySelector('input[type="email"]') || this.previousElementSibling;
+            if (!input || !input.value || !input.value.includes('@')) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            var email = input.value;
+            var originalText = this.textContent;
+            this.textContent = 'Subscribing...';
+            this.disabled = true;
+            
+            fetch('https://api.beehiiv.com/v2/publications/pub_5c9a95b1-9b7d-4809-a24f-e7dd6fb96512/subscriptions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer kRII45B7ClwC4RST00PgrNSMTeMDn7ssbX5Bgt0LDTiy67Jk3iXPRNPzLKaXjotF'
+                },
+                body: JSON.stringify({
+                    email: email,
+                    reactivate_existing: true,
+                    send_welcome_email: true,
+                    utm_source: 'skipschool_website',
+                    utm_medium: 'web',
+                    referring_site: window.location.pathname
+                })
+            })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data.data && data.data.id) {
+                    this.textContent = 'Subscribed!';
+                    input.value = '';
+                    input.placeholder = 'You\'re in! Check your email.';
+                    setTimeout(function() { window.location.href = 'https://skipschool.ai/subscribe'; }, 1500);
+                } else {
+                    this.textContent = originalText;
+                    this.disabled = false;
+                    alert('Something went wrong. Please try again.');
+                }
+            }.bind(this))
+            .catch(function(err) {
+                this.textContent = originalText;
+                this.disabled = false;
+                alert('Something went wrong. Please try again.');
+            }.bind(this));
+        });
+    }
+});
+</script>
+</body>
+</html>

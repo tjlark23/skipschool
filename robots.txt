@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://skipschool.ai/sitemap.xml
