@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://skipschool.ai/</loc><priority>1.0</priority></url>
   <url><loc>https://skipschool.ai/05-ai-curriculum-builder</loc><priority>0.6</priority></url>
-  <url><loc>https://skipschool.ai/06-chatgpt-vs-claude-homeschool</loc><priority>0.6</priority></url>
+  <url><loc>https://skipschool.ai/06-chatgpt-vs-claude-homeschool</loc><priority>0.8</priority></url>
   <url><loc>https://skipschool.ai/07-socialization-myth</loc><priority>0.6</priority></url>
   <url><loc>https://skipschool.ai/08-morning-routine-ai</loc><priority>0.6</priority></url>
   <url><loc>https://skipschool.ai/09-first-week-ai-homeschool</loc><priority>0.6</priority></url>
@@ -63,44 +62,69 @@
   <url><loc>https://skipschool.ai/64-ai-nature-journal</loc><priority>0.6</priority></url>
   <url><loc>https://skipschool.ai/65-gifted-homeschool-ai</loc><priority>0.6</priority></url>
   <url><loc>https://skipschool.ai/66-ai-grammar-painless</loc><priority>0.6</priority></url>
-  <url><loc>https://skipschool.ai/about/</loc><priority>0.6</priority></url>
-  <url><loc>https://skipschool.ai/ai-homeschool-complete-guide</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/articles</loc><priority>0.6</priority></url>
-  <url><loc>https://skipschool.ai/contact/</loc><priority>0.6</priority></url>
-  <url><loc>https://skipschool.ai/directory</loc><priority>0.6</priority></url>
-  <url><loc>https://skipschool.ai/guides</loc><priority>0.6</priority></url>
+  <url><loc>https://skipschool.ai/about-ashley-larkin</loc><priority>0.9</priority></url>
+  <url><loc>https://skipschool.ai/ai-homeschool-complete-guide</loc><priority>0.9</priority></url>
+  <url><loc>https://skipschool.ai/arizona-esa-guide</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/arkansas-esa-guide</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/articles-index</loc><priority>0.7</priority></url>
+  <url><loc>https://skipschool.ai/babbel-page</loc><priority>0.6</priority></url>
+  <url><loc>https://skipschool.ai/brainly-page</loc><priority>0.6</priority></url>
+  <url><loc>https://skipschool.ai/chatgpt-homeschool-page</loc><priority>0.6</priority></url>
+  <url><loc>https://skipschool.ai/chatgpt-vs-claude-homeschool</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/claude-homeschool-page</loc><priority>0.6</priority></url>
+  <url><loc>https://skipschool.ai/directory-index</loc><priority>0.7</priority></url>
+  <url><loc>https://skipschool.ai/duolingo-page</loc><priority>0.6</priority></url>
+  <url><loc>https://skipschool.ai/duolingo-vs-rosetta-stone</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/epic-books-page</loc><priority>0.6</priority></url>
+  <url><loc>https://skipschool.ai/epic-vs-kindle-kids</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/florida-esa-guide</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/guides-index</loc><priority>0.7</priority></url>
   <url><loc>https://skipschool.ai/homeschool-kids-ai-five-years-ahead</loc><priority>0.6</priority></url>
-  <url><loc>https://skipschool.ai/texas-esa-guide</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/tools</loc><priority>0.6</priority></url>
-  <url><loc>https://skipschool.ai/topics/ai-tools/</loc><priority>0.6</priority></url>
-  <url><loc>https://skipschool.ai/topics/curriculum/</loc><priority>0.6</priority></url>
-  <url><loc>https://skipschool.ai/topics/esa-funding/</loc><priority>0.6</priority></url>
-  <url><loc>https://skipschool.ai/topics/getting-started/</loc><priority>0.6</priority></url>
-  <url><loc>https://skipschool.ai/topics/high-school/</loc><priority>0.6</priority></url>
-  <url><loc>https://skipschool.ai/topics/special-needs/</loc><priority>0.6</priority></url>
-  <url><loc>https://skipschool.ai/review-math-academy</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-khan-academy</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-claude-ai</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-ixl</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-outschool</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-duolingo</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-chatgpt</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-beast-academy</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-teaching-textbooks</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-prodigy-math</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-time4learning</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-alpha-school</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-singapore-math</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-saxon-math</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-math-u-see</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-easy-peasy</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/</loc><priority>1.0</priority></url>
+  <url><loc>https://skipschool.ai/indiana-esa-guide</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/iowa-esa-guide</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/ixl-page</loc><priority>0.6</priority></url>
+  <url><loc>https://skipschool.ai/ixl-vs-khan-academy</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/ixl-vs-prodigy</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/mathway-page</loc><priority>0.6</priority></url>
+  <url><loc>https://skipschool.ai/north-carolina-esa-guide</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/ohio-esa-guide</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/oklahoma-esa-guide</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/outschool-page</loc><priority>0.6</priority></url>
+  <url><loc>https://skipschool.ai/outschool-vs-khan-academy</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/prodigy-page</loc><priority>0.6</priority></url>
+  <url><loc>https://skipschool.ai/prodigy-vs-khan-academy</loc><priority>0.8</priority></url>
   <url><loc>https://skipschool.ai/review-abcmouse</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-perplexity-ai</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-google-gemini</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-alpha-school</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-beast-academy</loc><priority>0.8</priority></url>
   <url><loc>https://skipschool.ai/review-bookshark</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-the-good-and-beautiful</loc><priority>0.8</priority></url>
-  <url><loc>https://skipschool.ai/review-splashlearn</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-chatgpt</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-claude-ai</loc><priority>0.8</priority></url>
   <url><loc>https://skipschool.ai/review-curiosity-stream</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-duolingo</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-easy-peasy</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-google-gemini</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-ixl</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-khan-academy</loc><priority>0.8</priority></url>
   <url><loc>https://skipschool.ai/review-libby-app</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-math-academy</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-math-u-see</loc><priority>0.8</priority></url>
   <url><loc>https://skipschool.ai/review-notion</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-outschool</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-perplexity-ai</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-prodigy-math</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-saxon-math</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-singapore-math</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-splashlearn</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-teaching-textbooks</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-the-good-and-beautiful</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/review-time4learning</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/rosetta-stone-page</loc><priority>0.6</priority></url>
+  <url><loc>https://skipschool.ai/splashlearn-page</loc><priority>0.6</priority></url>
+  <url><loc>https://skipschool.ai/subscribe</loc><priority>0.9</priority></url>
+  <url><loc>https://skipschool.ai/tennessee-esa-guide</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/texas-esa-guide</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/tools-index</loc><priority>0.7</priority></url>
+  <url><loc>https://skipschool.ai/utah-esa-guide</loc><priority>0.8</priority></url>
+  <url><loc>https://skipschool.ai/west-virginia-esa-guide</loc><priority>0.8</priority></url>
 </urlset>

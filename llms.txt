@@ -1,0 +1,142 @@
+# Skip School - skipschool.ai
+# The AI Playbook for Homeschool Parents
+
+## About
+Skip School helps homeschool parents use AI tools to personalize their kids' education. Weekly newsletter with tested prompts, honest tool reviews, and practical advice.
+
+## Key Pages
+- Homepage: https://skipschool.ai/
+- Subscribe: https://skipschool.ai/subscribe
+- Complete Guide: https://skipschool.ai/ai-homeschool-complete-guide
+- About the Author: https://skipschool.ai/about-ashley-larkin
+
+## Articles
+- Build a Custom Curriculum Using AI: https://skipschool.ai/05-ai-curriculum-builder
+- ChatGPT vs Claude for Homeschooling: Which Should You Use?: https://skipschool.ai/06-chatgpt-vs-claude-homeschool
+- The Socialization Question: Answered: https://skipschool.ai/07-socialization-myth
+- Our AI Homeschool Morning Routine: https://skipschool.ai/08-morning-routine-ai
+- Your First Week Using AI for Homeschool: https://skipschool.ai/09-first-week-ai-homeschool
+- Khan Academy: The Complete Setup Guide for Homeschool Families: https://skipschool.ai/10-khan-academy-guide
+- How I Spend $0 on Curriculum Most Months: https://skipschool.ai/11-homeschool-on-budget
+- AI-Curated Reading Lists for Every Age: https://skipschool.ai/12-ai-reading-list-by-age
+- How to Teach Your Kids to Use AI Responsibly: https://skipschool.ai/13-teach-kids-use-ai
+- 25 Field Trip Ideas That Double as Lessons: https://skipschool.ai/14-homeschool-field-trip-ideas
+- Charlotte Mason + AI: Better Together: https://skipschool.ai/15-charlotte-mason-ai
+- Classical Education Meets AI: https://skipschool.ai/16-classical-education-ai
+- How to Teach Writing Using AI (Without Letting AI Write For Them): https://skipschool.ai/17-homeschool-writing-ai
+- 20 AI-Designed Kitchen Science Experiments: https://skipschool.ai/18-ai-science-experiments
+- Homeschooling High School With AI: https://skipschool.ai/19-high-school-ai
+- AI Tools for Special Needs Homeschooling: https://skipschool.ai/20-special-needs-ai
+- AI for Math: When Your Kid Is Stuck: https://skipschool.ai/21-ai-math-help
+- AI Without the Screen Time Guilt: https://skipschool.ai/22-screen-time-balance
+- Homeschool Laws by State (2026): https://skipschool.ai/23-state-homeschool-laws
+- How to Find (or Start) a Homeschool Co-op: https://skipschool.ai/24-homeschool-co-op-guide
+- AI Tricks for the Reluctant Learner: https://skipschool.ai/25-ai-for-reluctant-learner
+- How to Know If Your Kid Is Actually Learning: https://skipschool.ai/26-homeschool-assessment
+- Making History Come Alive With AI: https://skipschool.ai/27-ai-history-alive
+- The 15 Best Free Resources (2026): https://skipschool.ai/28-best-free-resources
+- Teaching Art and Music With AI: https://skipschool.ai/29-ai-art-music-homeschool
+- Summer Learning That Doesn't Feel Like School: https://skipschool.ai/30-summer-learning-ai
+- Homeschool to College: What Admissions Want: https://skipschool.ai/31-college-admissions-homeschool
+- Teaching Foreign Languages at Home With AI: https://skipschool.ai/32-ai-foreign-language
+- Teaching Kids Financial Literacy With AI: https://skipschool.ai/33-ai-financial-literacy-kids
+- Homeschool Burnout Is Real: How I Recovered: https://skipschool.ai/34-homeschool-burnout
+- Teaching Kids to Code (AI as Teaching Assistant): https://skipschool.ai/35-ai-coding-kids
+- Can You Unschool With AI?: https://skipschool.ai/36-unschool-ai
+- Just Pulled Your Kid Out? Start Here.: https://skipschool.ai/37-new-to-homeschool
+- PE at Home: Keeping Kids Active: https://skipschool.ai/38-ai-physical-education
+- Dual Enrollment for Homeschoolers: https://skipschool.ai/39-dual-enrollment-guide
+- What Alpha School Gets Right (and Wrong): https://skipschool.ai/40-what-alpha-school-gets-right-wrong
+- 10 Ways to Teach Geography Kids Enjoy: https://skipschool.ai/41-ai-geography-lessons
+- How to Create Homeschool Report Cards: https://skipschool.ai/42-ai-report-cards
+- This Week in AI Homeschooling: Issue #1: https://skipschool.ai/43-weekly-newsletter-sample
+- 7 AI Homeschool Myths Busted: https://skipschool.ai/44-ai-homeschool-myths
+- Homeschool Schedule Templates That Work: https://skipschool.ai/45-homeschool-schedule-templates
+- AI Homeschool FAQ: 20 Questions Answered: https://skipschool.ai/46-ai-homeschool-faq
+- Build Vocabulary Without Boring Word Lists: https://skipschool.ai/47-ai-vocabulary-builder
+- Building a Homeschool Portfolio: https://skipschool.ai/48-homeschool-portfolio
+- Finally Master Multiplication Facts: https://skipschool.ai/49-ai-multiplication-facts
+- 50 AI Prompts for Homeschool Parents: https://skipschool.ai/50-ai-prompts-homeschool
+- Roadschooling: How to Homeschool While Traveling: https://skipschool.ai/50-roadschool-guide
+- Spelling Practice That Works: https://skipschool.ai/51-ai-spelling-practice
+- Why Reading Aloud Still Matters (Even With AI): https://skipschool.ai/52-reading-aloud-with-ai
+- Homeschool Record-Keeping: What to Track: https://skipschool.ai/53-homeschool-record-keeping
+- Handwriting Practice Kids Don't Hate: https://skipschool.ai/54-ai-handwriting-practice
+- AI-Powered Test Prep for Homeschoolers: https://skipschool.ai/55-ai-test-prep
+- Teaching Critical Thinking With AI Debates: https://skipschool.ai/56-ai-debate-critical-thinking
+- Signs of Learning Differences (And What to Do): https://skipschool.ai/57-ai-learning-disabilities-detection
+- How to Homeschool With a Toddler in the House: https://skipschool.ai/58-homeschool-with-toddlers
+- Building Executive Function Skills With AI: https://skipschool.ai/60-ai-executive-function
+- Encouraging Girls in STEM With AI: https://skipschool.ai/61-ai-stem-girls
+- Boost Reading Comprehension With AI: https://skipschool.ai/62-ai-reading-comprehension
+- The Homeschool Dad Guide: https://skipschool.ai/63-homeschool-dad-guide
+- Start a Nature Journal With AI: https://skipschool.ai/64-ai-nature-journal
+- Homeschooling Gifted Kids With AI: https://skipschool.ai/65-gifted-homeschool-ai
+- Painless Grammar: AI Methods That Work: https://skipschool.ai/66-ai-grammar-painless
+- How to Use AI to Homeschool Your Kids: The Complete Guide: https://skipschool.ai/ai-homeschool-complete-guide
+- Why Homeschool Kids Using AI Will Be 5 Years Ahead: https://skipschool.ai/homeschool-kids-ai-five-years-ahead
+
+## Tool Reviews
+- ABCmouse Review for Homeschool Families (2026): https://skipschool.ai/review-abcmouse
+- Alpha School Review: What Homeschoolers Can Learn From It (2026): https://skipschool.ai/review-alpha-school
+- Beast Academy Review for Homeschool Families (2026): https://skipschool.ai/review-beast-academy
+- BookShark Review for Homeschool Families (2026): https://skipschool.ai/review-bookshark
+- ChatGPT Review for Homeschool Parents (2026): https://skipschool.ai/review-chatgpt
+- Claude AI Review for Homeschool Parents (2026): https://skipschool.ai/review-claude-ai
+- CuriosityStream Review for Homeschool Families (2026): https://skipschool.ai/review-curiosity-stream
+- Duolingo Review for Homeschool Families (2026): https://skipschool.ai/review-duolingo
+- Easy Peasy All-in-One Homeschool Review (2026): https://skipschool.ai/review-easy-peasy
+- Google Gemini Review for Homeschool Parents (2026): https://skipschool.ai/review-google-gemini
+- IXL Review for Homeschool Families (2026): https://skipschool.ai/review-ixl
+- Khan Academy Review for Homeschool Families (2026): https://skipschool.ai/review-khan-academy
+- Libby App Review for Homeschool Families (2026): https://skipschool.ai/review-libby-app
+- Math Academy Review for Homeschool Families (2026): https://skipschool.ai/review-math-academy
+- Math-U-See Review for Homeschool Families (2026): https://skipschool.ai/review-math-u-see
+- Notion Review for Homeschool Planning (2026): https://skipschool.ai/review-notion
+- Outschool Review for Homeschool Families (2026): https://skipschool.ai/review-outschool
+- Perplexity AI Review for Homeschool Parents (2026): https://skipschool.ai/review-perplexity-ai
+- Prodigy Math Review for Homeschool Families (2026): https://skipschool.ai/review-prodigy-math
+- Saxon Math Review for Homeschool Families (2026): https://skipschool.ai/review-saxon-math
+- Singapore Math Review for Homeschool Families (2026): https://skipschool.ai/review-singapore-math
+- SplashLearn Review for Homeschool Families (2026): https://skipschool.ai/review-splashlearn
+- Teaching Textbooks Review for Homeschool Families (2026): https://skipschool.ai/review-teaching-textbooks
+- The Good and the Beautiful Review for Homeschool Families (2026): https://skipschool.ai/review-the-good-and-beautiful
+- Time4Learning Review for Homeschool Families (2026): https://skipschool.ai/review-time4learning
+
+## Comparison Guides
+- ChatGPT vs Claude for Homeschooling: Which Should You Use?: https://skipschool.ai/06-chatgpt-vs-claude-homeschool
+- ChatGPT vs Claude for Homeschool (2025): https://skipschool.ai/chatgpt-vs-claude-homeschool
+- Duolingo vs Rosetta Stone for Homeschool (2025): https://skipschool.ai/duolingo-vs-rosetta-stone
+- Epic! vs Kindle Kids for Homeschool Reading (2025): https://skipschool.ai/epic-vs-kindle-kids
+- IXL vs Khan Academy for Homeschool (2025): https://skipschool.ai/ixl-vs-khan-academy
+- IXL vs Prodigy Math for Homeschool (2025): https://skipschool.ai/ixl-vs-prodigy
+- Outschool vs Khan Academy for Homeschool (2025): https://skipschool.ai/outschool-vs-khan-academy
+- Prodigy vs Khan Academy Math for Homeschool (2025): https://skipschool.ai/prodigy-vs-khan-academy
+
+## State ESA Guides
+- Arizona ESA Guide for Homeschool Families 2026: https://skipschool.ai/arizona-esa-guide
+- Arkansas ESA Guide for Homeschool Families 2026: https://skipschool.ai/arkansas-esa-guide
+- Florida ESA Guide for Homeschool Families 2026: https://skipschool.ai/florida-esa-guide
+- Indiana School Choice Guide for Homeschool Families 2026: https://skipschool.ai/indiana-esa-guide
+- Iowa ESA Guide for Homeschool Families 2026: https://skipschool.ai/iowa-esa-guide
+- North Carolina ESA Guide for Homeschool Families 2026: https://skipschool.ai/north-carolina-esa-guide
+- Ohio School Choice Guide for Homeschool Families 2026: https://skipschool.ai/ohio-esa-guide
+- Oklahoma School Choice Guide for Homeschool Families 2026: https://skipschool.ai/oklahoma-esa-guide
+- Tennessee ESA Guide for Homeschool Families 2026: https://skipschool.ai/tennessee-esa-guide
+- Texas Education Freedom Accounts: What Homeschool Families Need to Know: https://skipschool.ai/texas-esa-guide
+- Utah ESA Guide for Homeschool Families 2026: https://skipschool.ai/utah-esa-guide
+- West Virginia Hope Scholarship Guide for Homeschool Families 2026: https://skipschool.ai/west-virginia-esa-guide
+
+## Directory
+- Babbel for Homeschool: https://skipschool.ai/babbel-page
+- Brainly for Homeschool: https://skipschool.ai/brainly-page
+- ChatGPT for Homeschool: https://skipschool.ai/chatgpt-homeschool-page
+- Claude AI for Homeschool: https://skipschool.ai/claude-homeschool-page
+- Duolingo for Homeschool: https://skipschool.ai/duolingo-page
+- Epic! Books for Homeschool: https://skipschool.ai/epic-books-page
+- IXL for Homeschool: https://skipschool.ai/ixl-page
+- Mathway for Homeschool: https://skipschool.ai/mathway-page
+- Outschool for Homeschool: https://skipschool.ai/outschool-page
+- Prodigy Math for Homeschool: https://skipschool.ai/prodigy-page
+- Rosetta Stone for Homeschool: https://skipschool.ai/rosetta-stone-page
+- SplashLearn for Homeschool: https://skipschool.ai/splashlearn-page
