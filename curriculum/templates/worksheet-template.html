@@ -1,0 +1,135 @@
+<!-- 
+  Skip School Curriculum Packet Template (v4)
+  This file is used by generate_packet.py to produce final worksheet HTML.
+  DO NOT edit this template for individual packets. Edit generate_packet.py instead.
+  
+  Design system:
+  - Two-bar header (white logo bar + colored subject banner)
+  - Five colors: Navy=computation, Green=reading, Coral=grammar, Teal=geometry, Purple=fractions, Gold=extensions
+  - Try This at Home box on every page
+  - Extension Page (gold, premium)
+  - Fixed 11in pages, overflow:hidden
+  - Fonts: Fraunces (titles), DM Sans (body)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{{PACKET_TITLE}}</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@page { size: 8.5in 11in; margin: 0; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; font-size:10.5pt; line-height:1.45; color:#1a1a1a; background:#fff; margin:0; }
+
+.page {
+  width: 8.5in; height: 11in; background: #fff;
+  position: relative; display: flex; flex-direction: column;
+  overflow: hidden;
+  page-break-after: always; break-after: page;
+  page-break-inside: avoid; break-inside: avoid;
+}
+.page:last-child { page-break-after: auto; break-after: auto; }
+
+/* HEADER */
+.logo-bar { background:#fff; padding:7px 0.6in 5px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e5e5e5; flex-shrink:0; }
+.logo-bar img.logo { height:24px; }
+.logo-bar .gw { font-size:8pt; font-weight:600; color:#888; }
+.subject-bar { padding:9px 0.6in 10px; flex-shrink:0; }
+.subject-bar h1 { font-family:'Fraunces',serif; font-weight:800; font-size:19pt; color:#fff; line-height:1.15; }
+.subject-bar .sub { font-size:8.5pt; color:rgba(255,255,255,.8); margin-top:1px; }
+
+.clr-computation { background:#0d203b; }
+.clr-reading     { background:#2c6e49; }
+.clr-grammar     { background:#c44536; }
+.clr-geometry    { background:#1a7a6d; }
+.clr-fractions   { background:#5b4a8a; }
+.clr-extensions  { background:#b8860b; }
+
+/* CONTENT */
+.page-inner { flex:1; padding:0 0.6in; overflow:hidden; }
+
+/* Name/Date */
+.nd { display:flex; justify-content:space-between; padding:8px 0; margin-bottom:6px; border-bottom:1.5px solid #ddd; font-size:9.5pt; }
+.nd .l { color:#777; font-weight:500; }
+.nd .b { border-bottom:1.5px solid #333; display:inline-block; }
+.nd .b.n { width:210px; }
+.nd .b.d { width:115px; }
+
+/* Ashley Tip */
+.atip { background:#fffcf0; border:1px solid #f0e6c0; border-left:4px solid #fbc926; border-radius:0 5px 5px 0; padding:8px 12px; margin:4px 0 10px; }
+.atip .ah { font-family:'Fraunces',serif; font-weight:700; font-size:9.5pt; color:#0d203b; margin-bottom:2px; }
+.atip .at { font-size:9pt; color:#444; line-height:1.5; }
+
+/* Sections */
+.sh { font-size:11pt; font-weight:700; color:#1a1a1a; margin:12px 0 4px; }
+.inst { font-size:9pt; color:#555; margin-bottom:5px; font-style:italic; }
+.rembox { background:#f4f6f8; border-left:3px solid var(--ac,#0d203b); padding:6px 12px; margin:4px 0 10px; font-size:9pt; }
+
+/* Grids */
+.g4 { display:grid; grid-template-columns:repeat(4,1fr); gap:0 6px; margin:3px 0; }
+.g3 { display:grid; grid-template-columns:repeat(3,1fr); gap:0 6px; margin:3px 0; }
+.g2 { display:grid; grid-template-columns:repeat(2,1fr); gap:0 6px; margin:3px 0; }
+.pc { padding:3px 1px; font-size:10pt; line-height:1.75; }
+.ab { display:inline-block; min-width:40px; border-bottom:1.5px solid #444; margin-left:3px; }
+.abm { min-width:50px; }
+
+/* Sequences */
+.seq { font-size:11pt; margin:4px 0; }
+.sb { display:inline-block; width:28px; border-bottom:1.5px solid #444; text-align:center; margin:0 1px; }
+
+/* Passage */
+.pbox { background:#f7f9fb; border:1px solid #dde3ea; border-radius:5px; padding:10px 14px; margin:6px 0 8px; font-size:10pt; line-height:1.55; }
+.pbox p { text-indent:20px; margin-bottom:3px; }
+
+/* MC */
+.mcq { margin:6px 0; }
+.mcq .qt { font-weight:700; font-size:10pt; margin-bottom:0; }
+.mcq .opts { margin-left:14px; font-size:9.5pt; line-height:1.45; }
+
+/* Story problems */
+.sp { margin:8px 0; }
+.sp .sn { font-weight:700; color:var(--ac,#0d203b); }
+.sp .al { margin:3px 0 2px 4px; font-size:9.5pt; color:#555; }
+.abl { display:inline-block; min-width:170px; border-bottom:1.5px solid #555; margin-left:3px; }
+
+/* Try This */
+.trybox { background:#fef9ec; border-top:2px solid #fbc926; padding:6px 0.6in; flex-shrink:0; display:flex; align-items:flex-start; gap:8px; }
+.trybox .tryicon { font-size:13pt; flex-shrink:0; margin-top:1px; }
+.trybox .trylabel { font-weight:700; font-size:8.5pt; color:#b8860b; text-transform:uppercase; letter-spacing:0.5px; }
+.trybox .trytext { font-size:8.5pt; color:#555; line-height:1.4; }
+
+/* Footer */
+.footer { background:#f8f8f8; border-top:1px solid #eee; padding:5px 0.6in; display:flex; align-items:center; flex-shrink:0; min-height:28px; }
+.footer .st { color:#fbc926; font-size:12pt; flex-shrink:0; }
+.footer .tip { font-style:italic; font-size:8pt; color:#666; text-align:center; flex:1; margin:0 8px; }
+.footer img.fl { height:11px; opacity:.3; flex-shrink:0; }
+
+/* Extension items */
+.ext-item { margin:10px 0; padding:10px 14px; background:#fef9ec; border-left:4px solid #b8860b; border-radius:0 6px 6px 0; }
+.ext-item .ext-subj { font-weight:700; font-size:9pt; color:#b8860b; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:2px; }
+.ext-item .ext-title { font-weight:700; font-size:10.5pt; color:#1a1a1a; margin-bottom:3px; }
+.ext-item .ext-desc { font-size:9.5pt; color:#444; line-height:1.5; }
+.ext-fieldtrip { margin:10px 0; padding:10px 14px; background:#f0f7f4; border-left:4px solid #2c6e49; border-radius:0 6px 6px 0; }
+.ext-fieldtrip .ft-label { font-weight:700; font-size:9pt; color:#2c6e49; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:2px; }
+.ext-fieldtrip .ft-title { font-weight:700; font-size:10.5pt; margin-bottom:3px; }
+.ext-fieldtrip .ft-desc { font-size:9.5pt; color:#444; line-height:1.5; }
+
+/* Cover */
+.cover-inner { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0.7in; }
+.cover-inner img.cl { height:50px; margin-bottom:12px; }
+.cover-inner .ctag { font-size:9.5pt; color:#888; letter-spacing:2px; text-transform:uppercase; margin-bottom:32px; }
+.cover-inner .cdiv { width:55px; height:3px; background:#fbc926; margin:0 auto 24px; }
+.cover-inner .ct { font-family:'Fraunces',serif; font-weight:800; font-size:19pt; color:#0d203b; margin-bottom:5px; }
+.cover-inner .cs { font-size:12pt; color:#555; margin-bottom:24px; }
+.cover-inner .cdet { background:#f7f8fa; border-radius:8px; padding:16px 28px; width:100%; max-width:380px; text-align:left; }
+.cover-inner .cdr { display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px solid #eee; font-size:9.5pt; }
+.cover-inner .cdr:last-child { border-bottom:none; }
+.cover-inner .cdr .cl2 { color:#888; }
+.cover-inner .cdr .cv { font-weight:600; color:#0d203b; }
+</style>
+</head>
+<body>
+{{PAGES}}
+</body>
+</html>

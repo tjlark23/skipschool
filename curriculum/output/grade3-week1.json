@@ -1,0 +1,249 @@
+{
+  "grade": 3,
+  "week": 1,
+  "date_range": "August 19-23, 2026",
+  "child_name": null,
+  "ashleys_tip": "First week of third grade! We're starting with place value and rounding, which is the foundation for everything else in math this year. If your kid can tell you the value of each digit in a 5-digit number, they're in good shape. Don't rush it. Spend extra time on the number puzzles if they enjoy those.",
+  "pages": [
+    {
+      "title": "Place Value to 100,000",
+      "subtitle": "Understand the value of each digit in large numbers.",
+      "subject": "math",
+      "color": "computation",
+      "teks": "TEKS 3.2A, 3.2B",
+      "try_this": {
+        "icon": "lightbulb",
+        "text": "Look at the odometer in your car. Read the number aloud, then tell someone the value of each digit. What place is each one in?"
+      },
+      "footer_tip": "Place value tells us what each digit is WORTH. The 3 in 3,452 is worth 3,000!",
+      "sections": [
+        {
+          "type": "section_header",
+          "text": "Write the value of the underlined digit:"
+        },
+        {
+          "type": "problems_grid",
+          "columns": 2,
+          "problems": [
+            "1. 4<u>7</u>,382 = <span class='ab abm'></span>",
+            "2. <u>5</u>6,219 = <span class='ab abm'></span>",
+            "3. 83,<u>4</u>61 = <span class='ab abm'></span>",
+            "4. 29,5<u>0</u>8 = <span class='ab abm'></span>",
+            "5. 6<u>1</u>,745 = <span class='ab abm'></span>",
+            "6. <u>9</u>2,003 = <span class='ab abm'></span>"
+          ]
+        },
+        {
+          "type": "section_header",
+          "text": "Write each number in expanded form:"
+        },
+        {
+          "type": "problems_list",
+          "problems": [
+            "7. 45,321 = <span class='abl'></span>",
+            "8. 78,059 = <span class='abl'></span>",
+            "9. 90,406 = <span class='abl'></span>"
+          ]
+        },
+        {
+          "type": "section_header",
+          "text": "Write the number from the clues:"
+        },
+        {
+          "type": "problems_list",
+          "problems": [
+            "10. I have a 6 in the thousands place, a 2 in the hundreds place, a 0 in the tens place, and a 9 in the ones place. What number am I? <span class='ab abm'></span>",
+            "11. I have 4 ten-thousands, 8 thousands, 3 hundreds, 5 tens, and 1 one. What number am I? <span class='ab abm'></span>",
+            "12. My tens digit is 7. My hundreds digit is double my tens digit minus 5. My thousands digit is 3. My ones digit is 0. What number am I? <span class='ab abm'></span>"
+          ]
+        },
+        {
+          "type": "section_header",
+          "text": "Round to the nearest hundred:"
+        },
+        {
+          "type": "problems_grid",
+          "columns": 3,
+          "problems": [
+            "13. 4,372 &#8776; <span class='ab'></span>",
+            "14. 8,951 &#8776; <span class='ab'></span>",
+            "15. 2,450 &#8776; <span class='ab'></span>",
+            "16. 6,849 &#8776; <span class='ab'></span>",
+            "17. 1,225 &#8776; <span class='ab'></span>",
+            "18. 9,087 &#8776; <span class='ab'></span>"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Reading Comprehension: Fiction",
+      "subtitle": "Read the story carefully, then answer the questions.",
+      "subject": "ela",
+      "color": "reading",
+      "teks": "TEKS 3.7A, 3.8A, 3.8B",
+      "try_this": {
+        "icon": "book",
+        "text": "After reading, write 3 sentences about a time YOU started something new. How did it feel at first? What helped you keep going?"
+      },
+      "footer_tip": "When a question asks WHY, look for cause-and-effect clues in the story.",
+      "sections": [
+        {
+          "type": "passage",
+          "paragraphs": [
+            "<strong>The Longest Yard Sale</strong>",
+            "Marco had exactly $4.75 in his pocket when his mom pulled the car over. A hand-painted sign read: YARD SALE, EVERYTHING MUST GO. Tables lined the driveway, covered in books, old toys, and kitchen gadgets.",
+            "\"Ten minutes,\" his mom said. Marco nodded and headed straight for the book table. He picked up a thick blue book with gold letters on the spine: <em>The World Atlas of Oceans</em>. The price sticker said $5.00.",
+            "Marco's stomach sank. He was twenty-five cents short. He started to put it back when the man behind the table said, \"You like oceans?\"",
+            "\"I want to be a marine biologist,\" Marco said quietly.",
+            "The man smiled. \"Tell you what. If you can name three oceans, it's yours for what you've got.\"",
+            "\"Pacific, Atlantic, Indian,\" Marco said without hesitating.",
+            "The man laughed and handed him the book. \"Sold. You'll need that where you're going.\""
+          ]
+        },
+        {
+          "type": "mc_questions",
+          "questions": [
+            {
+              "number": 1,
+              "text": "What is Marco's MAIN problem in this story?",
+              "options": ["A. He doesn't have enough time to shop.", "B. He can't find any books he likes.", "C. He doesn't have enough money for the book he wants.", "D. His mom won't let him buy anything."]
+            },
+            {
+              "number": 2,
+              "text": "Why does the man lower the price for Marco?",
+              "options": ["A. The book is damaged and not worth $5.00.", "B. He wants to get rid of everything quickly.", "C. He is impressed by Marco's knowledge and passion.", "D. Marco's mom asked him for a discount."]
+            },
+            {
+              "number": 3,
+              "text": "What does \"Marco's stomach sank\" most likely mean?",
+              "options": ["A. He was hungry.", "B. He felt disappointed.", "C. He was feeling sick.", "D. He was scared of the man."]
+            },
+            {
+              "number": 4,
+              "text": "What does the man mean when he says \"You'll need that where you're going\"?",
+              "options": ["A. Marco is about to go on a trip.", "B. The book will help Marco on his path to becoming a marine biologist.", "C. Marco should read it in the car.", "D. The man wants Marco to return the book later."]
+            },
+            {
+              "number": 5,
+              "text": "Which word BEST describes Marco?",
+              "options": ["A. Lazy", "B. Determined", "C. Angry", "D. Shy"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Grammar: Nouns, Verbs, Adjectives",
+      "subtitle": "Identify parts of speech in context.",
+      "subject": "ela",
+      "color": "grammar",
+      "teks": "TEKS 3.11A, 3.11B",
+      "try_this": {
+        "icon": "speech",
+        "text": "Write 5 sentences about your morning. Then underline every noun in blue, circle every verb in red, and box every adjective in green."
+      },
+      "footer_tip": "A noun names a person, place, or thing. A verb shows action. An adjective describes a noun.",
+      "sections": [
+        {
+          "type": "section_header",
+          "text": "1. Write NOUN, VERB, or ADJECTIVE for each underlined word:"
+        },
+        {
+          "type": "instruction",
+          "text": "\"The <u>tiny</u> kitten <u>climbed</u> the <u>tall</u> <u>bookshelf</u> and <u>knocked</u> over a <u>glass</u>.\""
+        },
+        {
+          "type": "problems_grid",
+          "columns": 3,
+          "problems": [
+            "tiny: <span class='ab abm'></span>",
+            "climbed: <span class='ab abm'></span>",
+            "tall: <span class='ab abm'></span>",
+            "bookshelf: <span class='ab abm'></span>",
+            "knocked: <span class='ab abm'></span>",
+            "glass: <span class='ab abm'></span>"
+          ]
+        },
+        {
+          "type": "section_header",
+          "text": "2. Add an adjective to make each sentence more interesting:"
+        },
+        {
+          "type": "problems_list",
+          "problems": [
+            "1. The <span class='ab abm'></span> dog jumped over the fence.",
+            "2. We ate <span class='ab abm'></span> pancakes for breakfast.",
+            "3. The <span class='ab abm'></span> bird sang a <span class='ab abm'></span> song.",
+            "4. My <span class='ab abm'></span> brother built a <span class='ab abm'></span> tower."
+          ]
+        },
+        {
+          "type": "section_header",
+          "text": "3. Underline the VERB in each sentence:"
+        },
+        {
+          "type": "problems_list",
+          "problems": [
+            "5. The frog jumped into the pond.",
+            "6. Maria reads a chapter every night.",
+            "7. Our family drove to the lake on Saturday.",
+            "8. The baby laughed at the silly face."
+          ]
+        },
+        {
+          "type": "section_header",
+          "text": "4. Write 3 nouns, 3 verbs, and 3 adjectives:"
+        },
+        {
+          "type": "problems_grid",
+          "columns": 3,
+          "problems": [
+            "<strong>Nouns:</strong>",
+            "<strong>Verbs:</strong>",
+            "<strong>Adjectives:</strong>",
+            "1. <span class='ab abm'></span>",
+            "1. <span class='ab abm'></span>",
+            "1. <span class='ab abm'></span>",
+            "2. <span class='ab abm'></span>",
+            "2. <span class='ab abm'></span>",
+            "2. <span class='ab abm'></span>",
+            "3. <span class='ab abm'></span>",
+            "3. <span class='ab abm'></span>",
+            "3. <span class='ab abm'></span>"
+          ]
+        }
+      ]
+    }
+  ],
+  "extension_page": {
+    "activities": [
+      {
+        "subject": "Math: Place Value",
+        "title": "Grocery Store Number Hunt",
+        "description": "Next time you're at the store, find 5 items with prices over $10. Write down each price. What digit is in the tens place? The ones place? Challenge: find the most expensive item in the store and identify every digit's place value."
+      },
+      {
+        "subject": "ELA: Reading and Writing",
+        "title": "Yard Sale Story Sequel",
+        "description": "Marco got his ocean book! What happens next? Write a short sequel (at least 6 sentences) about what Marco discovers in the book. Include at least one character, a setting, and a problem that gets solved."
+      },
+      {
+        "subject": "ELA: Grammar Challenge",
+        "title": "Parts of Speech Scavenger Hunt",
+        "description": "Open any book to a random page. Find and write down: 5 nouns, 5 verbs, and 5 adjectives from that page. Bonus: can you find an adverb?"
+      }
+    ],
+    "field_trips": [
+      {
+        "icon": "&#127793;",
+        "label": "Field Trip Idea",
+        "title": "Local Library: Nonfiction Exploration",
+        "description": "Visit the library and find 3 nonfiction books about something that interests your child (animals, space, cooking, sports). Practice identifying the main idea of one chapter. Use the table of contents and index to find specific facts."
+      }
+    ],
+    "family_challenge": {
+      "title": "Place Value War",
+      "description": "Each player draws 5 cards from a deck (remove face cards, aces = 1). Arrange your cards to make the BIGGEST 5-digit number you can. Compare numbers. Who has the bigger number? Play 5 rounds. Keep score!"
+    }
+  }
+}
