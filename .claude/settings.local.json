@@ -19,7 +19,15 @@
       "Bash(then)",
       "Bash(else)",
       "Bash(fi)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(sed -i 's|style=\"\"background:url\\(/images/img-05-133c7d4e.jpg\\) center/cover;\"\"|class=\"\"ac-blue\"\"|g' index.html)",
+      "Bash(sed -i 's|style=\"\"background:url\\(/images/img-06-c371cbad.jpg\\) center/cover;\"\"|class=\"\"ac-green\"\"|g' index.html)",
+      "Bash(sed -i 's|style=\"\"background:url\\(/images/img-07-763f7dc3.jpg\\) center/cover;\"\"|class=\"\"ac-warm\"\"|g' index.html)",
+      "Bash(cp site/files/src/guides-index.html guides-index.html)",
+      "Bash(cp site/files/src/articles-index.html articles-index.html)",
+      "Bash(cp site/files/src/tools-index.html tools-index.html)",
+      "Bash(cp site/files/src/directory-index.html directory-index.html)",
+      "Bash(FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch --force --tree-filter 'if [ -f site/download_files.py ]; then sed -i \"\"s/REMOVED/REMOVED_SECRET/g\"\" site/download_files.py; fi' -- 5fb1352^..HEAD)"
     ]
   }
 }

@@ -6,7 +6,7 @@ import urllib.request
 
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
-TOKEN = "REMOVED_SECRET"
+TOKEN = os.environ.get("VERCEL_TOKEN", "")
 TEAM_ID = "team_dVaxPtI3A2JQFxAQnwHDNa40"
 DEPLOY_ID = "dpl_4SaJGKbm9vCNd791svBrPdHgTtGs"
 
