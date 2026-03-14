@@ -26,8 +26,7 @@
       "Bash(cp site/files/src/guides-index.html guides-index.html)",
       "Bash(cp site/files/src/articles-index.html articles-index.html)",
       "Bash(cp site/files/src/tools-index.html tools-index.html)",
-      "Bash(cp site/files/src/directory-index.html directory-index.html)",
-      "Bash(FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch --force --tree-filter 'if [ -f site/download_files.py ]; then sed -i \"\"s/REMOVED/REMOVED_SECRET/g\"\" site/download_files.py; fi' -- 5fb1352^..HEAD)"
+      "Bash(cp site/files/src/directory-index.html directory-index.html)"
     ]
   }
 }
