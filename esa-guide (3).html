@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Skip School ESA Guide — Free Money for Homeschool Families</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a1a2e;
+    --forest: #2d6a4f;
+    --amber: #e8a838;
+    --coral: #e05c3a;
+    --cream: #f5f0e8;
+    --white: #ffffff;
+    --mid-gray: #9999bb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--cream); font-family: 'DM Sans', sans-serif; color: var(--navy); min-height: 100vh; }
+
+  nav { background: var(--navy); padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 900; color: var(--white); }
+  .nav-logo span { color: var(--amber); }
+  .nav-cta { background: var(--amber); color: var(--navy); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; padding: 8px 18px; border-radius: 6px; border: none; cursor: pointer; }
+
+  .hero { background: var(--navy); padding: 80px 40px 60px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(232,168,56,0.15) 0%, transparent 70%); border-radius: 50%; }
+  .hero::after { content: ''; position: absolute; bottom: -80px; left: -80px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(45,106,79,0.2) 0%, transparent 70%); border-radius: 50%; }
+  .hero-eyebrow { display: inline-block; background: rgba(232,168,56,0.15); border: 1px solid rgba(232,168,56,0.4); color: var(--amber); font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 24px; }
+  .hero h1 { font-family: 'Fraunces', serif; font-size: clamp(36px, 5vw, 64px); font-weight: 900; color: var(--white); line-height: 1.1; margin-bottom: 20px; position: relative; z-index: 1; }
+  .hero h1 em { font-style: italic; color: var(--amber); }
+  .hero-sub { font-size: 18px; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 40px; line-height: 1.6; position: relative; z-index: 1; }
+  .hero-stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; position: relative; z-index: 1; }
+  .hero-stat-num { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 900; color: var(--amber); display: block; }
+  .hero-stat-label { font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 4px; }
+
+  .explainer { max-width: 800px; margin: 0 auto; padding: 60px 40px; text-align: center; }
+  .explainer h2 { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 700; margin-bottom: 20px; }
+  .explainer p { font-size: 17px; line-height: 1.75; color: #444; margin-bottom: 16px; }
+
+  .updated-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(45,106,79,0.1); border: 1px solid rgba(45,106,79,0.25); color: var(--forest); font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 20px; margin-bottom: 32px; }
+  .updated-dot { width: 6px; height: 6px; background: var(--forest); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  .important-note { background: rgba(224,92,58,0.08); border: 1.5px solid rgba(224,92,58,0.25); border-radius: 12px; padding: 20px 28px; max-width: 800px; margin: 0 auto 40px; text-align: left; }
+  .important-note strong { color: var(--coral); font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; display: block; margin-bottom: 8px; }
+  .important-note p { font-size: 14px; color: #555; line-height: 1.65; }
+
+  .breaking-note { background: rgba(232,168,56,0.12); border: 1.5px solid rgba(232,168,56,0.4); border-radius: 12px; padding: 20px 28px; max-width: 800px; margin: 0 auto 20px; text-align: left; }
+  .breaking-note strong { color: var(--amber); font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; display: block; margin-bottom: 8px; }
+  .breaking-note p { font-size: 14px; color: #444; line-height: 1.65; }
+
+  .map-section { padding: 0 40px 60px; max-width: 1100px; margin: 0 auto; }
+  .section-label { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-gray); margin-bottom: 16px; text-align: center; }
+  .map-section h2 { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 700; text-align: center; margin-bottom: 8px; }
+  .map-section .sub { text-align: center; color: #666; font-size: 16px; margin-bottom: 32px; }
+
+  .legend { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 24px; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .dot-active { background: var(--forest); }
+  .dot-partial { background: var(--amber); }
+  .dot-pending { background: #6b7fd4; }
+  .dot-none { background: #d0ccc4; }
+
+  .filter-tabs { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 28px; }
+  .filter-tab { background: var(--white); border: 1.5px solid #ddd; color: #666; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; padding: 7px 16px; border-radius: 20px; cursor: pointer; transition: all 0.15s; }
+  .filter-tab:hover, .filter-tab.active { background: var(--navy); border-color: var(--navy); color: var(--white); }
+
+  .state-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 10px; margin-bottom: 48px; }
+  .state-card { background: var(--white); border: 2px solid transparent; border-radius: 10px; padding: 14px; cursor: pointer; transition: all 0.2s; position: relative; overflow: hidden; }
+  .state-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .state-card.active::before { background: var(--forest); }
+  .state-card.partial::before { background: var(--amber); }
+  .state-card.pending::before { background: #6b7fd4; }
+  .state-card.none::before { background: #d0ccc4; }
+  .state-card:hover { border-color: var(--navy); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(26,26,46,0.12); }
+  .state-card.selected { border-color: var(--navy); box-shadow: 0 0 0 3px rgba(26,26,46,0.15); }
+  .state-card.hidden { display: none; }
+  .state-name { font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+  .state-amount { font-family: 'Fraunces', serif; font-size: 17px; font-weight: 700; color: var(--forest); }
+  .state-card.none .state-amount { font-size: 12px; font-family: 'DM Sans', sans-serif; font-weight: 400; color: #aaa; }
+  .state-card.pending .state-amount { font-size: 12px; font-family: 'DM Sans', sans-serif; font-weight: 500; color: #6b7fd4; }
+  .state-status-badge { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; padding: 2px 7px; border-radius: 10px; margin-top: 5px; }
+  .badge-active { background: rgba(45,106,79,0.1); color: var(--forest); }
+  .badge-partial { background: rgba(232,168,56,0.15); color: #b07d10; }
+  .badge-pending { background: rgba(107,127,212,0.15); color: #4a5db0; }
+  .badge-none { background: rgba(0,0,0,0.06); color: #888; }
+
+  .state-detail { background: var(--white); border: 2px solid var(--navy); border-radius: 16px; overflow: hidden; display: none; animation: slideIn 0.3s ease; margin-bottom: 48px; }
+  .state-detail.visible { display: block; }
+  @keyframes slideIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  .detail-header { background: var(--navy); padding: 28px 36px; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .detail-state-name { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 900; color: var(--white); margin-bottom: 4px; }
+  .detail-program-name { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 8px; }
+  .detail-status-pill { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 3px 12px; border-radius: 20px; }
+  .pill-active { background: rgba(45,106,79,0.3); color: #7dd4a8; }
+  .pill-partial { background: rgba(232,168,56,0.2); color: var(--amber); }
+  .pill-pending { background: rgba(107,127,212,0.2); color: #a0acf0; }
+  .pill-none { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); }
+  .detail-updated { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 8px; }
+  .detail-amount-block { text-align: right; }
+  .detail-amount { font-family: 'Fraunces', serif; font-size: 42px; font-weight: 900; color: var(--amber); line-height: 1; }
+  .detail-amount-label { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; }
+  .detail-body { padding: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .detail-section h4 { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid-gray); margin-bottom: 10px; }
+  .detail-section p { font-size: 15px; line-height: 1.65; color: #333; }
+  .spend-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .spend-tag { background: rgba(45,106,79,0.08); color: var(--forest); font-size: 12px; font-weight: 500; padding: 4px 11px; border-radius: 20px; border: 1px solid rgba(45,106,79,0.2); }
+  .detail-cta { border-top: 1px solid #eee; padding: 20px 36px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; background: #fafaf8; }
+  .detail-cta p { font-size: 14px; color: #555; flex: 1; line-height: 1.5; }
+  .apply-btn { background: var(--forest); color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px; padding: 11px 22px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+  .close-btn-wrap { display: flex; justify-content: flex-end; padding: 12px 36px 0; }
+  .close-detail { background: none; border: 1.5px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.6); font-family: 'DM Sans', sans-serif; font-size: 13px; padding: 6px 14px; border-radius: 6px; cursor: pointer; }
+  .close-detail:hover { background: rgba(255,255,255,0.1); }
+
+  .calculator-section { background: var(--navy); padding: 60px 40px; }
+  .calculator-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+  .calculator-inner h2 { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
+  .calculator-inner .sub { color: rgba(255,255,255,0.6); font-size: 16px; margin-bottom: 40px; }
+  .calc-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 32px; text-align: left; }
+  .calc-field label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 8px; }
+  .calc-field select, .calc-field input { width: 100%; background: rgba(255,255,255,0.08); border: 1.5px solid rgba(255,255,255,0.15); color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 15px; padding: 12px 16px; border-radius: 8px; outline: none; appearance: none; }
+  .calc-field select:focus, .calc-field input:focus { border-color: var(--amber); }
+  .calc-field select option { background: var(--navy); color: var(--white); }
+  .calc-result { background: rgba(232,168,56,0.12); border: 2px solid rgba(232,168,56,0.3); border-radius: 14px; padding: 32px; }
+  .calc-result-label { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase; }
+  .calc-result-amount { font-family: 'Fraunces', serif; font-size: 56px; font-weight: 900; color: var(--amber); line-height: 1; margin-bottom: 8px; }
+  .calc-result-sub { font-size: 14px; color: rgba(255,255,255,0.5); }
+  .calc-result-note { margin-top: 16px; font-size: 12px; color: rgba(255,255,255,0.3); font-style: italic; line-height: 1.6; }
+
+  .gate-section { padding: 80px 40px; max-width: 680px; margin: 0 auto; text-align: center; }
+  .gate-section h2 { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 700; margin-bottom: 16px; line-height: 1.2; }
+  .gate-section p { font-size: 17px; color: #555; margin-bottom: 32px; line-height: 1.6; }
+  .email-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; flex-wrap: wrap; }
+  .email-input { flex: 1; min-width: 200px; padding: 14px 18px; font-family: 'DM Sans', sans-serif; font-size: 15px; border: 2px solid #ddd; border-radius: 8px; outline: none; background: var(--white); }
+  .email-input:focus { border-color: var(--navy); }
+  .email-btn { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 15px; padding: 14px 24px; border-radius: 8px; border: none; cursor: pointer; white-space: nowrap; }
+  .gate-note { font-size: 13px; color: #999; margin-top: 16px; }
+
+  footer { background: var(--navy); padding: 32px 40px; text-align: center; }
+  footer p { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.8; }
+  footer a { color: var(--amber); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    nav { padding: 14px 20px; }
+    .hero { padding: 60px 24px 48px; }
+    .explainer, .gate-section { padding: 48px 24px; }
+    .map-section { padding: 0 20px 48px; }
+    .detail-body { grid-template-columns: 1fr; padding: 24px; }
+    .detail-header { flex-direction: column; }
+    .detail-amount-block { text-align: left; }
+    .detail-cta { flex-direction: column; padding: 16px 24px; }
+    .calc-inputs { grid-template-columns: 1fr; }
+    footer { padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Skip<span>School</span>.ai</div>
+  <button class="nav-cta" onclick="document.querySelector('.gate-section').scrollIntoView({behavior:'smooth'})">Get the Free Newsletter</button>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">Free Resource — Data Verified March 2026</div>
+  <h1>Your State May Owe<br>Your Family <em>Thousands</em></h1>
+  <p class="hero-sub">Education Savings Accounts let homeschool families use government funds for curriculum, tutoring, AI tools, enrichment programs, and more. Here is exactly what is available in your state right now.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="hero-stat-num">29</span>
+      <div class="hero-stat-label">States with active ESA<br>or school choice programs</div>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">$7,500</span>
+      <div class="hero-stat-label">National average ESA<br>award per student</div>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">500K+</span>
+      <div class="hero-stat-label">Students using ESAs<br>in Florida alone</div>
+    </div>
+  </div>
+</section>
+
+<section class="explainer">
+  <div class="updated-badge"><div class="updated-dot"></div> Last verified March 2026</div>
+  <h2>What is an Education Savings Account?</h2>
+  <p>An ESA is a government-funded account that puts education dollars directly in your hands instead of a school district. Instead of your tax dollars automatically going to a public school your child does not attend, a portion goes into an account you control.</p>
+  <p>You can spend that money on curriculum, tutoring, online courses, AI learning tools, enrichment programs, testing services, and more. The rules vary by state, but the core idea is the same: your family gets real money to spend on your child's education your way.</p>
+  <p>Many homeschool families have no idea this money exists, or assume it only applies to private school students. In many states, it fully covers homeschool expenses. This guide tells you exactly what your state offers and how to get it.</p>
+</section>
+
+<div style="max-width:800px;margin:0 auto 0;padding:0 40px 0;">
+  <div class="breaking-note">
+    <strong>Breaking News</strong>
+    <p><strong>West Virginia (March 3, 2026):</strong> The Hope Scholarship just expanded to fully universal eligibility. All K-12 students can now apply for $5,267 per year regardless of where they currently attend school. Applications for 2026-27 are open NOW through June 15, 2026 at hopescholarshipwv.gov.</p>
+  </div>
+  <div class="important-note">
+    <strong>Important Disclaimer</strong>
+    <p>ESA rules, amounts, and eligibility change frequently as new legislation passes. This guide is researched and verified as of March 2026. Always confirm program details with your state's official portal before making any education decisions. Direct application links are included in each state's detail panel below.</p>
+  </div>
+</div>
+
+<section class="map-section">
+  <div class="section-label" style="margin-top:40px;">Find Your State</div>
+  <h2>ESA Programs by State</h2>
+  <p class="sub">Click any state to see full program details, eligibility, and how to apply.</p>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot dot-active"></div> Fully Active</div>
+    <div class="legend-item"><div class="legend-dot dot-partial"></div> Limited / Partial</div>
+    <div class="legend-item"><div class="legend-dot dot-pending"></div> Legislation Pending</div>
+    <div class="legend-item"><div class="legend-dot dot-none"></div> Not Yet Available</div>
+  </div>
+
+  <div class="filter-tabs">
+    <button class="filter-tab active" onclick="filterStates('all',this)">All 50 States</button>
+    <button class="filter-tab" onclick="filterStates('active',this)">Active Programs</button>
+    <button class="filter-tab" onclick="filterStates('partial',this)">Limited Programs</button>
+    <button class="filter-tab" onclick="filterStates('pending',this)">Legislation Pending</button>
+    <button class="filter-tab" onclick="filterStates('none',this)">Not Yet Available</button>
+  </div>
+
+  <div class="state-grid" id="stateGrid"></div>
+
+  <div class="state-detail" id="stateDetail">
+    <div class="detail-header">
+      <div>
+        <div class="detail-state-name" id="detailStateName"></div>
+        <div class="detail-program-name" id="detailProgramName"></div>
+        <div class="detail-status-pill" id="detailStatusPill"></div>
+        <div class="detail-updated" id="detailUpdated"></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:16px;">
+        <div class="detail-amount-block">
+          <div class="detail-amount" id="detailAmount"></div>
+          <div class="detail-amount-label" id="detailAmountLabel">per student, per year</div>
+        </div>
+        <button class="close-detail" onclick="closeDetail()">✕ Close</button>
+      </div>
+    </div>
+    <div class="detail-body">
+      <div class="detail-section">
+        <h4>Who Qualifies</h4>
+        <p id="detailQualify"></p>
+      </div>
+      <div class="detail-section">
+        <h4>What You Can Spend It On</h4>
+        <div class="spend-tags" id="detailSpend"></div>
+      </div>
+      <div class="detail-section">
+        <h4>How to Apply</h4>
+        <p id="detailApply"></p>
+      </div>
+      <div class="detail-section">
+        <h4>Important Notes</h4>
+        <p id="detailNotes"></p>
+      </div>
+    </div>
+    <div class="detail-cta">
+      <p id="detailCtaText"></p>
+      <a href="#" class="apply-btn" id="detailApplyBtn" target="_blank" rel="noopener">Official Application &#8594;</a>
+    </div>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="calculator-inner">
+    <h2>How Much Could Your Family Receive?</h2>
+    <p class="sub">Estimate your annual ESA benefit based on your state and number of children.</p>
+    <div class="calc-inputs">
+      <div class="calc-field">
+        <label>Your State</label>
+        <select id="calcState" onchange="updateCalc()">
+          <option value="">Select your state</option>
+        </select>
+      </div>
+      <div class="calc-field">
+        <label>Number of Kids</label>
+        <input type="number" id="calcKids" value="1" min="1" max="10" oninput="updateCalc()">
+      </div>
+    </div>
+    <div class="calc-result">
+      <div class="calc-result-label">Estimated Annual Benefit</div>
+      <div class="calc-result-amount" id="calcResult">$0</div>
+      <div class="calc-result-sub" id="calcResultSub">Select your state to see your estimate</div>
+      <div class="calc-result-note" id="calcNote"></div>
+    </div>
+  </div>
+</section>
+
+<section class="gate-section">
+  <h2>Get Notified When Your State Acts on ESA Legislation</h2>
+  <p>ESA programs are spreading fast. New states pass legislation every year and amounts change annually. We track every bill and update this guide the moment something changes. Subscribe free to stay informed.</p>
+  <div class="email-form">
+    <input type="email" class="email-input" placeholder="your@email.com">
+    <button class="email-btn">Notify Me Free</button>
+  </div>
+  <p class="gate-note">You also get our free weekly AI homeschool newsletter every Wednesday. Unsubscribe anytime.</p>
+</section>
+
+<footer>
+  <p>Skip School is a free weekly newsletter for homeschool families across the United States.<br>
+  <a href="#">Subscribe free at SkipSchool.ai</a> for weekly AI tools, curriculum picks, and ESA updates.<br><br>
+  ESA data is researched and updated regularly but program rules, amounts, and eligibility change frequently.<br>
+  Always verify details with your state's official program before making any decisions.<br>
+  Data sources: EdChoice, official state department of education portals, and program websites. Verified March 2026.</p>
+</footer>
+
+<script>
+const states = [
+  { name:"Alabama", abbr:"AL", status:"active", amount:7000, program:"CHOOSE Act", qualify:"Universal eligibility for all K-12 Alabama students regardless of income or prior school enrollment. Students in public school, private school, or homeschool all qualify.", spend:["Private school tuition","Curriculum","Tutoring","AI educational tools","Enrichment programs","Testing fees","After-school programs","College placement exams"], apply:"Apply through the Alabama Department of Education CHOOSE Act portal. Program launched for the 2024-25 school year. Rolling applications are accepted. Visit alsde.edu for the CHOOSE Act portal link.", notes:"Alabama became one of the first southern states with a universal ESA. Funds cover private school tuition and a wide range of learning expenses for homeschool families. Program details were still being finalized in its early months.", ctaText:"Alabama's CHOOSE Act is fully active. All families are welcome to apply.", applyUrl:"https://chooseact.alabama.gov/", updated:"Verified March 2026" },
+  { name:"Alaska", abbr:"AK", status:"none", amount:0, program:"No program available", qualify:"Alaska does not currently have an ESA program.", spend:[], apply:"No application available.", notes:"ESA legislation has been proposed but Alaska's political environment has made passage difficult. Most advocacy focuses on a tax credit scholarship model.", ctaText:"Subscribe to get notified if Alaska passes ESA legislation.", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Arizona", abbr:"AZ", status:"active", amount:7500, program:"Empowerment Scholarship Account (ESA)", qualify:"All Arizona K-12 students are eligible regardless of income, location, or academic performance. Preschool children with an IEP or 504 plan also qualify. Over 101,000 students enrolled as of March 2026.", spend:["Private school tuition","Curriculum","Educational software","Tutoring","Testing fees","Online learning programs","Postsecondary tuition","Uniforms","Extracurricular instruction","Transportation"], apply:"Apply at azed.gov/esa. Applications accepted year-round. Processing takes up to 30 days. Funds distributed quarterly through ClassWallet. Call 602-364-1969 with questions.", notes:"Arizona launched the first ESA program in the nation (2011) and expanded to universal eligibility in 2022. Average award is $7,000-$8,000. Students with disabilities may receive significantly more. ESA students are not classified as 'homeschool' students and do not file homeschool affidavits separately.", ctaText:"Arizona has the most established universal ESA in the nation, now serving over 101,000 students.", applyUrl:"https://www.azed.gov/esa", updated:"Verified March 2026" },
+  { name:"Arkansas", abbr:"AR", status:"active", amount:6864, program:"Children's Educational Freedom Account (EFA)", qualify:"Universal eligibility for all K-12 Arkansas students as of 2025-26. The program phased in over two years and is now fully open. Enrollment surged 226% in 2025-26 to over 46,000 students.", spend:["Private school tuition","Curriculum","Tutoring","Online courses","Educational supplies","Testing fees","Uniforms","College admission exams"], apply:"Apply through the Arkansas Department of Education EFA portal at ade.arkansas.gov. Applications open in March each year. Funding is 90% of the prior year's per-pupil public school funding. Funds deposit after enrollment or Notice of Intent to Homeschool is verified.", notes:"Families using the EFA for a private school must first apply funds toward tuition, then use remaining funds for other approved expenses. Arkansas saw the largest ESA program growth of any state in the country in 2025-26.", ctaText:"Arkansas's EFA is now universal and fully active. The program saw 226% growth in 2025-26.", applyUrl:"https://arkansasefa.com", updated:"Verified March 2026" },
+  { name:"California", abbr:"CA", status:"none", amount:0, program:"No program available", qualify:"California does not currently have an ESA program.", spend:[], apply:"No application available.", notes:"California's legislature and political environment have consistently blocked school choice legislation. No ESA bill has advanced to a vote in recent sessions.", ctaText:"Subscribe to get notified if California passes ESA legislation.", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Colorado", abbr:"CO", status:"none", amount:0, program:"No program available", qualify:"Colorado does not currently have an ESA program.", spend:[], apply:"No application available.", notes:"School choice legislation has been introduced but has not passed. Colorado's Taxpayer's Bill of Rights (TABOR) creates additional hurdles for any new spending program.", ctaText:"Subscribe to get notified if Colorado passes ESA legislation.", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Connecticut", abbr:"CT", status:"none", amount:0, program:"No program available", qualify:"Connecticut does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Delaware", abbr:"DE", status:"none", amount:0, program:"No program available", qualify:"Delaware does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Florida", abbr:"FL", status:"active", amount:8000, program:"Personalized Education Program (PEP) / Family Empowerment Scholarship (FES)", qualify:"Universal eligibility since 2023. All K-12 Florida students qualify. Homeschoolers primarily use the Personalized Education Program (PEP). Families must not be registered in their district's home education program while using PEP. Over 221,000 students participated in 2024-25.", spend:["Curriculum","Tutoring","Online courses","Educational technology","Testing fees","Enrichment programs","Therapy services (FES-UA for disabilities)"], apply:"Apply through Step Up For Students at stepupforstudents.org or AAA Scholarship Foundation. PEP is the primary program for homeschoolers. Funds are disbursed in 10 monthly installments starting in August. Capacity is 140,000 for 2026-27. Applications for 2026-27 are now open.", notes:"Florida runs multiple programs. PEP (~$8,000/year) is for homeschoolers not in the district home education program. FES-EO (~$8,000) is for private school students. FES-UA serves students with disabilities at an average of $10,000 with some awards reaching $34,000. Florida has the largest ESA ecosystem in the nation.", ctaText:"Florida's PEP is the best ESA option for homeschoolers. Applications for 2026-27 are open now.", applyUrl:"https://www.stepupforstudents.org/scholarships/", updated:"Verified March 2026" },
+  { name:"Georgia", abbr:"GA", status:"partial", amount:6000, program:"Special Needs Scholarship / GOAL Tax Credit Scholarship", qualify:"Georgia's ESA-style programs are currently limited. The Special Needs Scholarship is for students with disabilities who attended public school the prior year. The GOAL Tax Credit Scholarship is income-based for private school students. Universal ESA legislation has passed the Georgia House and is pending in the Senate.", spend:["Private school tuition","Tutoring","Therapy services","Curriculum"], apply:"Apply through the Georgia Department of Education for the Special Needs Scholarship. Apply through a GOAL-approved school for the tax credit scholarship.", notes:"Georgia's current programs are limited. A universal ESA bill passed the Georgia House in early 2026. Georgia is surrounded by states with universal programs, adding significant legislative momentum.", ctaText:"Universal ESA passed the Georgia House in early 2026. Subscribe for Senate vote updates.", applyUrl:"https://www.gadoe.org/External-Affairs-and-Policy/Policy/Pages/Special-Needs-Scholarship-Program.aspx", updated:"Verified March 2026" },
+  { name:"Hawaii", abbr:"HI", status:"none", amount:0, program:"No program available", qualify:"Hawaii does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Idaho", abbr:"ID", status:"none", amount:0, program:"No program available", qualify:"Idaho does not currently have a funded ESA program for homeschool families.", spend:[], apply:"", notes:"Idaho has explored school choice legislation but has not launched a funded ESA program.", ctaText:"Subscribe to get notified if Idaho passes ESA legislation.", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Illinois", abbr:"IL", status:"none", amount:0, program:"No program available", qualify:"Illinois does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Indiana", abbr:"IN", status:"partial", amount:6700, program:"Choice Scholarship Program (CSP)", qualify:"Indiana's program is primarily a private school voucher, not a flexible ESA. It is income-based for most applicants. Homeschool families have limited access to flexible spending.", spend:["Private school tuition"], apply:"Apply through the Indiana Department of Education. Income documentation required. The program focuses on private school tuition rather than flexible homeschool expenses.", notes:"Indiana's Choice Scholarship is one of the oldest programs in the country (2011). However, it functions more like a voucher than a flexible ESA. Homeschool families have limited spending flexibility compared to states with true ESA programs.", ctaText:"Indiana's program is primarily for private school students. Homeschool spending flexibility is limited.", applyUrl:"https://www.in.gov/doe/students/indiana-choice-scholarship-program/", updated:"Verified March 2026" },
+  { name:"Iowa", abbr:"IA", status:"active", amount:7988, program:"Students First ESA Program", qualify:"Universal eligibility for all Iowa K-12 students. The Iowa ESA is currently structured primarily for students attending Iowa-accredited nonpublic (private) schools. Homeschool families should confirm their specific eligibility at the time of application.", spend:["Private school tuition","Fees","Qualified educational expenses"], apply:"Apply through the Iowa Department of Education at educate.iowa.gov. Annual residency verification required. Application deadline is typically June 30. Funds are disbursed through Odyssey.", notes:"For 2025-26, the ESA amount is $7,988 per student. Iowa's ESA is primarily structured for private school enrollment. Universal eligibility is established but the program's practical structure currently favors private school attendance.", ctaText:"Iowa's program is active at $7,988 per student for 2025-26.", applyUrl:"https://educate.iowa.gov/pk-12/educational-choice/education-savings-accounts", updated:"Verified March 2026" },
+  { name:"Kansas", abbr:"KS", status:"partial", amount:8000, program:"Tax Credit Scholarship Program", qualify:"Income-based eligibility. Administered through approved scholarship organizations. Limited scope.", spend:["Private school tuition","Curriculum"], apply:"Apply through an approved Kansas scholarship organization.", notes:"Kansas has a limited tax credit scholarship program. Universal ESA legislation has been proposed but not passed.", ctaText:"Kansas has a limited program. Universal ESA legislation is being actively pursued.", applyUrl:"https://www.ksde.org/Agency/Division-of-Learning-Services/Career-Standards-and-Assessment-Services/School-Choice", updated:"Verified March 2026" },
+  { name:"Kentucky", abbr:"KY", status:"none", amount:0, program:"No active program", qualify:"Kentucky does not currently have an active ESA program.", spend:[], apply:"", notes:"Kentucky passed an Education Opportunity Account program but it has faced legal challenges and has not been fully implemented.", ctaText:"Subscribe to get notified on Kentucky ESA developments.", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Louisiana", abbr:"LA", status:"partial", amount:6100, program:"Louisiana Scholarship Program", qualify:"Income-based. Primarily for students from families at or below 250% of the federal poverty level who attend public schools rated C, D, or F. Not universal.", spend:["Private school tuition"], apply:"Apply through the Louisiana Department of Education. Income documentation required.", notes:"Louisiana's program is primarily a private school voucher for lower-income families. It does not function as a flexible ESA for homeschool spending.", ctaText:"Louisiana's program is income-based and limited to private school tuition.", applyUrl:"https://doe.louisiana.gov/topic-pages/louisiana-school-choice/la-gator", updated:"Verified March 2026" },
+  { name:"Maine", abbr:"ME", status:"none", amount:0, program:"No program available", qualify:"Maine does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Maryland", abbr:"MD", status:"none", amount:0, program:"No program available", qualify:"Maryland does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Massachusetts", abbr:"MA", status:"none", amount:0, program:"No program available", qualify:"Massachusetts does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Michigan", abbr:"MI", status:"none", amount:0, program:"No program available", qualify:"Michigan does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Minnesota", abbr:"MN", status:"none", amount:0, program:"No program available", qualify:"Minnesota does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Mississippi", abbr:"MS", status:"pending", amount:0, program:"Universal ESA — Passed House, Pending Senate", qualify:"Pending legislation would create universal eligibility for all Mississippi students.", spend:[], apply:"Not yet available. A limited special needs program exists but the universal program is pending Senate action.", notes:"A universal ESA bill passed the Mississippi House in early 2026 and is now in the Senate Education Committee. Mississippi is surrounded by states with active universal programs. EdChoice named this one of the most anticipated bills of 2026.", ctaText:"Universal ESA passed the Mississippi House. This could become law in 2026. Subscribe for updates.", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Missouri", abbr:"MO", status:"partial", amount:6375, program:"Missouri Empowerment Scholarship Accounts", qualify:"Available to students in unaccredited or provisionally accredited school districts, students with disabilities, foster children, and students from lower-income families. Not universal.", spend:["Private school tuition","Tutoring","Curriculum","Online courses","Educational therapies"], apply:"Apply through an approved Missouri scholarship organization.", notes:"Missouri has had a limited ESA program since 2021. Universal expansion has been proposed repeatedly but has not passed. The current program serves a targeted population.", ctaText:"Missouri's program is active but limited. Universal expansion remains under legislative debate.", applyUrl:"https://treasurer.mo.gov/MOScholars/", updated:"Verified March 2026" },
+  { name:"Montana", abbr:"MT", status:"partial", amount:4000, program:"Montana Tax Credit Scholarship", qualify:"Income-based. Available to K-12 students attending approved private schools through scholarship organizations.", spend:["Private school tuition"], apply:"Apply through a Montana-approved scholarship organization.", notes:"Montana's program is small in scope and primarily a private school tax credit. Not a flexible ESA for homeschool spending.", ctaText:"Montana's program is limited in scope and primarily for private school students.", applyUrl:"https://opi.mt.gov/Families-Students/Parent-Resources/Parent-Resources", updated:"Verified March 2026" },
+  { name:"Nebraska", abbr:"NE", status:"none", amount:0, program:"No program available", qualify:"Nebraska does not currently have an ESA program.", spend:[], apply:"", notes:"Nebraska voters rejected a school choice initiative via referendum in 2024. Legislative paths forward are being explored.", ctaText:"Subscribe to get notified on Nebraska ESA developments.", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Nevada", abbr:"NV", status:"partial", amount:8200, program:"Opportunity Scholarship Program", qualify:"Income-based tax credit scholarships for students from lower-income families. Nevada's earlier universal ESA (passed 2015) was never funded. The current Opportunity Scholarship requires income eligibility.", spend:["Private school tuition","Curriculum","Testing fees"], apply:"Apply through Nevada's Department of Education or an approved scholarship organization.", notes:"Nevada passed a universal ESA in 2015 but it was defunded before it ever launched. The current program is a more limited tax credit scholarship. Advocates continue pursuing a funded universal program.", ctaText:"Nevada's current program is income-based and limited. Universal program efforts are ongoing.", applyUrl:"https://doe.nv.gov/Schools/Private/Opportunity_Scholarship_Program/", updated:"Verified March 2026" },
+  { name:"New Hampshire", abbr:"NH", status:"active", amount:4800, program:"Education Freedom Account (EFA)", qualify:"Universal eligibility as of June 2025 (SB 295 signed by Gov. Ayotte). All NH K-12 students ages 5-20 are eligible. A 10,000 student cap applies for families above 350% of the federal poverty level, with automatic 25% escalation. The cap was hit in 2025-26, triggering expansion to 12,500 for 2026-27. Priority families (income below 350% FPL, current recipients, siblings, students with disabilities) are exempt from the cap.", spend:["Private school tuition","Tutoring","Online courses","Curriculum","Educational technology","Enrichment programs","Transportation","Educational supplies"], apply:"Apply through Children's Scholarship Fund New Hampshire at nh.scholarshipfund.org. Applications for 2026-27 open March 16, 2026. Administered by CSF NH with hand-reviewed transactions.", notes:"Base award is at least $4,265.64 for 2025-26. New Hampshire became the fifth state with truly universal eligibility in 2025. Homeschool families must terminate their formal home education program with their school district when enrolling in EFA. Students enrolled in public school are not eligible.", ctaText:"New Hampshire is now fully universal with 12,500 spots available for 2026-27. Applications open March 16.", applyUrl:"https://nh.scholarshipfund.org/apply/nh-education-freedom-accounts/", updated:"Verified March 2026" },
+  { name:"New Jersey", abbr:"NJ", status:"none", amount:0, program:"No program available", qualify:"New Jersey does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"New Mexico", abbr:"NM", status:"none", amount:0, program:"No program available", qualify:"New Mexico does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"New York", abbr:"NY", status:"none", amount:0, program:"No program available", qualify:"New York does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"North Carolina", abbr:"NC", status:"active", amount:7800, program:"Opportunity Scholarship + ESA+ (for students with disabilities)", qualify:"The Opportunity Scholarship is open to all NC K-12 students. Income tiers affect the award amount. The ESA+ provides $9,000 base awards for students with disabilities ($17,000+ for certain disability categories). Applications for 2026-27 priority period closed March 2, 2026.", spend:["Private school tuition","Testing fees","Educational technology","Tutoring","Curriculum"], apply:"Apply through the NC State Educational Assistance Authority at k12.ncseaa.edu. A lottery is conducted for applications submitted during the priority period (Feb 2 - March 2). Rolling applications are accepted after the lottery until funds are exhausted.", notes:"NC runs two programs. The Opportunity Scholarship has income tiers affecting the award amount. The ESA+ is specifically for students with disabilities and provides significantly higher funding. For homeschool families, check the full detail on allowable expenses on the NCSEAA website.", ctaText:"NC's programs are active. Priority applications for 2026-27 closed March 2. Rolling applications are still accepted.", applyUrl:"https://k12.ncseaa.edu/", updated:"Verified March 2026" },
+  { name:"North Dakota", abbr:"ND", status:"none", amount:0, program:"No program available", qualify:"North Dakota does not currently have an ESA program.", spend:[], apply:"", notes:"School choice legislation has been proposed and debated. The political environment has been mixed.", ctaText:"Subscribe to get notified on North Dakota ESA developments.", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Ohio", abbr:"OH", status:"partial", amount:8407, program:"EdChoice Scholarship + Jon Peterson Special Needs Scholarship", qualify:"Ohio has multiple scholarship programs. The EdChoice Scholarship is income-based or available to students in lower-rated public schools. The Jon Peterson Scholarship serves students with special needs. Not universal.", spend:["Private school tuition","Tutoring","Therapy services","Curriculum"], apply:"Apply through the Ohio Department of Education. Different programs have different eligibility and application timelines.", notes:"Ohio has one of the most complex sets of choice programs in the country but most are targeted rather than universal. Universal expansion has been under active legislative discussion.", ctaText:"Ohio's programs are active but targeted. Universal expansion is under legislative debate.", applyUrl:"https://education.ohio.gov/Topics/Other-Resources/Scholarships", updated:"Verified March 2026" },
+  { name:"Oklahoma", abbr:"OK", status:"active", amount:7500, program:"Parental Choice Tax Credit", qualify:"Oklahoma's program is a refundable tax credit available to families with children in private school or homeschool. Income affects the credit amount (up to $7,500 for lower-income families, $5,000-$7,500 scaling by income). All Oklahoma families with homeschool students are eligible.", spend:["Private school tuition","Homeschool curriculum","Tutoring","Testing fees","Educational materials"], apply:"Claim through your Oklahoma state income tax return via the Oklahoma Tax Commission. The credit is refundable: lower-income families receive the full credit amount even if their tax liability is lower.", notes:"Oklahoma's structure is a tax credit rather than a traditional account. Homeschool families are explicitly included. Claim it on your state tax return annually. Oklahoma also has school district transfer and charter school options.", ctaText:"Oklahoma's refundable tax credit is available to homeschool families. Claim up to $7,500 on your state tax return.", applyUrl:"https://oklahoma.gov/tax/individuals/parental-choice-tax-credit.html", updated:"Verified March 2026" },
+  { name:"Oregon", abbr:"OR", status:"none", amount:0, program:"No program available", qualify:"Oregon does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Pennsylvania", abbr:"PA", status:"partial", amount:5000, program:"EITC / OSTC Tax Credit Scholarships", qualify:"Income-based tax credit scholarships administered through approved scholarship organizations. Not a direct ESA. Primarily for private school students.", spend:["Private school tuition","Curriculum"], apply:"Apply through an approved Pennsylvania scholarship organization. Availability depends on employer donations claiming the EITC/OSTC tax credit.", notes:"Pennsylvania's programs are indirect and complex. A direct universal ESA bill has been proposed but has not yet passed.", ctaText:"Pennsylvania's programs are limited and indirect. Subscribe for updates on direct ESA legislation.", applyUrl:"https://www.dced.pa.gov/programs/educational-improvement-tax-credit-program-eitc/", updated:"Verified March 2026" },
+  { name:"Rhode Island", abbr:"RI", status:"none", amount:0, program:"No program available", qualify:"Rhode Island does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"South Carolina", abbr:"SC", status:"active", amount:7100, program:"Education Scholarship Trust Fund (ESTF)", qualify:"South Carolina launched a universal ESA in 2024. All K-12 SC students are eligible. Income may affect priority in application processing. The program is in its second year.", spend:["Private school tuition","Tutoring","Curriculum","AI educational tools","Online courses","Testing fees","Enrichment programs"], apply:"Apply through the South Carolina Department of Education ESTF portal at ed.sc.gov.", notes:"South Carolina's universal program launched in 2024. It is expanding as it enters its second year of operation.", ctaText:"South Carolina's universal ESA is active and in its second year of operation.", applyUrl:"https://ed.sc.gov/newsroom/strategic-engagement/education-scholarship-trust-fund-program/", updated:"Verified March 2026" },
+  { name:"South Dakota", abbr:"SD", status:"none", amount:0, program:"No program available", qualify:"South Dakota does not currently have an ESA program.", spend:[], apply:"", notes:"Legislation has been proposed but not passed.", ctaText:"Subscribe to get notified on South Dakota ESA developments.", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Tennessee", abbr:"TN", status:"active", amount:9000, program:"Tennessee Education Savings Account (ESA)", qualify:"Tennessee's ESA is currently available to students zoned for Memphis-Shelby County Schools, Metro Nashville Public Schools, Hamilton County Schools, or schools that were in the Achievement School District. Universal statewide expansion is under active legislative consideration.", spend:["Private school tuition","Tutoring","Online courses","Testing fees","Enrichment programs","Educational materials"], apply:"Apply through the Tennessee Department of Education ESA portal at tn.gov/education/esa. Applications for 2026-27 opened February 3, 2026, with a deadline of March 16, 2026 at 4pm CT.", notes:"Tennessee's base ESA award is $9,000 for 2025-26, one of the highest in the country. The program is currently limited to specific school districts. If you live in an eligible county, this is an excellent program to act on now.", ctaText:"Tennessee's $9,000 ESA is one of the highest awards in the country. Applications for 2026-27 closed March 16.", applyUrl:"https://www.tn.gov/education/esa.html", updated:"Verified March 2026" },
+  { name:"Texas", abbr:"TX", status:"active", amount:10474, program:"Texas Education Freedom Accounts (TEFA)", qualify:"All Texas PreK-12 students are eligible to apply. Funding is limited to $1 billion in year one, so a lottery is used if demand exceeds capacity. Priority order: (1) Students with disabilities from households at or below 500% FPL, (2) Households at or below 200% FPL, (3) Households 200-500% FPL, (4) All other eligible students. CRITICAL: Homeschool families receive $2,000 per student. The $10,474 amount is ONLY for students attending an approved accredited private school.", spend:["Private school tuition","Curriculum","Tutoring","Therapy services","Educational technology","Transportation","Testing fees"], apply:"Apply at educationfreedom.texas.gov. Application window: February 4 - March 17, 2026 at 11:59pm CT. This is NOT first-come, first-served. Award notifications expected early April 2026. First funds available July 1, 2026 (25% of approved amount), 50% by October 1, 2026, remaining by April 1, 2027.", notes:"IMPORTANT FOR HOMESCHOOLERS: TEFA provides $10,474 for students at approved accredited private schools, but only $2,000 for homeschool families. If your child will homeschool and NOT attend a registered private school, your award is $2,000 per student. Students with an IEP on file with TEA may receive up to $30,000. This is the first-ever school choice program in Texas. Unused funds roll over annually.", ctaText:"TEFA is Texas's first-ever school choice program. Private school students: $10,474. Homeschoolers: $2,000. Application window closed March 17, 2026.", applyUrl:"https://educationfreedom.texas.gov/", updated:"Verified March 2026" },
+  { name:"Utah", abbr:"UT", status:"active", amount:8000, program:"Utah Fits All Scholarship", qualify:"Universal eligibility for all Utah K-12 students. IMPORTANT: Homeschool student amounts differ from private school amounts. Homeschool students ages 5-11 receive $4,000/year; ages 12-18 receive $6,000/year. Private school students receive $8,000/year. Total program funding is capped at $120 million. Priority given to returning recipients, lower-income families (up to 200% FPL), siblings, then all others.", spend:["Private school tuition","Curriculum","Tutoring","Online courses","Testing fees","Enrichment programs","Therapy services","Music instruction","After-school programs"], apply:"Apply through Odyssey (program administrator as of May 2025) via the Utah Fits All portal at utaheducationfitsall.org. Application window typically opens in February and closes May 1. Funds deposited quarterly starting in August.", notes:"HB 455 (2025) reduced homeschool awards to $4,000/$6,000 by age to allow more students into the program. Extracurricular expenses are capped at 20% of the award. The program is subject to a constitutional challenge (ruled unconstitutional at trial level; program continues during appeal). The application window for 2025-26 is closed; plan for 2026-27.", ctaText:"Utah's program is active. Homeschoolers receive $4,000 (ages 5-11) or $6,000 (ages 12-18). Applications for 2025-26 are closed.", applyUrl:"https://www.utaheducationfitsall.org/", updated:"Verified March 2026" },
+  { name:"Vermont", abbr:"VT", status:"none", amount:0, program:"No program available", qualify:"Vermont does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"Virginia", abbr:"VA", status:"partial", amount:5000, program:"EITC Scholarship Programs", qualify:"Income-based. Available through approved scholarship organizations using employer tax credits. Not a direct ESA program.", spend:["Private school tuition","Curriculum","Tutoring"], apply:"Apply through a Virginia-approved scholarship foundation.", notes:"Virginia's program is indirect. A direct ESA bill has been proposed and gained momentum in the legislature.", ctaText:"Virginia's program is limited and indirect. Universal ESA legislation is being actively pursued.", applyUrl:"https://www.doe.virginia.gov/home/showpublisheddocument/5432/637891462562570000", updated:"Verified March 2026" },
+  { name:"Washington", abbr:"WA", status:"none", amount:0, program:"No program available", qualify:"Washington does not currently have an ESA program.", spend:[], apply:"", notes:"", ctaText:"", applyUrl:"", updated:"Verified March 2026" },
+  { name:"West Virginia", abbr:"WV", status:"active", amount:5267, program:"Hope Scholarship", qualify:"JUST EXPANDED: As of March 3, 2026, West Virginia announced universal eligibility for all K-12 students for the 2026-27 school year. The previous 45-day public school attendance requirement has been eliminated. ALL West Virginia students grades K-12 can now apply for the first time regardless of prior schooling. Applications for 2026-27 are NOW OPEN through June 15, 2026.", spend:["Private school tuition","Homeschool curriculum","Tutoring","Testing fees","Enrichment programs","Educational materials","Online courses"], apply:"Apply NOW at hopescholarshipwv.gov. Applications for 2026-27 are open March 2 through June 15, 2026. Apply early for 100% funding. Funds managed through ClassWallet with quarterly distributions.", notes:"Award for 2025-26 is $5,267.38. Projected 2026-27 amount is approximately $5,400. A bill under consideration would fix the annual amount at $5,250. West Virginia was the first state to pass a universal ESA (2021). The program has grown from 2,300 students in year one to approximately 19,000 in 2025-26, with a large surge expected when full universal eligibility launches in 2026-27.", ctaText:"APPLY NOW: West Virginia just opened applications for 2026-27 on March 2. All K-12 students are eligible for the first time. Applications close June 15, 2026.", applyUrl:"https://hopescholarshipwv.gov/", updated:"Verified March 3, 2026" },
+  { name:"Wisconsin", abbr:"WI", status:"partial", amount:9485, program:"Wisconsin Parental Choice Program (WPCP)", qualify:"Income-based voucher primarily for private school students available statewide. Not a flexible ESA for homeschool spending.", spend:["Private school tuition"], apply:"Apply through the Wisconsin Department of Public Instruction. Annual income verification required.", notes:"Wisconsin's program is one of the oldest in the country (Milwaukee, 1990) but is a private school voucher with income limits, not a flexible ESA. Homeschool spending flexibility is very limited.", ctaText:"Wisconsin's program is a private school voucher with income limits. Homeschool spending flexibility is very limited.", applyUrl:"https://dpi.wi.gov/parental-education-options/choice-programs", updated:"Verified March 2026" },
+  { name:"Wyoming", abbr:"WY", status:"active", amount:6000, program:"Wyoming Education Savings Act", qualify:"Available to Wyoming residents ages PreK-12 who are not enrolled in public school. INCOME RESTRICTED: Households must be at or below 150% of the federal poverty level (approximately $46,800 for a family of four). This is more restrictive than most other states.", spend:["Private school tuition","Tutoring","Curriculum","Educational technology","Testing fees","Summer education programs","College admission tests","Transportation to approved schools"], apply:"Apply through the Wyoming Department of Education. Applications opened January 1, 2025 for the 2025-26 school year. This is a newer program.", notes:"Wyoming's program is income-based, which is more restrictive than most other active ESA states. The $6,000 annual award is deposited into an ESA account. Families must have household income at or below 150% of FPL to qualify (about $46,800 for a family of four).", ctaText:"Wyoming's program is active but income-restricted. Families must earn under approximately $46,800/year (family of four) to qualify.", applyUrl:"https://edu.wyoming.gov/parents/education-savings-accounts/", updated:"Verified March 2026" }
+];
+
+function renderStates() {
+  const grid = document.getElementById('stateGrid');
+  const calcSelect = document.getElementById('calcState');
+  states.forEach((state, idx) => {
+    const card = document.createElement('div');
+    card.className = `state-card ${state.status}`;
+    card.dataset.idx = idx;
+    card.dataset.status = state.status;
+    card.onclick = () => showDetail(state, card);
+    const amountDisplay = (state.status === 'active' || state.status === 'partial') && state.amount > 0
+      ? `$${state.amount.toLocaleString()}`
+      : state.status === 'pending' ? 'Bill pending' : 'Not available';
+    const badgeText = {active:'Active', partial:'Limited', pending:'Pending', none:'Not yet'}[state.status];
+    card.innerHTML = `<div class="state-name">${state.name}</div><div class="state-amount">${amountDisplay}</div><div><span class="state-status-badge badge-${state.status}">${badgeText}</span></div>`;
+    grid.appendChild(card);
+    if ((state.status === 'active' || state.status === 'partial') && state.amount > 0) {
+      const opt = document.createElement('option');
+      opt.value = state.amount;
+      opt.textContent = `${state.name} — $${state.amount.toLocaleString()}/student`;
+      calcSelect.appendChild(opt);
+    }
+  });
+}
+
+function filterStates(status, tabEl) {
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  tabEl.classList.add('active');
+  document.querySelectorAll('.state-card').forEach(card => {
+    card.classList.toggle('hidden', status !== 'all' && card.dataset.status !== status);
+  });
+  closeDetail();
+}
+
+function showDetail(state, cardEl) {
+  document.getElementById('detailStateName').textContent = state.name;
+  document.getElementById('detailProgramName').textContent = state.program;
+  document.getElementById('detailUpdated').textContent = state.updated;
+  const pill = document.getElementById('detailStatusPill');
+  const pillMap = {active:['pill-active','Active Program'],partial:['pill-partial','Limited Program'],pending:['pill-pending','Legislation Pending'],none:['pill-none','Not Yet Available']};
+  pill.className = `detail-status-pill ${pillMap[state.status][0]}`;
+  pill.textContent = pillMap[state.status][1];
+  const amountEl = document.getElementById('detailAmount');
+  const amountLabel = document.getElementById('detailAmountLabel');
+  if (state.amount > 0) { amountEl.textContent = `$${state.amount.toLocaleString()}`; amountEl.style.fontSize = '42px'; amountLabel.textContent = 'per student, per year'; }
+  else { amountEl.textContent = state.status === 'pending' ? 'TBD' : 'N/A'; amountEl.style.fontSize = '28px'; amountLabel.textContent = state.status === 'pending' ? 'if legislation passes' : 'no program yet'; }
+  document.getElementById('detailQualify').textContent = state.qualify || 'No program currently available.';
+  document.getElementById('detailApply').textContent = state.apply || 'No application available yet.';
+  document.getElementById('detailNotes').textContent = state.notes || 'Check back for updates.';
+  document.getElementById('detailCtaText').textContent = state.ctaText || `Subscribe to get updates when ${state.name} changes.`;
+  const spendContainer = document.getElementById('detailSpend');
+  spendContainer.innerHTML = '';
+  if (state.spend.length > 0) {
+    state.spend.forEach(item => {
+      const tag = document.createElement('span');
+      tag.className = 'spend-tag';
+      tag.textContent = item;
+      spendContainer.appendChild(tag);
+    });
+  } else {
+    spendContainer.innerHTML = '<p style="font-size:14px;color:#888;">No program available yet.</p>';
+  }
+  const applyBtn = document.getElementById('detailApplyBtn');
+  if (state.applyUrl) { applyBtn.href = state.applyUrl; applyBtn.style.display = 'inline-flex'; }
+  else { applyBtn.style.display = 'none'; }
+  const detail = document.getElementById('stateDetail');
+  detail.classList.add('visible');
+  setTimeout(() => detail.scrollIntoView({behavior:'smooth',block:'start'}), 50);
+  document.querySelectorAll('.state-card').forEach(c => c.classList.remove('selected'));
+  cardEl.classList.add('selected');
+}
+
+function closeDetail() {
+  document.getElementById('stateDetail').classList.remove('visible');
+  document.querySelectorAll('.state-card').forEach(c => c.classList.remove('selected'));
+}
+
+function updateCalc() {
+  const amt = parseInt(document.getElementById('calcState').value) || 0;
+  const kids = parseInt(document.getElementById('calcKids').value) || 1;
+  const total = amt * kids;
+  const r = document.getElementById('calcResult');
+  const s = document.getElementById('calcResultSub');
+  const n = document.getElementById('calcNote');
+  if (!amt) { r.textContent = '$0'; s.textContent = 'Select your state to see your estimate'; n.textContent = ''; return; }
+  r.textContent = `$${total.toLocaleString()}`;
+  s.textContent = `${kids} student${kids>1?'s':''} at $${amt.toLocaleString()} per year`;
+  n.textContent = 'This is an estimate only. Actual amounts vary by grade level, income tier, disability status, and program structure. Texas homeschoolers receive $2,000 (not $10,474 which is for private school students). Utah homeschoolers receive $4,000-$6,000 based on age. Always verify with your state\'s official program.';
+}
+
+renderStates();
+</script>
+</body>
+</html>

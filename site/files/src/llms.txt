@@ -1,0 +1,29 @@
+# Skip School
+> The AI Playbook for Homeschool Parents
+
+Skip School helps parents use AI tools like ChatGPT, Claude, and Khan Academy to build personalized learning plans for their kids. We publish practical guides, tool reviews, curriculum templates, and state-by-state homeschool law breakdowns.
+
+## Topics We Cover
+- AI-powered homeschool curriculum design
+- Tool comparisons (ChatGPT vs Claude, Khan Academy, IXL, etc.)
+- Homeschool methods + AI (Charlotte Mason, Classical, Montessori, Unschooling, Eclectic)
+- State homeschool laws and ESA/voucher programs
+- Age-specific learning strategies (K-12)
+- Special needs and learning disabilities
+- College admissions for homeschoolers
+- STEM, writing, reading, math, history, science with AI
+- Homeschool co-ops, record-keeping, and scheduling
+
+## Key Pages
+- Homepage: https://skipschool.ai
+- Complete AI Homeschool Guide: https://skipschool.ai/ai-homeschool-complete-guide
+- 50 AI Prompts for Homeschool: https://skipschool.ai/50-ai-prompts-homeschool
+- Texas ESA Guide: https://skipschool.ai/texas-esa-guide
+- All Articles: https://skipschool.ai/articles-index
+- All Guides: https://skipschool.ai/guides-index
+- Tool Directory: https://skipschool.ai/directory-index
+- Newsletter: https://skipschool.ai/subscribe
+
+## About
+Skip School is a national brand serving homeschool families across all 50 states. Founded by Ashley Larkin.
+- About Ashley Larkin: https://skipschool.ai/about-ashley-larkin

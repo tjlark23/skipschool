@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TJ's Lighthouse — AI-Powered Business Operating System</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0e17;
+  --surface: #111827;
+  --surface2: #1a2332;
+  --accent: #38bdf8;
+  --accent2: #818cf8;
+  --accent3: #34d399;
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --text-bright: #f8fafc;
+  --glow: rgba(56, 189, 248, 0.15);
+  --border: rgba(255,255,255,0.06);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; color: var(--text-bright); line-height: 1.2; }
+
+/* Subtle grid bg */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    linear-gradient(rgba(56,189,248,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56,189,248,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+/* HERO */
+.hero {
+  padding: 120px 0 80px;
+  text-align: center;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 32px;
+  letter-spacing: 0.5px;
+}
+.hero-badge .dot { width: 6px; height: 6px; background: var(--accent3); border-radius: 50%; animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+.hero h1 { font-size: clamp(40px, 6vw, 72px); font-weight: 700; margin-bottom: 24px; letter-spacing: -2px; }
+.hero h1 span { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { font-size: 20px; color: var(--text-dim); max-width: 640px; margin: 0 auto 48px; }
+
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.stat { text-align: center; }
+.stat-num { font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700; color: var(--text-bright); }
+.stat-label { font-size: 13px; color: var(--text-dim); margin-top: 4px; letter-spacing: 0.5px; text-transform: uppercase; }
+
+/* SECTION */
+section { padding: 80px 0; }
+.section-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+section h2 { font-size: 36px; margin-bottom: 16px; letter-spacing: -1px; }
+section .subtitle { font-size: 18px; color: var(--text-dim); margin-bottom: 48px; max-width: 600px; }
+
+/* FEATURE GRID */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.feature-card:hover { border-color: rgba(56,189,248,0.2); transform: translateY(-2px); }
+.feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.feature-icon.blue { background: rgba(56,189,248,0.1); }
+.feature-icon.purple { background: rgba(129,140,248,0.1); }
+.feature-icon.green { background: rgba(52,211,153,0.1); }
+.feature-icon.orange { background: rgba(251,146,60,0.1); }
+.feature-card h3 { font-size: 18px; margin-bottom: 8px; }
+.feature-card p { font-size: 15px; color: var(--text-dim); line-height: 1.6; }
+
+/* FLOW */
+.flow-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.flow-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+.flow-step { text-align: center; }
+.flow-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+.flow-step h4 { font-size: 16px; margin-bottom: 8px; }
+.flow-step p { font-size: 14px; color: var(--text-dim); }
+
+/* AGENTS */
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.agent-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.agent-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.agent-card.research::before { background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+.agent-card.outreach::before { background: linear-gradient(90deg, var(--accent3), #22d3ee); }
+.agent-card.future::before { background: linear-gradient(90deg, #f59e0b, #f97316); }
+.agent-name { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+.agent-role { font-size: 13px; color: var(--accent); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+.agent-card p { font-size: 14px; color: var(--text-dim); }
+.agent-tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+.agent-tag.live { background: rgba(52,211,153,0.1); color: var(--accent3); }
+.agent-tag.soon { background: rgba(251,146,60,0.1); color: #fb923c; }
+
+/* ROADMAP */
+.roadmap-list { list-style: none; }
+.roadmap-item {
+  display: flex;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+.roadmap-phase {
+  flex-shrink: 0;
+  width: 100px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 2px;
+}
+.roadmap-phase.now { color: var(--accent3); }
+.roadmap-phase.next { color: var(--accent); }
+.roadmap-phase.future { color: var(--accent2); }
+.roadmap-content h4 { font-size: 16px; margin-bottom: 4px; }
+.roadmap-content p { font-size: 14px; color: var(--text-dim); }
+
+/* TECH STACK */
+.stack-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 32px;
+}
+.pill {
+  padding: 8px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 14px;
+  color: var(--text);
+  transition: border-color 0.3s;
+}
+.pill:hover { border-color: var(--accent); }
+
+/* FOOTER */
+footer {
+  padding: 60px 0 40px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+footer p { color: var(--text-dim); font-size: 14px; }
+footer .name { font-family: 'Space Grotesk', sans-serif; font-size: 18px; color: var(--text-bright); margin-bottom: 8px; }
+
+@media (max-width: 640px) {
+  .hero { padding: 80px 0 60px; }
+  .stats-row { gap: 24px; }
+  .feature-card, .agent-card { padding: 24px; }
+  .roadmap-item { flex-direction: column; gap: 8px; }
+  .roadmap-phase { width: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge"><span class="dot"></span> Running 24/7 on Railway</div>
+    <h1>TJ's <span>Lighthouse</span></h1>
+    <p>An AI-powered operating system that processes meetings, researches sales prospects, drafts cold outreach, and delivers intelligence briefings every morning. Built for a 27-brand local media empire.</p>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-num">27</div><div class="stat-label">Newsletter Brands</div></div>
+      <div class="stat"><div class="stat-num">145K+</div><div class="stat-label">Subscribers</div></div>
+      <div class="stat"><div class="stat-num">14</div><div class="stat-label">Active Pipelines</div></div>
+      <div class="stat"><div class="stat-num">$2/day</div><div class="stat-label">AI Cost</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IT DOES -->
+<section>
+  <div class="container">
+    <div class="section-label">Core Capabilities</div>
+    <h2>What the Lighthouse Does</h2>
+    <p class="subtitle">Every feature runs autonomously. TJ does his normal work. The system handles the intelligence, organization, and outreach.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon blue">🎙</div>
+        <h3>Meeting Intelligence</h3>
+        <p>Every Zoom call is recorded by Fathom. The bot auto-pulls transcripts, extracts decisions, action items, contacts, and revenue opportunities. Writes everything to CRM and Obsidian vault.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon purple">🧠</div>
+        <h3>Feed the Brain</h3>
+        <p>Drop any URL in Discord. Get back AI analysis in 60 seconds: key insights, which business it applies to, and a specific action plan. YouTube, articles, newsletters.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon green">📧</div>
+        <h3>Daily Briefing</h3>
+        <p>6 AM email with synthesized priorities, revenue pipeline, content ideas, stale contacts needing follow-up, and agent activity. 7 AM task list organized by urgency.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon orange">🔍</div>
+        <h3>AI Sales Agents</h3>
+        <p>Lenny researches real businesses via Google Places API. Carl drafts 50-75 word personalized cold pitches using 7 different angles. Approve or reject with a Discord reaction.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon blue">📰</div>
+        <h3>Newsletter Processing</h3>
+        <p>Gmail newsletters automatically pulled overnight from 4 labels, run through AI analysis, and saved to the intelligence vault. Fresh insights ready for the morning brief.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon purple">📚</div>
+        <h3>Knowledge Vault</h3>
+        <p>Everything writes to three places: Supabase (queries), Obsidian (permanent knowledge, synced to all devices via GitHub), and Discord (real-time visibility). Nothing is lost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="flow-section">
+  <div class="container">
+    <div class="section-label">Daily Flow</div>
+    <h2>How a Typical Day Looks</h2>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="flow-num">5am</div>
+        <h4>Readwise + Newsletters</h4>
+        <p>Reading highlights and newsletters processed overnight. Intelligence saved to vault.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">6am</div>
+        <h4>Daily Brief</h4>
+        <p>Synthesized email with priorities, pipeline, follow-ups, content ideas, agent report.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">7am</div>
+        <h4>Smart Tasks</h4>
+        <p>Auto-organized task list: overdue, due today, this week. Color-coded by urgency.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">All Day</div>
+        <h4>Auto Processing</h4>
+        <p>Meetings processed every 2 hours. Links analyzed on drop. Contacts extracted. Tasks created.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENTS -->
+<section>
+  <div class="container">
+    <div class="section-label">Planet Express Agent System</div>
+    <h2>The AI Workforce</h2>
+    <p class="subtitle">Named after Futurama and Simpsons characters. Each agent has one job and gets ruthlessly good at it.</p>
+    <div class="agents-grid">
+      <div class="agent-card research">
+        <div class="agent-name">Lenny</div>
+        <div class="agent-role">Research Agent</div>
+        <p>Uses Google Places API to find real, verified local business prospects in Williamson County. Scores each one for newsletter sponsorship fit. Rotates through cities to avoid repeats.</p>
+        <span class="agent-tag live">Live</span>
+      </div>
+      <div class="agent-card outreach">
+        <div class="agent-name">Carl</div>
+        <div class="agent-role">Outreach Agent</div>
+        <p>Drafts 50-75 word personalized cold emails using 7 angle templates. Each pitch in a batch uses a different approach. Discord approval workflow with reaction-based review.</p>
+        <span class="agent-tag live">Live</span>
+      </div>
+      <div class="agent-card future">
+        <div class="agent-name">Gil</div>
+        <div class="agent-role">Sales Agent (Coming Soon)</div>
+        <p>AI-generates website redesigns as cold outreach door-openers. Scrapes current site, builds modern preview, sends before/after comparison. 4-email sequence over 14 days.</p>
+        <span class="agent-tag soon">Building Next</span>
+      </div>
+      <div class="agent-card future">
+        <div class="agent-name">Bender</div>
+        <div class="agent-role">Chief of Staff (Planned)</div>
+        <p>The orchestrator. Coordinates all agents, reallocates resources to high-performing channels, generates daily scorecards, escalates hot leads to humans.</p>
+        <span class="agent-tag soon">Planned</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section>
+  <div class="container">
+    <div class="section-label">What's Next</div>
+    <h2>The Roadmap</h2>
+    <ul class="roadmap-list">
+      <li class="roadmap-item">
+        <span class="roadmap-phase now">Now</span>
+        <div class="roadmap-content"><h4>Gil Outbound Agent</h4><p>AI website redesigns as cold outreach pattern interrupt. Dedicated sending domains with inbox warmup. 4-email follow-up sequence.</p></div>
+      </li>
+      <li class="roadmap-item">
+        <span class="roadmap-phase now">Now</span>
+        <div class="roadmap-content"><h4>Email Infrastructure</h4><p>SPF/DKIM/DMARC on dedicated domains. 2-3 week warmup via Instantly. Inbox rotation for deliverability.</p></div>
+      </li>
+      <li class="roadmap-item">
+        <span class="roadmap-phase next">Next</span>
+        <div class="roadmap-content"><h4>Project Atlas</h4><p>8-agent system (Silicon Valley themed) for Lightbreak SaaS sales, podcast guest booking, and partnership prospecting. 75 personalized pitches per day.</p></div>
+      </li>
+      <li class="roadmap-item">
+        <span class="roadmap-phase next">Next</span>
+        <div class="roadmap-content"><h4>Freaks and Geeks Agent Team</h4><p>13-agent swarm on dedicated Mac Mini. Always-on autonomous operations across content, sales, ops, and intelligence.</p></div>
+      </li>
+      <li class="roadmap-item">
+        <span class="roadmap-phase future">Future</span>
+        <div class="roadmap-content"><h4>Agent Marketplace</h4><p>Package proven agent configurations as templates. Lightbreak customers spin up their own agent teams. Recurring revenue as a platform.</p></div>
+      </li>
+      <li class="roadmap-item">
+        <span class="roadmap-phase future">Future</span>
+        <div class="roadmap-content"><h4>100+ Agent Organization</h4><p>Full department structure: content, sales, ops, intelligence, engineering. Bender as Chief of Staff coordinating everything. Autonomous deal closing.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section>
+  <div class="container">
+    <div class="section-label">Under the Hood</div>
+    <h2>Tech Stack</h2>
+    <div class="stack-pills">
+      <span class="pill">Discord</span>
+      <span class="pill">Railway</span>
+      <span class="pill">Supabase</span>
+      <span class="pill">Node.js</span>
+      <span class="pill">DeepSeek V3.2</span>
+      <span class="pill">OpenRouter</span>
+      <span class="pill">Google Places API</span>
+      <span class="pill">Fathom</span>
+      <span class="pill">Obsidian</span>
+      <span class="pill">GitHub</span>
+      <span class="pill">Resend</span>
+      <span class="pill">Beehiiv</span>
+      <span class="pill">Claude / Claude Code</span>
+    </div>
+    <p style="margin-top: 24px; color: var(--text-dim); font-size: 15px;">Total infrastructure cost: under $50/month. AI processing: ~$2/day.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p class="name">TJ Larkin</p>
+    <p>Liberty Hill, TX — 27 Newsletter Brands — 145K+ Subscribers</p>
+    <p style="margin-top: 4px;">WilCo Guide • WilCo Seniors • WilCo Grind • Lightbreak • Hometown Legend • Local Media HQ</p>
+    <p style="margin-top: 24px; font-size: 12px; color: #64748b;">Built with Claude • March 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>

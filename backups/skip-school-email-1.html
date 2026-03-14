@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skip School — Email 1: Welcome</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #f5f0e8;
+    font-family: 'Georgia', serif;
+    color: #1a1a2e;
+    padding: 40px 20px;
+  }
+  .doc-wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0px #1a1a2e;
+    overflow: hidden;
+  }
+  .doc-header {
+    background: #1a1a2e;
+    color: #f5f0e8;
+    padding: 28px 40px;
+  }
+  .doc-header h1 {
+    font-size: 13px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #e8a838;
+    margin-bottom: 6px;
+  }
+  .doc-header p {
+    font-size: 13px;
+    font-family: 'Arial', sans-serif;
+    color: #9999bb;
+  }
+  .meta-block {
+    background: #f5f0e8;
+    border-bottom: 2px solid #1a1a2e;
+    padding: 24px 40px;
+  }
+  .meta-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+  }
+  .meta-row:last-child { margin-bottom: 0; }
+  .meta-label {
+    font-weight: 700;
+    color: #1a1a2e;
+    min-width: 100px;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding-top: 2px;
+  }
+  .meta-value { color: #333; line-height: 1.5; }
+  .meta-value.subject {
+    font-weight: 700;
+    font-size: 15px;
+    color: #1a1a2e;
+  }
+  .email-body {
+    padding: 40px 40px 50px;
+    line-height: 1.75;
+    font-size: 16px;
+    color: #1a1a2e;
+  }
+  .email-body p {
+    margin-bottom: 20px;
+  }
+  .ashley-note {
+    background: #fff8e8;
+    border-left: 4px solid #e8a838;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 24px 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: #7a5c00;
+    font-style: italic;
+  }
+  .ashley-note strong {
+    font-style: normal;
+    display: block;
+    margin-bottom: 4px;
+    color: #5a4000;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .reply-box {
+    background: #1a1a2e;
+    color: #f5f0e8;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin: 28px 0;
+  }
+  .reply-box p {
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #f5f0e8;
+  }
+  .reply-box strong {
+    color: #e8a838;
+  }
+  .divider {
+    border: none;
+    border-top: 2px dashed #ddd;
+    margin: 32px 0;
+  }
+  .section-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #9999bb;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  .three-things {
+    border: 2px solid #1a1a2e;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 28px 0;
+  }
+  .three-things-header {
+    background: #1a1a2e;
+    color: #f5f0e8;
+    padding: 14px 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .three-things-item {
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .three-things-item:last-child { border-bottom: none; }
+  .item-num {
+    background: #e8a838;
+    color: #1a1a2e;
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .item-text strong {
+    display: block;
+    margin-bottom: 3px;
+  }
+  .item-text span {
+    font-size: 14px;
+    color: #555;
+    font-family: 'Arial', sans-serif;
+  }
+  .poll-box {
+    border: 2px solid #e8a838;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin: 28px 0;
+    background: #fffdf7;
+  }
+  .poll-box h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+  .poll-subtext {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 20px !important;
+  }
+  .poll-option {
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.15s;
+    background: white;
+  }
+  .poll-option:last-child { margin-bottom: 0; }
+  .freebie-box {
+    background: #f0f7f0;
+    border: 2px solid #2d6a4f;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin: 28px 0;
+  }
+  .freebie-box .gift-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #2d6a4f;
+    margin-bottom: 10px;
+  }
+  .freebie-box h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #1a1a2e;
+  }
+  .freebie-box p {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 16px !important;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #2d6a4f;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+  .sequence-preview {
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 28px 0;
+  }
+  .sequence-preview h3 {
+    font-size: 15px;
+    margin-bottom: 16px;
+    font-family: 'Arial', sans-serif;
+  }
+  .seq-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    align-items: flex-start;
+  }
+  .seq-row:last-child { margin-bottom: 0; }
+  .seq-day {
+    background: #1a1a2e;
+    color: #e8a838;
+    font-weight: 700;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    margin-top: 1px;
+    letter-spacing: 0.5px;
+  }
+  .seq-desc { color: #444; line-height: 1.5; }
+  .sign-off {
+    margin-top: 32px;
+  }
+  .sign-off p { margin-bottom: 8px; }
+  .ps-block {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+  }
+  .ps-block strong { font-style: normal; color: #1a1a2e; }
+</style>
+</head>
+<body>
+<div class="doc-wrapper">
+
+  <div class="doc-header">
+    <h1>Skip School — Welcome Sequence</h1>
+    <p>Email 1 of 4 &nbsp;·&nbsp; Sends: Immediately on signup &nbsp;·&nbsp; Draft for Ashley's edit pass</p>
+  </div>
+
+  <div class="meta-block">
+    <div class="meta-row">
+      <span class="meta-label">Subject</span>
+      <span class="meta-value subject">You're in. Here's what happens next.</span>
+    </div>
+    <div class="meta-row">
+      <span class="meta-label">Preview</span>
+      <span class="meta-value">Plus a free AI starter pack — and a quick question for you.</span>
+    </div>
+    <div class="meta-row">
+      <span class="meta-label">From</span>
+      <span class="meta-value">Ashley (& TJ) at Skip School &lt;hello@skipschool.ai&gt;</span>
+    </div>
+    <div class="meta-row">
+      <span class="meta-label">Timing</span>
+      <span class="meta-value">Trigger: ~30 seconds after signup confirmation</span>
+    </div>
+  </div>
+
+  <div class="email-body">
+
+    <p>Hey — you made it.</p>
+
+    <p>I'm Ashley. My husband TJ and I run Skip School, and I'm genuinely glad you're here.</p>
+
+    <p>Before anything else — one quick question:</p>
+
+    <div class="reply-box">
+      <p><strong>Hit reply and tell me:</strong> Where are you right now with AI and homeschooling? Total beginner? Already using some tools? Or somewhere in the "I know I should be doing more of this" middle?</p>
+      <p style="margin-top: 12px; font-size: 13px; font-family: Arial, sans-serif; color: #aab;">One sentence is fine. I read every reply — and your answer genuinely shapes what I write about.</p>
+    </div>
+
+    <div class="ashley-note">
+      <strong>✏️ Ashley — add here</strong>
+      A personal line or two about why you asked this specific question. Something like a real example of a reply you've gotten, or why you care about knowing where they're starting from. Keep it 2–3 sentences, very casual.
+    </div>
+
+    <hr class="divider">
+
+    <p class="section-label">What is Skip School</p>
+
+    <p>Here's the short version of what we believe:</p>
+
+    <p>AI tutoring tools that would have cost $50,000 a year a decade ago are available today for $20 a month. Several states are now giving homeschool families $10,000 per kid per year to spend on exactly this kind of education. And the gap between what a personalized AI-powered home education can deliver — versus what the average classroom offers — is getting wider every single month.</p>
+
+    <p>Most homeschool parents sense this. Very few know exactly what to do about it.</p>
+
+    <p>That's the gap Skip School lives in.</p>
+
+    <p>Every week, TJ digs into the AI tools, the research, the policy updates, and the platforms worth knowing about. I bring it back to the kitchen table — what actually works with real kids, what sounds good in theory and falls apart in practice, and what's genuinely worth your time and money.</p>
+
+    <p>We use AI to do a lot of this. We're not shy about that. This is a brand about AI, built with AI — and run by two humans who think the human filter is exactly what makes it worth reading.</p>
+
+    <div class="ashley-note">
+      <strong>✏️ Ashley — add here</strong>
+      1–2 sentences grounding this in something real about your family and your kids. You don't need to get specific about your homeschool situation — just something that makes it feel like a real household and not a brand statement. Something like what a typical week of learning looks like, or what made you personally lean into AI for education.
+    </div>
+
+    <hr class="divider">
+
+    <p class="section-label">Your next 4 days</p>
+
+    <p>Over the next three days, you'll get one email each day. Each one has something free and immediately useful — no fluff, no pitch, just tools and resources you can actually use.</p>
+
+    <div class="sequence-preview">
+      <h3>📬 Here's what's coming:</h3>
+      <div class="seq-row">
+        <span class="seq-day">TODAY</span>
+        <span class="seq-desc"><strong>Free AI Starter Pack</strong> — 10 copy-paste Claude prompts for homeschool parents. You'll see it below.</span>
+      </div>
+      <div class="seq-row">
+        <span class="seq-day">DAY 2</span>
+        <span class="seq-desc"><strong>The AI Toolkit</strong> — The exact tools we use to teach our kids, what each one costs, and what to try first.</span>
+      </div>
+      <div class="seq-row">
+        <span class="seq-day">DAY 3</span>
+        <span class="seq-desc"><strong>The $10,000 Email</strong> — Everything you need to know about ESA funding and how to claim it for your family.</span>
+      </div>
+      <div class="seq-row">
+        <span class="seq-day">DAY 4</span>
+        <span class="seq-desc"><strong>What to expect every Wednesday</strong> — The full picture of what Skip School is building and why we're not going anywhere.</span>
+      </div>
+    </div>
+
+    <p>After that, every Wednesday at 7am CT — the weekly newsletter. New tools, curriculum picks, ESA updates, and whatever we've been experimenting with that week.</p>
+
+    <hr class="divider">
+
+    <p class="section-label">Today's free resource</p>
+
+    <div class="freebie-box">
+      <div class="gift-label">🎁 Free Download</div>
+      <h3>10 Claude Prompts for Homeschool Parents</h3>
+      <p>Copy-paste prompts that work right now — no setup, no paid tools required. Covers spelling lists, lesson planning, reading comprehension questions, science explanations by age, and more. This is the starter pack we wish we'd had on day one.</p>
+      <a href="[LINK TO PROMPT PACK]" class="cta-button">Grab the Prompt Pack →</a>
+    </div>
+
+    <div class="ashley-note">
+      <strong>✏️ Ashley — add here</strong>
+      One quick line about one specific prompt in the pack that you personally use or that surprised you. Makes the freebie feel curated, not generic.
+    </div>
+
+    <hr class="divider">
+
+    <p class="section-label">Quick poll</p>
+
+    <div class="poll-box">
+      <h3>Where are you on the homeschool journey?</h3>
+      <p class="poll-subtext">Click your answer — takes 2 seconds, helps me send you more relevant content.</p>
+      <div class="poll-option">🌱 Just getting started — new to homeschooling or thinking about it</div>
+      <div class="poll-option">📚 In it — been homeschooling for a year or more</div>
+      <div class="poll-option">🤖 AI-curious — using some tools but want to go deeper</div>
+      <div class="poll-option">🚀 Already all-in — AI is a big part of how we learn at home</div>
+    </div>
+
+    <div class="ashley-note">
+      <strong>📋 TJ note</strong>
+      Hook this poll up to Beehiiv's poll feature or a Typeform — whichever tags the subscriber in the right segment. The goal is to know who's a beginner vs. already using AI so we can trigger different content paths eventually.
+    </div>
+
+    <hr class="divider">
+
+    <div class="sign-off">
+      <p>Genuinely glad you're here. Check your inbox tomorrow — the AI toolkit email is one I think you'll want to save.</p>
+
+      <div class="ashley-note">
+        <strong>✏️ Ashley — sign-off</strong>
+        Write your own closing 1–2 lines in your voice. Something warm, maybe a little self-aware about the fact that you're sending this right after they subscribed. Then sign it "— Ashley (& TJ)" or however you prefer to sign it.
+      </div>
+
+      <p style="margin-top: 24px; font-family: Arial, sans-serif; font-size: 14px; color: #666;">Ashley (& TJ) Larkin<br>
+      <span style="color: #999; font-size: 13px;">SkipSchool.ai — The AI Playbook for Homeschool Parents</span></p>
+    </div>
+
+    <div class="ps-block">
+      <strong>P.S.</strong> — Tomorrow's email covers the exact AI tools we actually use at home, what each one costs, and which one to try first if you're just getting started. It's free. No pitch attached.
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

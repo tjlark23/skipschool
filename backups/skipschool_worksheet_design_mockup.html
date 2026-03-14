@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skip School Curriculum Packet - Design Mockup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,800;9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================================
+           SKIP SCHOOL CURRICULUM PACKET - DESIGN SYSTEM
+           ============================================================
+           Colors: Navy #0d203b, Yellow #fbc926
+           Fonts: Fraunces (titles), DM Sans (body)
+           Subject colors: Navy=Math, #2c6e49=ELA, #c44536=Review
+        ============================================================ */
+
+        @page {
+            size: letter;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.45;
+            color: #1a1a1a;
+            background: #e8e8e8;
+        }
+
+        /* ============================================================
+           PAGE CONTAINER
+        ============================================================ */
+        .page {
+            width: 8.5in;
+            min-height: 11in;
+            background: white;
+            margin: 20px auto;
+            padding: 0;
+            position: relative;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .page-inner {
+            padding: 0 0.65in 0.7in 0.65in;
+        }
+
+        @media print {
+            body { background: white; }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+            .page:last-child { page-break-after: avoid; }
+            .design-label { display: none !important; }
+        }
+
+        /* ============================================================
+           HEADER SYSTEM
+           Logo bar + Subject banner + Name/Date
+        ============================================================ */
+
+        /* Top logo strip */
+        .logo-strip {
+            background: #0d203b;
+            padding: 8px 0.65in;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-text {
+            display: flex;
+            align-items: baseline;
+            gap: 0;
+        }
+
+        .logo-skip {
+            font-family: 'Fraunces', serif;
+            font-weight: 900;
+            font-size: 20pt;
+            color: #fbc926;
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+
+        .logo-school {
+            font-family: 'Fraunces', serif;
+            font-weight: 900;
+            font-size: 20pt;
+            color: white;
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+
+        .logo-meta {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 7.5pt;
+            color: rgba(255,255,255,0.6);
+            text-align: right;
+        }
+
+        /* Subject banner */
+        .subject-banner {
+            padding: 12px 0.65in 10px;
+            color: white;
+        }
+
+        .subject-banner.math { background: #0d203b; }
+        .subject-banner.ela { background: #2c6e49; }
+        .subject-banner.review { background: #c44536; }
+        .subject-banner.cover { background: #0d203b; }
+
+        /* When logo strip and banner are same color, merge them */
+        .merged-header .logo-strip {
+            padding-bottom: 0;
+        }
+        .merged-header .subject-banner {
+            padding-top: 4px;
+        }
+
+        .banner-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 800;
+            font-size: 22pt;
+            line-height: 1.15;
+            margin: 0;
+        }
+
+        .banner-subtitle {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 9.5pt;
+            font-weight: 400;
+            opacity: 0.85;
+            margin-top: 2px;
+        }
+
+        .banner-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 4px;
+            padding: 2px 10px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 8pt;
+            font-weight: 600;
+            color: white;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        /* Name/Date line */
+        .name-date-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 10px 0;
+            margin: 0 0 10px 0;
+            border-bottom: 1.5px solid #ddd;
+            font-size: 10pt;
+        }
+
+        .name-date-line .field-label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .name-date-line .field-blank {
+            border-bottom: 1.5px solid #333;
+            display: inline-block;
+        }
+
+        .name-field .field-blank { width: 220px; }
+        .date-field .field-blank { width: 120px; }
+
+        /* Personalized name (Tier 3) */
+        .name-personalized {
+            font-weight: 700;
+            color: #0d203b;
+            border-bottom: none !important;
+        }
+
+        /* ============================================================
+           CONTENT ELEMENTS
+        ============================================================ */
+
+        /* Section headers */
+        .section-header {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11.5pt;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 16px 0 6px 0;
+        }
+
+        .instruction {
+            font-size: 9.5pt;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        /* Remember/hint box */
+        .remember-box {
+            background: #f4f6f8;
+            border-left: 3px solid var(--subject-color, #0d203b);
+            padding: 7px 14px;
+            margin: 6px 0 14px 0;
+            font-size: 9.5pt;
+            color: #333;
+        }
+
+        /* Ashley's Tip */
+        .ashleys-tip {
+            background: #fffcf0;
+            border: 1px solid #f0e6c0;
+            border-left: 4px solid #fbc926;
+            border-radius: 0 6px 6px 0;
+            padding: 10px 14px;
+            margin: 8px 0 16px 0;
+        }
+
+        .ashleys-tip-header {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: 10pt;
+            color: #0d203b;
+            margin-bottom: 3px;
+        }
+
+        .ashleys-tip-text {
+            font-size: 9.5pt;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        /* Problem grid */
+        .problems-grid {
+            display: grid;
+            margin: 6px 0;
+            row-gap: 2px;
+        }
+
+        .grid-4col { grid-template-columns: repeat(4, 1fr); }
+        .grid-3col { grid-template-columns: repeat(3, 1fr); }
+        .grid-2col { grid-template-columns: repeat(2, 1fr); }
+        .grid-5col { grid-template-columns: repeat(5, 1fr); }
+
+        .problem-cell {
+            padding: 5px 2px;
+            font-size: 10.5pt;
+            line-height: 1.8;
+        }
+
+        .answer-blank {
+            display: inline-block;
+            min-width: 45px;
+            border-bottom: 1.5px solid #444;
+            margin-left: 4px;
+        }
+
+        .answer-blank-long {
+            display: inline-block;
+            min-width: 160px;
+            border-bottom: 1.5px solid #444;
+            margin-left: 4px;
+        }
+
+        /* Work boxes (show your work) */
+        .work-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 8px 0;
+        }
+
+        .work-box {
+            border: 1.5px solid #d0d0d0;
+            border-radius: 6px;
+            padding: 10px 10px 8px;
+            text-align: center;
+            min-height: 90px;
+            position: relative;
+        }
+
+        .work-box .problem-display {
+            font-size: 14pt;
+            font-weight: 600;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .work-box .work-label {
+            position: absolute;
+            bottom: 4px;
+            right: 8px;
+            font-size: 7pt;
+            color: #bbb;
+            font-style: italic;
+        }
+
+        /* Story problems */
+        .story-problem {
+            margin: 12px 0;
+            padding-left: 2px;
+        }
+
+        .story-problem .problem-num {
+            font-weight: 700;
+            color: var(--subject-color, #0d203b);
+            font-size: 11pt;
+        }
+
+        .story-problem .problem-text {
+            margin: 2px 0 6px 0;
+            line-height: 1.5;
+        }
+
+        .story-problem .answer-area {
+            margin: 3px 0 3px 4px;
+            font-size: 9.5pt;
+            color: #555;
+        }
+
+        /* Reading passage */
+        .passage-box {
+            background: #f7f9fb;
+            border: 1px solid #dde3ea;
+            border-radius: 6px;
+            padding: 16px 18px;
+            margin: 10px 0 14px 0;
+            font-size: 10.5pt;
+            line-height: 1.65;
+        }
+
+        .passage-box p {
+            text-indent: 24px;
+            margin-bottom: 6px;
+        }
+
+        .passage-box p:first-child { text-indent: 24px; }
+
+        /* Multiple choice */
+        .mc-question {
+            margin: 12px 0;
+        }
+
+        .mc-question .q-text {
+            font-weight: 700;
+            font-size: 10.5pt;
+            margin-bottom: 2px;
+        }
+
+        .mc-options {
+            margin-left: 16px;
+            font-size: 10pt;
+            line-height: 1.65;
+        }
+
+        /* Comparison circles */
+        .compare-circle {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1.5px solid #444;
+            border-radius: 50%;
+            margin: 0 6px;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 17px;
+            font-size: 9pt;
+        }
+
+        /* Sequence blanks */
+        .sequence-row {
+            font-size: 12pt;
+            letter-spacing: 0.5px;
+            margin: 6px 0;
+            padding: 3px 0;
+        }
+
+        .seq-blank {
+            display: inline-block;
+            width: 32px;
+            border-bottom: 1.5px solid #444;
+            text-align: center;
+            margin: 0 2px;
+        }
+
+        /* ============================================================
+           SVG VISUAL ELEMENTS
+        ============================================================ */
+
+        .shapes-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 10px 0;
+            align-items: flex-start;
+        }
+
+        .shape-problem {
+            text-align: center;
+        }
+
+        .shape-problem .shape-label {
+            font-size: 10pt;
+            margin-top: 4px;
+        }
+
+        .clock-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 10px 0;
+        }
+
+        .clock-item {
+            text-align: center;
+        }
+
+        .clock-item .clock-label {
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--subject-color, #0d203b);
+        }
+
+        .clock-item .clock-answer {
+            margin-top: 4px;
+            font-size: 11pt;
+        }
+
+        .grid-squares {
+            margin: 8px 0;
+        }
+
+        /* ============================================================
+           FOOTER
+        ============================================================ */
+        .page-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 8px 0.65in;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #f8f8f8;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-star {
+            color: #fbc926;
+            font-size: 14pt;
+        }
+
+        .footer-tip {
+            font-style: italic;
+            font-size: 8.5pt;
+            color: #666;
+            text-align: center;
+            flex: 1;
+        }
+
+        .footer-brand {
+            font-size: 7pt;
+            color: #bbb;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        /* ============================================================
+           COVER PAGE SPECIFIC
+        ============================================================ */
+        .cover-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5in 1in 1in;
+            text-align: center;
+        }
+
+        .cover-logo {
+            margin-bottom: 30px;
+        }
+
+        .cover-logo .skip {
+            font-family: 'Fraunces', serif;
+            font-weight: 900;
+            font-size: 52pt;
+            color: #fbc926;
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        .cover-logo .school {
+            font-family: 'Fraunces', serif;
+            font-weight: 900;
+            font-size: 52pt;
+            color: #0d203b;
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        .cover-tagline {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11pt;
+            color: #777;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
+
+        .cover-divider {
+            width: 80px;
+            height: 3px;
+            background: #fbc926;
+            margin: 0 auto 40px;
+        }
+
+        .cover-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 800;
+            font-size: 20pt;
+            color: #0d203b;
+            margin-bottom: 8px;
+        }
+
+        .cover-subtitle {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13pt;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .cover-details {
+            background: #f7f8fa;
+            border-radius: 8px;
+            padding: 20px 40px;
+            margin-top: 20px;
+            text-align: left;
+            width: 100%;
+            max-width: 420px;
+        }
+
+        .cover-detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 10.5pt;
+        }
+
+        .cover-detail-row:last-child { border-bottom: none; }
+
+        .cover-detail-label {
+            color: #888;
+            font-weight: 500;
+        }
+
+        .cover-detail-value {
+            font-weight: 600;
+            color: #0d203b;
+        }
+
+        .cover-footer-note {
+            margin-top: 40px;
+            font-size: 9pt;
+            color: #999;
+            font-style: italic;
+        }
+
+        /* ============================================================
+           DESIGN LABELS (for mockup only, hidden in print)
+        ============================================================ */
+        .design-label {
+            background: #fbc926;
+            color: #0d203b;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 10pt;
+            text-align: center;
+            padding: 8px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* True/False grid styling */
+        .tf-grid {
+            display: grid;
+            grid-template-columns: 1fr 80px;
+            gap: 2px 12px;
+            margin: 6px 0;
+        }
+        .tf-grid .tf-problem {
+            padding: 4px 0;
+            font-size: 10.5pt;
+        }
+        .tf-grid .tf-answer {
+            padding: 4px 0;
+            border-bottom: 1.5px solid #444;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- ============================================================
+     PAGE 1: COVER PAGE
+============================================================ -->
+<div class="design-label">MOCKUP 1 of 4: Cover Page</div>
+<div class="page">
+    <div class="cover-content">
+        <div class="cover-logo">
+            <span class="skip">SKIP</span><span class="school">SCHOOL</span>
+        </div>
+        <div class="cover-tagline">Weekly Curriculum Packet</div>
+        <div class="cover-divider"></div>
+        <div class="cover-title">Grade 3: Math + ELA</div>
+        <div class="cover-subtitle">Week 5 &middot; October 7 &ndash; 11, 2026</div>
+
+        <div class="cover-details">
+            <div class="cover-detail-row">
+                <span class="cover-detail-label">Student</span>
+                <span class="cover-detail-value">_____________________</span>
+            </div>
+            <div class="cover-detail-row">
+                <span class="cover-detail-label">Math Focus</span>
+                <span class="cover-detail-value">Multiplication: 2s, 5s, 10s</span>
+            </div>
+            <div class="cover-detail-row">
+                <span class="cover-detail-label">ELA Focus</span>
+                <span class="cover-detail-value">Fiction &amp; Nonfiction Comprehension</span>
+            </div>
+            <div class="cover-detail-row">
+                <span class="cover-detail-label">Pages</span>
+                <span class="cover-detail-value">7 worksheets + answer key</span>
+            </div>
+            <div class="cover-detail-row">
+                <span class="cover-detail-label">Standards</span>
+                <span class="cover-detail-value">TEKS 3.4D, 3.4E, 3.7A, 3.8B</span>
+            </div>
+        </div>
+
+        <div class="cover-footer-note">
+            Aligned to Texas TEKS standards &middot; skipschool.ai
+        </div>
+    </div>
+
+    <div class="page-footer">
+        <span class="footer-star">&#9733;</span>
+        <span class="footer-tip">Built with AI. Reviewed by a real homeschool mom. &middot; skipschool.ai</span>
+        <span class="footer-star">&#9733;</span>
+    </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE 2: MATH COMPUTATION PAGE
+============================================================ -->
+<div class="design-label">MOCKUP 2 of 4: Math Page (Computation)</div>
+<div class="page" style="--subject-color: #0d203b;">
+    <!-- Header -->
+    <div class="logo-strip">
+        <div class="logo-text">
+            <span class="logo-skip">SKIP</span><span class="logo-school">SCHOOL</span>
+        </div>
+        <div class="logo-meta">Grade 3 &middot; Week 5</div>
+    </div>
+    <div class="subject-banner math">
+        <h1 class="banner-title">Multiplication: 2s, 5s, and 10s</h1>
+        <div class="banner-subtitle">Solve each problem. Build your speed and accuracy!</div>
+    </div>
+
+    <div class="page-inner">
+        <!-- Name/Date -->
+        <div class="name-date-line">
+            <span class="name-field">
+                <span class="field-label">Name:</span>
+                <span class="field-blank"></span>
+            </span>
+            <span class="date-field">
+                <span class="field-label">Date:</span>
+                <span class="field-blank"></span>
+            </span>
+        </div>
+
+        <!-- Ashley's Tip -->
+        <div class="ashleys-tip">
+            <div class="ashleys-tip-header">Ashley's Note:</div>
+            <div class="ashleys-tip-text">
+                This week we're kicking off multiplication, starting with the 2s, 5s, and 10s. These are the foundation facts. If your kid already skip-counts well, they might breeze through. Let them. The speed round builds confidence, not stress. If they struggle, grab coins or blocks and make groups.
+            </div>
+        </div>
+
+        <!-- Speed Round -->
+        <div class="section-header">Speed Round!</div>
+        <div class="problems-grid grid-4col">
+            <div class="problem-cell">1. &nbsp;2 &times; 3 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">2. &nbsp;5 &times; 4 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">3. &nbsp;10 &times; 2 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">4. &nbsp;2 &times; 7 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">5. &nbsp;5 &times; 6 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">6. &nbsp;10 &times; 5 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">7. &nbsp;2 &times; 9 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">8. &nbsp;5 &times; 8 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">9. &nbsp;10 &times; 7 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">10. 2 &times; 5 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">11. 5 &times; 9 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">12. 10 &times; 10 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">13. 2 &times; 8 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">14. 5 &times; 5 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">15. 10 &times; 4 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">16. 2 &times; 12 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">17. 5 &times; 7 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">18. 10 &times; 8 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">19. 2 &times; 11 = <span class="answer-blank"></span></div>
+            <div class="problem-cell">20. 5 &times; 12 = <span class="answer-blank"></span></div>
+        </div>
+
+        <!-- Skip Counting -->
+        <div class="section-header" style="margin-top: 18px;">Skip Counting Patterns</div>
+        <p class="instruction">Fill in the missing numbers:</p>
+        <div class="sequence-row">Count by 2s: &nbsp; 2, &nbsp;4, <span class="seq-blank"></span>, &nbsp;8, <span class="seq-blank"></span>, &nbsp;12, <span class="seq-blank"></span>, &nbsp;16, <span class="seq-blank"></span>, &nbsp;20</div>
+        <div class="sequence-row">Count by 5s: &nbsp; 5, <span class="seq-blank"></span>, &nbsp;15, <span class="seq-blank"></span>, &nbsp;25, <span class="seq-blank"></span>, &nbsp;35, <span class="seq-blank"></span>, &nbsp;45, <span class="seq-blank"></span></div>
+        <div class="sequence-row">Count by 10s: 10, <span class="seq-blank"></span>, <span class="seq-blank"></span>, &nbsp;40, <span class="seq-blank"></span>, &nbsp;60, <span class="seq-blank"></span>, <span class="seq-blank"></span>, &nbsp;90, <span class="seq-blank"></span></div>
+
+        <!-- True or False -->
+        <div class="section-header" style="margin-top: 18px;">True or False?</div>
+        <div class="problems-grid grid-2col">
+            <div class="problem-cell">1. &nbsp;2 &times; 6 = 14 <span class="answer-blank" style="min-width:55px;"></span></div>
+            <div class="problem-cell">2. &nbsp;5 &times; 5 = 25 <span class="answer-blank" style="min-width:55px;"></span></div>
+            <div class="problem-cell">3. &nbsp;10 &times; 3 = 30 <span class="answer-blank" style="min-width:55px;"></span></div>
+            <div class="problem-cell">4. &nbsp;2 &times; 9 = 16 <span class="answer-blank" style="min-width:55px;"></span></div>
+            <div class="problem-cell">5. &nbsp;5 &times; 8 = 45 <span class="answer-blank" style="min-width:55px;"></span></div>
+            <div class="problem-cell">6. &nbsp;10 &times; 10 = 100 <span class="answer-blank" style="min-width:55px;"></span></div>
+        </div>
+    </div>
+
+    <div class="page-footer">
+        <span class="footer-star">&#9733;</span>
+        <span class="footer-tip">Multiplication is just skip counting! 5 &times; 3 means skip count by 5 three times: 5, 10, 15!</span>
+        <span class="footer-star">&#9733;</span>
+    </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE 3: ELA READING COMPREHENSION
+============================================================ -->
+<div class="design-label">MOCKUP 3 of 4: ELA Page (Reading Comprehension)</div>
+<div class="page" style="--subject-color: #2c6e49;">
+    <!-- Header -->
+    <div class="logo-strip">
+        <div class="logo-text">
+            <span class="logo-skip">SKIP</span><span class="logo-school">SCHOOL</span>
+        </div>
+        <div class="logo-meta">Grade 3 &middot; Week 5</div>
+    </div>
+    <div class="subject-banner ela">
+        <h1 class="banner-title">Reading Comprehension: Fiction</h1>
+        <div class="banner-subtitle">Read the story carefully, then answer the questions.</div>
+    </div>
+
+    <div class="page-inner">
+        <div class="name-date-line">
+            <span class="name-field">
+                <span class="field-label">Name:</span>
+                <span class="field-blank"></span>
+            </span>
+            <span class="date-field">
+                <span class="field-label">Date:</span>
+                <span class="field-blank"></span>
+            </span>
+        </div>
+
+        <div class="passage-box">
+            <p><strong>The Garden Plan</strong></p>
+            <p>Sophia stared at the empty patch of dirt behind the house and sighed. Every year, her grandmother grew tomatoes, peppers, and herbs in that spot. But Grandma had moved to a smaller apartment in January, and the garden sat untouched.</p>
+            <p>"I want to try," Sophia told her mom one Saturday morning.</p>
+            <p>Her mom raised an eyebrow. "Gardening is harder than it looks. You have to water every day, pull weeds, and be patient."</p>
+            <p>Sophia nodded. She rode her bike to the library and checked out two books about vegetable gardens. She spent the whole afternoon reading about soil, sunlight, and spacing. The next morning, she woke up early and started digging.</p>
+            <p>Three weeks later, tiny green sprouts pushed through the soil. Sophia took a photo and sent it to Grandma.</p>
+            <p>"You did the hard part," Grandma texted back. "You started."</p>
+            <p>By July, Sophia had more tomatoes than her family could eat. She filled a basket and left it on her neighbor's porch with a note: <em>From Sophia's Garden.</em></p>
+        </div>
+
+        <div class="mc-question">
+            <div class="q-text">1. What is the THEME of this story?</div>
+            <div class="mc-options">
+                <div>A. Gardens need a lot of water to grow.</div>
+                <div>B. Hard work and taking initiative lead to success.</div>
+                <div>C. Grandmothers are always the best gardeners.</div>
+                <div>D. Libraries have books about everything.</div>
+            </div>
+        </div>
+
+        <div class="mc-question">
+            <div class="q-text">2. How does Sophia PREPARE before she starts gardening?</div>
+            <div class="mc-options">
+                <div>A. She asks her grandmother to come help.</div>
+                <div>B. She buys all the supplies at a store.</div>
+                <div>C. She goes to the library and reads about gardening.</div>
+                <div>D. She watches videos online about growing vegetables.</div>
+            </div>
+        </div>
+
+        <div class="mc-question">
+            <div class="q-text">3. Why does Grandma say "You did the hard part"?</div>
+            <div class="mc-options">
+                <div>A. Because digging is the most physical work.</div>
+                <div>B. Because getting started is often the hardest step.</div>
+                <div>C. Because Sophia had to ride her bike to the library.</div>
+                <div>D. Because three weeks is a long time to wait.</div>
+            </div>
+        </div>
+
+        <div class="mc-question">
+            <div class="q-text">4. What does the word "untouched" most likely mean in this story?</div>
+            <div class="mc-options">
+                <div>A. Broken and damaged</div>
+                <div>B. Perfectly cleaned</div>
+                <div>C. Not worked on or cared for</div>
+                <div>D. Covered in flowers</div>
+            </div>
+        </div>
+
+        <div class="mc-question">
+            <div class="q-text">5. Which detail BEST shows that Sophia is generous?</div>
+            <div class="mc-options">
+                <div>A. She sent a photo to Grandma.</div>
+                <div>B. She read two books from the library.</div>
+                <div>C. She woke up early to start digging.</div>
+                <div>D. She left a basket of tomatoes on her neighbor's porch.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-footer">
+        <span class="footer-star">&#9733;</span>
+        <span class="footer-tip">Go back to the story to find evidence for your answer. Don't just guess from memory!</span>
+        <span class="footer-star">&#9733;</span>
+    </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE 4: MATH WITH VISUALS (Area & Perimeter with SVG shapes)
+============================================================ -->
+<div class="design-label">MOCKUP 4 of 4: Math Page with Visual Elements (Geometry)</div>
+<div class="page" style="--subject-color: #0d203b;">
+    <!-- Header -->
+    <div class="logo-strip">
+        <div class="logo-text">
+            <span class="logo-skip">SKIP</span><span class="logo-school">SCHOOL</span>
+        </div>
+        <div class="logo-meta">Grade 3 &middot; Week 25</div>
+    </div>
+    <div class="subject-banner math">
+        <h1 class="banner-title">Area and Perimeter</h1>
+        <div class="banner-subtitle">Find the area AND perimeter of each shape.</div>
+    </div>
+
+    <div class="page-inner">
+        <div class="name-date-line">
+            <span class="name-field">
+                <span class="field-label">Name:</span>
+                <span class="field-blank"></span>
+            </span>
+            <span class="date-field">
+                <span class="field-label">Date:</span>
+                <span class="field-blank"></span>
+            </span>
+        </div>
+
+        <div class="remember-box">
+            <strong>Remember:</strong> &nbsp;Area = length &times; width (square units) &nbsp;&nbsp;&nbsp;&nbsp; Perimeter = add up ALL sides
+        </div>
+
+        <!-- Row of 3 rectangles with dimensions -->
+        <div class="shapes-row" style="justify-content: space-between;">
+            <!-- Shape 1 -->
+            <div class="shape-problem">
+                <div style="color: #0d203b; font-weight: 700; font-size: 11pt; margin-bottom: 4px;">#1</div>
+                <svg width="150" height="100" viewBox="0 0 150 100">
+                    <!-- Rectangle -->
+                    <rect x="15" y="20" width="120" height="60" fill="#e8f0fe" stroke="#0d203b" stroke-width="2" rx="2"/>
+                    <!-- Dimension labels -->
+                    <text x="75" y="14" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="600">5 cm</text>
+                    <text x="142" y="54" text-anchor="start" font-family="DM Sans" font-size="11" font-weight="600">3 cm</text>
+                </svg>
+                <div style="font-size: 10pt; text-align: left; padding-left: 8px;">
+                    Area = <span class="answer-blank" style="min-width:40px;"></span> sq cm<br>
+                    Perimeter = <span class="answer-blank" style="min-width:40px;"></span> cm
+                </div>
+            </div>
+
+            <!-- Shape 2 -->
+            <div class="shape-problem">
+                <div style="color: #0d203b; font-weight: 700; font-size: 11pt; margin-bottom: 4px;">#2</div>
+                <svg width="170" height="95" viewBox="0 0 170 95">
+                    <rect x="10" y="20" width="150" height="55" fill="#e8f0fe" stroke="#0d203b" stroke-width="2" rx="2"/>
+                    <text x="85" y="14" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="600">8 in</text>
+                    <text x="166" y="52" text-anchor="start" font-family="DM Sans" font-size="11" font-weight="600">4 in</text>
+                </svg>
+                <div style="font-size: 10pt; text-align: left; padding-left: 4px;">
+                    Area = <span class="answer-blank" style="min-width:40px;"></span> sq in<br>
+                    Perimeter = <span class="answer-blank" style="min-width:40px;"></span> in
+                </div>
+            </div>
+
+            <!-- Shape 3 (square) -->
+            <div class="shape-problem">
+                <div style="color: #0d203b; font-weight: 700; font-size: 11pt; margin-bottom: 4px;">#3</div>
+                <svg width="120" height="110" viewBox="0 0 120 110">
+                    <rect x="10" y="15" width="85" height="85" fill="#e8f0fe" stroke="#0d203b" stroke-width="2" rx="2"/>
+                    <text x="52" y="10" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="600">6 ft</text>
+                    <text x="102" y="62" text-anchor="start" font-family="DM Sans" font-size="11" font-weight="600">6 ft</text>
+                </svg>
+                <div style="font-size: 10pt; text-align: left; padding-left: 4px;">
+                    Area = <span class="answer-blank" style="min-width:40px;"></span> sq ft<br>
+                    Perimeter = <span class="answer-blank" style="min-width:40px;"></span> ft
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: More complex shapes -->
+        <div class="shapes-row" style="justify-content: space-around; margin-top: 16px;">
+            <!-- Shape 4: wide rectangle -->
+            <div class="shape-problem">
+                <div style="color: #0d203b; font-weight: 700; font-size: 11pt; margin-bottom: 4px;">#4</div>
+                <svg width="190" height="75" viewBox="0 0 190 75">
+                    <rect x="10" y="18" width="165" height="40" fill="#e8f0fe" stroke="#0d203b" stroke-width="2" rx="2"/>
+                    <text x="92" y="13" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="600">10 m</text>
+                    <text x="181" y="42" text-anchor="start" font-family="DM Sans" font-size="11" font-weight="600">3 m</text>
+                </svg>
+                <div style="font-size: 10pt; text-align: left; padding-left: 4px;">
+                    Area = <span class="answer-blank" style="min-width:40px;"></span> sq m<br>
+                    Perimeter = <span class="answer-blank" style="min-width:40px;"></span> m
+                </div>
+            </div>
+
+            <!-- Shape 5: L-shaped figure -->
+            <div class="shape-problem">
+                <div style="color: #0d203b; font-weight: 700; font-size: 11pt; margin-bottom: 4px;">#5</div>
+                <svg width="160" height="130" viewBox="0 0 160 130">
+                    <!-- L-shape polygon -->
+                    <polygon points="10,10 100,10 100,60 60,60 60,120 10,120"
+                             fill="#e8f0fe" stroke="#0d203b" stroke-width="2"/>
+                    <!-- Dimension labels -->
+                    <text x="55" y="7" text-anchor="middle" font-family="DM Sans" font-size="9" font-weight="600">6 in</text>
+                    <text x="108" y="38" text-anchor="start" font-family="DM Sans" font-size="9" font-weight="600">3 in</text>
+                    <text x="82" y="73" text-anchor="start" font-family="DM Sans" font-size="9" font-weight="600">3 in</text>
+                    <text x="68" y="95" text-anchor="start" font-family="DM Sans" font-size="9" font-weight="600">3 in</text>
+                    <text x="30" y="128" text-anchor="middle" font-family="DM Sans" font-size="9" font-weight="600">3 in</text>
+                    <text x="3" y="70" text-anchor="end" font-family="DM Sans" font-size="9" font-weight="600" transform="rotate(-90, 3, 70)">6 in</text>
+                </svg>
+                <div style="font-size: 10pt; text-align: left;">
+                    Area = <span class="answer-blank" style="min-width:50px;"></span><br>
+                    Perimeter = <span class="answer-blank" style="min-width:50px;"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid counting -->
+        <div class="section-header" style="margin-top: 18px;">#6 &nbsp;Count the square units to find the area:</div>
+        <svg width="280" height="120" viewBox="0 0 280 120" style="margin: 8px 0;">
+            <!-- 7x4 grid with L-shape shaded -->
+            <!-- Row 1: 7 squares -->
+            <rect x="0" y="0" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="30" y="0" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="60" y="0" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="90" y="0" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="120" y="0" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="150" y="0" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="180" y="0" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <!-- Row 2: 7 squares -->
+            <rect x="0" y="30" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="30" y="30" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="60" y="30" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="90" y="30" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="120" y="30" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="150" y="30" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="180" y="30" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <!-- Row 3: 4 squares -->
+            <rect x="0" y="60" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="30" y="60" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="60" y="60" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <rect x="90" y="60" width="30" height="30" fill="#e8f0fe" stroke="#0d203b" stroke-width="1.5"/>
+            <!-- Answer -->
+            <text x="240" y="55" font-family="DM Sans" font-size="11">Area = <tspan class="answer-blank" style="min-width:40px;">______</tspan></text>
+            <text x="240" y="75" font-family="DM Sans" font-size="10" fill="#666">square units</text>
+        </svg>
+    </div>
+
+    <div class="page-footer">
+        <span class="footer-star">&#9733;</span>
+        <span class="footer-tip">Area = how much space INSIDE the shape. Perimeter = the distance AROUND the shape.</span>
+        <span class="footer-star">&#9733;</span>
+    </div>
+</div>
+
+
+</body>
+</html>

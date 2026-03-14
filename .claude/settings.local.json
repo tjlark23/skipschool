@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tar:*)",
+      "Bash(winget install:*)",
+      "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI:/c/Program Files \\(x86\\)/GitHub CLI\")",
+      "Bash(cmd.exe /c \"where gh\")",
+      "Bash(powershell.exe -Command \"\\(Get-Command gh -ErrorAction SilentlyContinue\\).Source\")",
+      "Bash(powershell.exe -Command \"Get-ChildItem ''C:\\\\Program Files'' -Recurse -Filter ''gh.exe'' -ErrorAction SilentlyContinue | Select-Object -First 3 -ExpandProperty FullName\")",
+      "Bash(powershell.exe -Command:*)",
+      "Bash(/tmp/gh-cli/bin/gh:*)",
+      "Bash(openssl rand:*)",
+      "Bash(unzip:*)",
+      "WebFetch(domain:skipschool.ai)",
+      "Bash(PYTHONIOENCODING=utf-8 python3:*)",
+      "Bash(for page in about-ashley-larkin compare-khan-vs-ixl compare-chatgpt-vs-claude compare-prodigy-vs-beast compare-abcmouse-vs-splashlearn compare-outschool-vs-alpha compare-teaching-textbooks-vs-saxon compare-time4learning-vs-easy-peasy florida-esa-guide arizona-esa-guide west-virginia-esa-guide indiana-esa-guide north-carolina-esa-guide iowa-esa-guide utah-esa-guide ohio-esa-guide arkansas-esa-guide tennessee-esa-guide oklahoma-esa-guide brand-khan-academy brand-chatgpt brand-duolingo brand-ixl brand-prodigy brand-outschool brand-splashlearn brand-teaching-textbooks brand-beast-academy brand-notion brand-abcmouse brand-time4learning)",
+      "Bash(do)",
+      "Bash(if [ -f \"$page.html\" ])",
+      "Bash(then)",
+      "Bash(else)",
+      "Bash(fi)",
+      "Bash(done)"
+    ]
+  }
+}
