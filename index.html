@@ -53,7 +53,7 @@
         .nav { background: #fff; border-bottom: 3px solid var(--navy); position: sticky; top: 0; z-index: 100; }
         .nav .wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 8px; padding-bottom: 8px; }
         .nav-left { display: flex; align-items: center; gap: 14px; }
-        .nav-logo img { height: 28px; }
+        .nav-logo img { height: 28px; width: auto; display: block; }
         .nav-tagline { font-size: 12px; color: var(--text-light); padding-left: 14px; border-left: 1.5px solid var(--border); }
         .nav-right { display: flex; align-items: center; gap: 20px; }
         .nav-right a { min-height:44px; display:inline-flex; align-items:center; font-size: 13px; font-weight: 600; color: var(--text-mid); }
@@ -286,7 +286,7 @@
                 <a href="/tools">Tools</a>
                 <a href="/directory">Directory</a>
                 <button class="nav-search-btn" onclick="document.querySelector('.search-overlay').classList.toggle('active')" aria-label="Search">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 </button>
                 <a href="/subscribe" class="nav-sub">Subscribe</a>
             </div>
@@ -382,15 +382,15 @@ Mix difficulty: 5 easy, 7 medium, 3 challenging.</pre>
             </div>
             <div class="articles-grid">
                 <a href="06-chatgpt-vs-claude-homeschool" class="article-card">
-                    <div class="article-card-img" class="ac-blue"><span class="article-cat">Tool Review</span></div>
+                    <div class="article-card-img ac-blue"><span class="article-cat">Tool Review</span></div>
                     <div class="article-card-body"><h3>ChatGPT vs Claude for Homeschooling</h3><p>An honest comparison after using both for a year. Which one should you pick?</p></div>
                 </a>
                 <a href="09-first-week-ai-homeschool" class="article-card">
-                    <div class="article-card-img" class="ac-green"><span class="article-cat">Getting Started</span></div>
+                    <div class="article-card-img ac-green"><span class="article-cat">Getting Started</span></div>
                     <div class="article-card-body"><h3>Your First Week Using AI for Homeschool</h3><p>A 5-day starter plan. One small step each day. Start this Monday.</p></div>
                 </a>
                 <a href="#" class="article-card">
-                    <div class="article-card-img" class="ac-warm"><span class="article-cat article-cat-sponsor">Sponsor</span></div>
+                    <div class="article-card-img ac-warm"><span class="article-cat article-cat-sponsor">Sponsor</span></div>
                     <div class="article-card-body"><h3>IXL: Personalized Practice That Adapts</h3><p>Adaptive questions, real-time diagnostics, and progress tracking. Try it free for 30 days.</p></div>
                 </a>
             </div>
@@ -432,15 +432,15 @@ Mix difficulty: 5 easy, 7 medium, 3 challenging.</pre>
             </div>
             <div class="articles-grid">
                 <a href="ai-homeschool-complete-guide" class="article-card">
-                    <div class="article-card-img" class="ac-blue"><span class="article-cat">Complete Guide</span></div>
+                    <div class="article-card-img ac-blue"><span class="article-cat">Complete Guide</span></div>
                     <div class="article-card-body"><h3>How to Use AI to Homeschool Your Kids</h3><p>The practical, no-hype guide. Real tools, tested prompts, real results. 18 min read.</p></div>
                 </a>
                 <a href="05-ai-curriculum-builder" class="article-card">
-                    <div class="article-card-img" class="ac-green"><span class="article-cat">How-To</span></div>
+                    <div class="article-card-img ac-green"><span class="article-cat">How-To</span></div>
                     <div class="article-card-body"><h3>Build a Custom Curriculum Using AI</h3><p>From blank page to full year plan in 45 minutes. Step by step.</p></div>
                 </a>
                 <a href="09-first-week-ai-homeschool" class="article-card">
-                    <div class="article-card-img" class="ac-warm"><span class="article-cat">Getting Started</span></div>
+                    <div class="article-card-img ac-warm"><span class="article-cat">Getting Started</span></div>
                     <div class="article-card-body"><h3>Your First Week Using AI for Homeschool</h3><p>A 5-day starter plan. One small step each day. Start this Monday.</p></div>
                 </a>
             </div>
@@ -513,15 +513,15 @@ Mix difficulty: 5 easy, 7 medium, 3 challenging.</pre>
             </div>
             <div class="articles-grid">
                 <a href="06-chatgpt-vs-claude-homeschool" class="article-card">
-                    <div class="article-card-img" class="ac-green"><span class="article-cat">Comparison</span></div>
+                    <div class="article-card-img ac-green"><span class="article-cat">Comparison</span></div>
                     <div class="article-card-body"><h3>ChatGPT vs Claude: Which Should You Use?</h3><p>After a year using both, here's the honest breakdown for homeschool parents.</p></div>
                 </a>
                 <a href="10-khan-academy-guide" class="article-card">
-                    <div class="article-card-img" class="ac-blue"><span class="article-cat">Setup Guide</span></div>
+                    <div class="article-card-img ac-blue"><span class="article-cat">Setup Guide</span></div>
                     <div class="article-card-body"><h3>Khan Academy: The Complete Setup Guide</h3><p>How to set up Khan Academy properly for homeschooling. Free content, Khanmigo, tracking.</p></div>
                 </a>
                 <a href="50-ai-prompts-homeschool" class="article-card">
-                    <div class="article-card-img" class="ac-warm"><span class="article-cat">Resource</span></div>
+                    <div class="article-card-img ac-warm"><span class="article-cat">Resource</span></div>
                     <div class="article-card-body"><h3>50 AI Prompts for Homeschool Parents</h3><p>Copy, paste, fill in the blanks. Organized by subject. Tested with real kids.</p></div>
                 </a>
             </div>
