@@ -4,6 +4,12 @@
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/guides", "destination": "/guides-index.html" },
+    { "source": "/articles", "destination": "/articles-index.html" },
+    { "source": "/tools", "destination": "/tools-index.html" },
+    { "source": "/directory", "destination": "/directory-index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
