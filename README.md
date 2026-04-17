@@ -1,4 +1,5 @@
 # Skip School - skipschool.ai
+Live: https://skipschool.com
 
 **The AI Playbook for Homeschool Parents**
 
