@@ -195,7 +195,10 @@ def head_or_get(url: str, session: requests.Session) -> int | None:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Skip School SEO audit")
     parser.add_argument("--base", default="https://skipschool.ai", help="Base URL")
-    parser.add_argument("--limit", type=int, default=0, help="Limit pages crawled (0 = no limit)")
+    parser.add_argument(
+        "--limit", "--max-pages", dest="limit", type=int, default=0,
+        help="Limit pages crawled (0 = no limit)",
+    )
     parser.add_argument("--out-json", default="scripts/seo-audit-data.json")
     parser.add_argument("--out-md", default="scripts/seo-audit-report.md")
     args = parser.parse_args()
